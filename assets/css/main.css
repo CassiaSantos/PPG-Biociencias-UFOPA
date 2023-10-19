@@ -611,6 +611,15 @@ section {
   }
 }
 
+.text-overlay{
+  background-color:hsla(0, 0%, 1%, 0.37) !important;
+  position: absolute;
+  top: -480px;
+  left: 175px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
@@ -1892,7 +1901,11 @@ section {
   width: 100%;
   position: relative;
   background: var(--color-primary);
-  padding: 60px 0 30px 0;
+  padding: 10px 0 30px 0;
+}
+
+.position-real{
+  height: 100vh;
 }
 
 @media (min-width: 1365px) {
