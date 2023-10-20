@@ -488,8 +488,8 @@ section {
   .text-overlay{
     background-color:hsla(0, 0%, 1%, 0.212) !important;
     position: absolute;
-    top: -480px;
-    left: 175px;
+    top: -500px;
+    /* left: 175px; */
     border-radius: 10px;
     padding-bottom: 10px;
   }

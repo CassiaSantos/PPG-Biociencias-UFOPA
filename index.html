@@ -65,7 +65,7 @@
           <li><a href="#hero">Início</a></li>
           <li><a href="#about">Disciplinas</a></li>
           <li><a href="#services">Laboratórios</a></li>
-          <li class="dropdown"><a href="#"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#team"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Coordenação</a></li>
               <li><a href="#">Colegiado</a></li>
@@ -91,8 +91,8 @@
         </ul>
       </nav><!-- .navbar -->
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list" onclick="viewNavbar()"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onclick="closedNavbar()"></i>
 
     </div>
   </header><!-- End Header -->
@@ -104,7 +104,7 @@
       <div class="row g-6 flex-column full-width-carousel align-items-center d-flex justify-content-center" data-aos="fade-in">
 
         <!-- Div Carousel -->
-        <div class="col-lg-12 order-1 order-lg-1 full-width-carousel>
+        <div class="col-lg-12 order-1 order-lg-1 full-width-carousel">
           
           <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" data-pause="false">
             <ol class="carousel-indicators">
@@ -136,9 +136,9 @@
         <div class="col-lg-9 order-2 order-lg-2 d-flex flex-column justify-content-center text-center text-lg-start text-overlay">
           <h2>Mestrado em <span>Biociências</span></h2>
           <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
-          <div class="d-flex justify-content-center justify-content-lg-center">
-            <a href="#about" class="btn-get-started">Conhecer curso</a>
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Conheça a universidade</span></a>
+          <div class="d-flex justify-content-center justify-content-lg-center align-items-center">
+            <a href="#about" class="btn-get-started mr-2">Conhecer curso</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox ml-2 d-flex align-items-center btn-get-started"><i class=" bi-play-circle mr-1"></i><span>Conheça a universidade</span></a>
           </div>
         </div>
       </div>
@@ -155,8 +155,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Sobre o programa</h2>
-          <p>Conheça um pouco do nosso mestrado no contexto da Floresta Amazônica no estado do Pará e quais suas possibilidades.</p>
+          <h2 class="pt-5">Sobre o programa</h2>
+          <p style="color: black;">Conheça um pouco do nosso mestrado no contexto da Floresta Amazônica no estado do Pará e quais suas possibilidades.</p>
         </div>
 
         <div class="row gy-4">
@@ -197,8 +197,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>O que o mestrado pode proporcionar</h2>
-          <p>Conheça o que nosso mestrado em Biociências pode proporcionar para sua vida acadêmica, profissional e pessal!</p>
+          <h2 class="pt-5">O que o mestrado pode proporcionar</h2>
+          <p style="color: black;">Conheça o que nosso mestrado em Biociências pode proporcionar para sua vida acadêmica, profissional e pessoal!</p>
         </div>
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
@@ -410,8 +410,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Corpo Acadêmico</h2>
-          <p>Conheça as pessoas que fazem parte e tornam esse programa possível</p>
+          <h2 class="pt-5">Corpo Acadêmico</h2>
+          <p style="color: black;">Conheça as pessoas que fazem parte e tornam esse programa possível</p>
         </div>
 
         <div class="row gy-4">
@@ -680,8 +680,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Contato</h2>
-          <p>Ficou com alguma dúvida ou tem algo para compartilhar conosco? Veja abaixo nosso endereço, e-mail e formulário de contato e sinta-se a vontade para escolher a melhor opção para você!</p>
+          <h2 class="pt-5">Contato</h2>
+          <p style="color: black;">Ficou com alguma dúvida ou tem algo para compartilhar conosco? Veja abaixo nosso endereço, e-mail e formulário de contato e sinta-se a vontade para escolher a melhor opção para você!</p>
         </div>
 
         <div class="row gx-lg-0 gy-4">
@@ -777,13 +777,13 @@
         <div class="col-lg-4 col-6 footer-links">
           <h4>Quero ir para:</h4>
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Disciplinas</a></li>
-            <li><a href="#">Laboratórios</a></li>
-            <li><a href="#">Corpo Acadêmico</a></li>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Disciplinas</a></li>
+            <li><a href="#services">Laboratórios</a></li>
+            <li><a href="#team">Corpo Acadêmico</a></li>
             <li><a href="#">Teses</a></li>
             <li><a href="#">Documentos</a></li>
-            <li><a href="#"></a>Contato</li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </div>
 <!-- 
@@ -848,6 +848,33 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- JS Navbar -->
+<script>
+  function viewNavbar(){
+    var nav = document.getElementById('navbar');
+    console.log(nav);
+    nav.style.display = 'flex'; 
+}
+
+  function closedNavbar(){
+    var nav = document.getElementById('navbar');
+    console.log(nav);
+    nav.style.display ='none';
+  }
+
+  function checkWidth() {
+  var div = document.getElementById('navbar');
+
+  if (window.innerWidth > 1279) {
+    div.style.display = 'flex';
+  } else {
+    div.style.display = 'none';
+  }
+}
+
+   window.addEventListener('resize', checkWidth);
+</script>
 
 </body>
 
