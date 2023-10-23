@@ -1,10 +1,3 @@
-/**
-* Template Name: Impact
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -17,6 +10,27 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.remove();
     });
   }
+  /*HTML*/
+  const nav = document.getElementById('navbar');
+  function viewNavbar(){
+    
+    console.log(nav);
+    nav.style.display = flex; 
+}
+
+  function closedNavbar(){
+    console.log(nav);
+    nav.style.display =none;
+  }
+
+  function checkWidth() {
+    console.log(screen.width)
+  if (screen.width > 1279) {
+    nav.style.display = flex;
+  } else {
+    nav.style.display = none;
+  }
+}
 
   /**
    * Sticky Header on Scroll
