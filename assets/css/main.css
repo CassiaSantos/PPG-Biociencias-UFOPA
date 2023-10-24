@@ -41,12 +41,12 @@ body {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 h1,
@@ -150,7 +150,7 @@ section {
 }
 
 .breadcrumbs nav ol a:hover {
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 
 .breadcrumbs nav ol li+li {
@@ -281,7 +281,7 @@ section {
 
 .topbar .contact-info i a:hover {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 
 .topbar .social-links a {
@@ -1580,7 +1580,7 @@ section {
 }
 
 .pricing ul .na span {
-  text-decoration: line-through;
+  text-decoration: none !important;
 }
 
 .pricing .buy-btn {
