@@ -45,6 +45,8 @@ fetch(jsonURL)
         article.appendChild(title);
         article.appendChild(div_data_post);
         divNotice.appendChild(article);
+
+        // Criando a pagina de noticias de forma automatica via json
     
         
 
