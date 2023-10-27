@@ -1038,7 +1038,10 @@ section {
 
 .button-green:hover {
   color: #ffffff;
+  background-color: var(--color-tertiary);
   }
+
+  
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
