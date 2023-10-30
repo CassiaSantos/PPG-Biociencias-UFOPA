@@ -1,0 +1,68 @@
+[
+    {
+        "nome": "Marta Rodrigues",
+        "foto": "https://exemplo.com/marta_rodrigues.jpg",
+        "cargo": "Professora de Literatura",
+        "resumo": "Ph.D. em Literatura Comparada, especializada em literatura latino-americana. Ministra cursos sobre grandes escritores da região.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/marta_rodrigues",
+            "linkedin": "https://www.linkedin.com/in/marta_rodrigues",
+            "facebook": "https://www.facebook.com/marta_rodrigues",
+            "instagram": "https://www.instagram.com/marta_rodrigues"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/9876543210"
+    },
+    {
+        "nome": "Carlos Silva",
+        "foto": "https://exemplo.com/carlos_silva.jpg",
+        "cargo": "Professor de História",
+        "resumo": "Mestre em História Antiga e Medieval, com foco em culturas antigas. Dedica-se ao ensino de história em escolas públicas.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/carlos_silva",
+            "linkedin": "https://www.linkedin.com/in/carlos_silva",
+            "facebook": "https://www.facebook.com/carlos_silva",
+            "instagram": "https://www.instagram.com/carlos_silva"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/1234567890"
+    },
+    {
+        "nome": "Ana Pereira",
+        "foto": "https://exemplo.com/ana_pereira.jpg",
+        "cargo": "Professora de Matemática",
+        "resumo": "Doutora em Matemática Pura e apaixonada por geometria. Ministra aulas avançadas de matemática em universidades.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/ana_pereira",
+            "linkedin": "https://www.linkedin.com/in/ana_pereira",
+            "facebook": "https://www.facebook.com/ana_pereira",
+            "instagram": "https://www.instagram.com/ana_pereira"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/5432109876"
+    },
+    {
+        "nome": "Pedro Santos",
+        "foto": "https://exemplo.com/pedro_santos.jpg",
+        "cargo": "Professor de Biologia",
+        "resumo": "Ph.D. em Biologia Molecular com ampla experiência em pesquisa. Foca em genética e biologia molecular.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/pedro_santos",
+            "linkedin": "https://www.linkedin.com/in/pedro_santos",
+            "facebook": "https://www.facebook.com/pedro_santos",
+            "instagram": "https://www.instagram.com/pedro_santos"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/9876123456"
+    },
+    {
+        "nome": "Lucia Fernandes",
+        "foto": "https://exemplo.com/lucia_fernandes.jpg",
+        "cargo": "Professora de Química",
+        "resumo": "Especialista em Química Orgânica e Química Inorgânica. Desenvolve pesquisas em novos materiais.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/lucia_fernandes",
+            "linkedin": "https://www.linkedin.com/in/lucia_fernandes",
+            "facebook": "https://www.facebook.com/lucia_fernandes",
+            "instagram": "https://www.instagram.com/lucia_fernandes"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/1357924680"
+    }
+]
+
