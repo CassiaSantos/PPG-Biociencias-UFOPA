@@ -1,0 +1,33 @@
+const corpoAcademico = [
+    {
+      "foto": "url_da_foto1.jpg",
+      "nomeCompleto": "Nome Completo do Professor 1",
+      "cargo": "Cargo do Professor 1",
+      "resumoPessoal": "Pequeno resumo pessoal do Professor 1",
+      "redesSociais": {
+        "twitter": "https://twitter.com/professor1",
+        "facebook": "https://www.facebook.com/professor1",
+        "instagram": "https://www.instagram.com/professor1",
+        "linkedin": "https://www.linkedin.com/in/professor1"
+      },
+      "curriculoLattes": "https://lattes.cnpq.br/1234567890"
+    },
+    {
+      "foto": "url_da_foto2.jpg",
+      "nomeCompleto": "Nome Completo do Professor 2",
+      "cargo": "Cargo do Professor 2",
+      "resumoPessoal": "Pequeno resumo pessoal do Professor 2",
+      "redesSociais": {
+        "twitter": "https://twitter.com/professor2",
+        "facebook": "https://www.facebook.com/professor2",
+        "instagram": "https://www.instagram.com/professor2",
+        "linkedin": "https://www.linkedin.com/in/professor2"
+      },
+      "curriculoLattes": "https://lattes.cnpq.br/2345678901"
+    }
+    // Adicione mais professores conforme necessário
+];
+  
+  // Você pode acessar as informações de um professor, por exemplo:
+  console.log(corpoAcademico[0].nomeCompleto); // Saída: Nome Completo do Professor 1
+  
