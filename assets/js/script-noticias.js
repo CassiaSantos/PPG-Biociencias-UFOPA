@@ -47,11 +47,6 @@ fetch(jsonURL)
         divNotice.appendChild(article);
 
         // Criando a pagina de noticias de forma automatica via json
-    
-        
-
-
-
 
       })}).catch((error) => console.error("Erro ao carregar o JSON: ", error));
 
