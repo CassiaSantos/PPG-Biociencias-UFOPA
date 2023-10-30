@@ -1,4 +1,4 @@
-const corpoAcademico = [
+[
     {
       "foto": "url_da_foto1.jpg",
       "nomeCompleto": "Nome Completo do Professor 1",
@@ -24,10 +24,5 @@ const corpoAcademico = [
         "linkedin": "https://www.linkedin.com/in/professor2"
       },
       "curriculoLattes": "https://lattes.cnpq.br/2345678901"
-    },
-    // Adicione mais professores conforme necessário
-];
-  
-  // Você pode acessar as informações de um professor, por exemplo:
-  console.log(corpoAcademico[0].nomeCompleto); // Saída: Nome Completo do Professor 1
-  
+    }
+]
