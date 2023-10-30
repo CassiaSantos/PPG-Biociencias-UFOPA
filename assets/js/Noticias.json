@@ -1,0 +1,63 @@
+[
+    {
+        "data": "2023-10-30",
+        "hora": "08:30",
+        "titulo": "Novo Programa de Bolsas de Estudo Anunciado",
+        "categorias": ["EDUCAÇÃO"],
+        "imagem": "img_noticia.jpg",
+        "texto": "O governo anunciou hoje um novo programa de bolsas de estudo para estudantes de baixa renda. O programa visa ajudar milhares de jovens a acessarem uma educação de qualidade.",
+        "autor": "João Silva",
+        "links": [
+            "https://exemplo.com/noticia1"
+        ]
+    },
+    {
+        "data": "2023-10-29",
+        "hora": "14:45",
+        "titulo": "Universidade XYZ Lança Novo Curso Online",
+        "categorias": ["EDUCAÇÃO"],
+        "imagem": "img_noticia.jpg",
+        "texto": "A Universidade XYZ lançou um novo curso online sobre inteligência artificial. Este curso é gratuito e aberto a todos os interessados em aprender sobre o assunto.",
+        "autor": "Maria Santos",
+        "links": [
+            "https://exemplo.com/noticia2"
+        ]
+    },
+    {
+        "data": "2023-10-28",
+        "hora": "10:15",
+        "titulo": "Escolas da Região Recebem Investimento em Tecnologia",
+        "categorias": ["EDUCAÇÃO"],
+        "imagem": "img_noticia.jpg",
+        "texto": "O governo local anunciou um investimento significativo em tecnologia para escolas da região. Isso inclui a distribuição de laptops e acesso à internet para alunos carentes.",
+        "autor": "Pedro Oliveira",
+        "links": [
+            "https://exemplo.com/noticia3"
+        ]
+    },
+    {
+        "data": "2023-10-27",
+        "hora": "09:20",
+        "titulo": "Estudantes se Destacam em Olimpíada de Matemática",
+        "categorias": ["EDUCAÇÃO"],
+        "imagem": "img_noticia.jpg",
+        "texto": "Estudantes de uma escola local se destacaram na Olimpíada Brasileira de Matemática. Vários deles conquistaram medalhas de ouro, prata e bronze.",
+        "autor": "Ana Rodrigues",
+        "links": [
+            "https://exemplo.com/noticia4"
+        ]
+    },
+    {
+        "data": "2023-10-26",
+        "hora": "16:00",
+        "titulo": "Inaugurada Nova Biblioteca na Universidade ABC",
+        "categorias": ["EDUCAÇÃO"],
+        "imagem": "img_noticia.jpg",
+        "texto": "A Universidade ABC inaugurou sua nova biblioteca, com um acervo de mais de 50.000 livros. Os estudantes agora têm um espaço de estudo moderno e confortável.",
+        "autor": "Luís Fernandes",
+        "links": [
+            "https://exemplo.com/noticia5"
+        ]
+    }
+]
+
