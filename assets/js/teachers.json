@@ -24,7 +24,7 @@ const corpoAcademico = [
         "linkedin": "https://www.linkedin.com/in/professor2"
       },
       "curriculoLattes": "https://lattes.cnpq.br/2345678901"
-    },
+    }
     // Adicione mais professores conforme necessário
 ];
   
