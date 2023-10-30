@@ -14,7 +14,7 @@ function preencherMembros() {
         
           memberDiv.innerHTML = `
             <div class="member">
-              <img src="assets/img/${membro.foto}" class="img-fluid" alt="">
+              <img src="assets/img/team/${membro.foto}" class="img-fluid" alt="">
               <h4>${membro.nomeCompleto}</h4>
               <span>${membro.cargo}</span>
               <div class="social">
