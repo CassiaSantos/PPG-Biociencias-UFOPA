@@ -29,8 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <nav id="navbar" class="navbar">
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="#">Disciplinas</a></li>
+                        <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
                         <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
+                        <li><a href="projetosPPGBIO.html">Projetos</a></li>
                         <li class="dropdown"><a href="corpoAcademico.html"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">Coordenação</a></li>
@@ -39,18 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <li><a href="#">Discentes</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Dissertações</a></li>
                         <!--Menu dropdown-->
                         <li class="dropdown"><a href="#"><span>Documentos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="regimentosPPGBIO.html">Regimento do Curso</a></li>
-                                <li><a href="#">PPC do curso</a></li>
-                                <li><a href="#">Grade Curricular</a></li>
+                                <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
+                                <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
+                                <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
                                 <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                                     <ul>
                                         <li><a href="PS-PPGBIO.html">Processos seletivos</a></li>
-                                        <li><a href="">Bolsas</a></li>
-                                        <li><a href="">Auxílios</a></li>
+                                        <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
+                                        <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
                                     </ul>
                             </ul>
                         <li><a href="contato.html">Contato</a></li>
