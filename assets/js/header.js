@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a href="#hero">Início</a></li>
+                        <li><a href="index.html">Início</a></li>
                         <li><a href="#">Disciplinas</a></li>
                         <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
                         <li class="dropdown"><a href="corpoAcademico.html"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -43,17 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <!--Menu dropdown-->
                         <li class="dropdown"><a href="#"><span>Documentos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">Regimento do Curso</a></li>
+                                <li><a href="regimentosPPGBIO.html">Regimento do Curso</a></li>
                                 <li><a href="#">PPC do curso</a></li>
                                 <li><a href="#">Grade Curricular</a></li>
                                 <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                                     <ul>
-                                        <li><a href="">Processos seletivos</a></li>
+                                        <li><a href="PS-PPGBIO.html">Processos seletivos</a></li>
                                         <li><a href="">Bolsas</a></li>
                                         <li><a href="">Auxílios</a></li>
                                     </ul>
                             </ul>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </nav><!-- end navbar -->
 
