@@ -30,6 +30,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!--Cabeçalho da página-->
+  <script src="assets/js/header.js"></script>
+
   <!-- CSS Botstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -37,64 +40,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a  href="mailto:ppgbio@ufopa.edu.br">e-mail: ppgbio@ufopa.edu.br</a></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section><!-- End Top Bar -->
-
-  <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>PPG <span>Biociências</span></h1>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#">Disciplinas</a></li>
-          <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
-          <li class="dropdown"><a href="corpoAcademico.html"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Coordenação</a></li>
-              <li><a href="#">Colegiado</a></li>
-              <li><a href="#">Docentes</a></li>
-              <li><a href="#">Discentes</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Dissertações</a></li>
-          <!--Menu dropdown-->
-          <li class="dropdown"><a href="#"><span>Documentos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Regimento do Curso</a></li>
-              <li><a href="#">PPC do curso</a></li>
-              <li><a href="#">Grade Curricular</a></li>
-              <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="">Processos seletivos</a></li>
-                  <li><a href="">Bolsas</a></li>
-                  <li><a href="">Auxílios</a></li>
-                </ul>
-            </ul>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list" onclick="viewNavbar()"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onclick="closedNavbar()"></i>
-
-    </div>
-  </header><!-- End Header -->
+  <div class="header-container" id="header-container">
+    <!--Renderização do cabeçalho da página-->
+  </div>
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -426,86 +374,11 @@
         </div>
 
         <div class="row gy-4" id="noticiasContainer">
+          <div class="text-center pt-4">
+            <a class="button-green" href="blog.html">Todas as notícias</a>
+        </div>
 
-          <!-- <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.hFftg-xNSsELsnG6LGPNkgHaE6%26pid%3DApi&f=1&ipt=cdc8dfa7cea5d82510cbb35b1108e903db70977dac5238696075f6bd21db360c&ipo=images" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Defesa de tese</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Aluno do Mestrado em Biociências de Santarém publica trabalho em revista de renome</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                  <p class="post-date">
-                    <time datetime="2023-10-17">17 de outubro de 2023</time>
-                  </p>
-                
-              </div>
-
-            </article>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mI21T9quUwTlsPLXtPXIcQHaE7%26pid%3DApi&f=1&ipt=cd23057978fb5bdc182c37daeeb18594a58accbe71db882c81290debf7c5f32f&ipo=images" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Extensão</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Aluno do Mestrado em Biociências realiza trabalho de extensão com comunidade ribeirina</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Santana</p>
-                  <p class="post-date">
-                    <time datetime="2023-08-12">12 de agosto de 2023</time>
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="http://www.ufopa.edu.br/media/file/site/ufopa/imagens/2021/f203e394884e2d7501b6436348468bb2_3qMjRMk_540x360.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Processo seletivo</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">UFOPA abre processo seletivo para Mestrado em Biociências na cidade de Santarém - PA</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Marcos Vinícios</p>
-                  <p class="post-date">
-                    <time datetime="2022-10-10">10 de outubro de 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div> -->
-
-        </div><!-- End recent posts list -->
-
-        <div class="text-center pt-4"><a class="button-green" href="blog.html">Todas as notícias</a></div>
-      </div>
-      
+      </div> 
     </section><!-- End Recent Blog Posts Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
@@ -685,68 +558,9 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-5">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>PPG Biociências</span>
-          </a>
-          <p>O programa de Pós-Graduação no coração da Amazônia, um tesouro verde. Um refúgio de biodiversidade inigualável. Um mundo de beleza e mistério, onde a natureza desabrocha em toda a sua exuberância, grandiosidade e problemas para serem solucionados.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-6 footer-links">
-          <h4>Quero ir para:</h4>
-          <ul>
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#about">Disciplinas</a></li>
-            <li><a href="#services">Laboratórios</a></li>
-            <li><a href="#team">Corpo Acadêmico</a></li>
-            <li><a href="#">Teses</a></li>
-            <li><a href="#">Documentos</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-        </div>
-<!-- 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div> -->
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contato:</h4>
-          <p>
-            Rua: Vera Paz, bairro Salé <br>
-            Santarém, Pará cepAqui<br>
-            Brazil <br><br>
-            <strong>Email:</strong> ppgbio@ufopa.edu.br<br>
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>PPG Biociências</span></strong>. Todos os direitos reservados
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
+  <div class="footer-container" id="footer-container"> <!--Ver arquivo assets/js/footer.html-->
+    <!--Renderização do footer da página-->
+  </div>
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -770,11 +584,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+<!-- Footer da página-->
+<script src="assets/js/footer.js"></script>
 <!--JS Corpo Acadêmico-->
 <script src="assets/js/script-corpoAcademico.js"></script>
 <!-- JS Carousel -->
-<script src="assets/js/script-carrosel.js">
-</script>
+<script src="assets/js/script-carrosel.js"></script>
 
 <!-- JS Noticias -->
 <script src="assets/js/script-noticias.js">
