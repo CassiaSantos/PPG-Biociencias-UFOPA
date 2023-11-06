@@ -2682,6 +2682,10 @@ section {
   color: var(--color-white);
 }
 
+.footer .container p a{
+  color: var(--color-white)
+}
+
 .footer .footer-contact p {
   line-height: 26px;
 }
