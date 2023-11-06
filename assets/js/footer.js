@@ -33,15 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <div class="col-lg-col-md-12 footer-contact text-center text-md-start">
             <h4>Contato:</h4>
             <p>
-              Rua: Vera Paz, bairro Salé <br>
-              Santarém, Pará cepAqui<br>
+              <a href="https://maps.app.goo.gl/VN2AQE2LxEf9uXhH8" target="_blank">
+                Rua: Vera Paz - bairro Salé, 68040-255<br>
+                Santarém - Pará
+              </a><br>
               Brazil <br><br>
               <strong>Email:</strong> ppgbio@ufopa.edu.br<br>
             </p>
-
           </div>
 
         </div>
