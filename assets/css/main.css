@@ -2648,6 +2648,10 @@ section {
   margin-bottom: 30px;
 }
 
+.footer .container a p{
+  color: var(--color-white)
+}
+
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
@@ -2680,10 +2684,6 @@ section {
 
 .footer .footer-links ul a:hover {
   color: var(--color-white);
-}
-
-.footer .container p a{
-  color: var(--color-white)
 }
 
 .footer .footer-contact p {
