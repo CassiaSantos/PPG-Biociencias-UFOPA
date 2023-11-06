@@ -37,10 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <h4>Contato:</h4>
             <p>
               <a href="https://maps.app.goo.gl/VN2AQE2LxEf9uXhH8" target="_blank">
-                Rua: Vera Paz - bairro Salé, 68040-255<br>
-                Santarém - Pará
+                Rua: Vera Paz - bairro Salé, 68040-255, Santarém - Pará
               </a><br>
-              Brazil <br><br>
               <strong>Email:</strong> ppgbio@ufopa.edu.br<br>
             </p>
           </div>
