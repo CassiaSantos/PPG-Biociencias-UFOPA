@@ -28,9 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 <nav id="navbar" class="navbar">
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
-                        <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
-                        <li><a href="projetosPPGBIO.html">Projetos</a></li>
+                        <li class="dropdown"><a href="#"><span>Institucional</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
+                                <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
+                                <li><a href="projetosPPGBIO.html">Projetos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Notícias</a></li>
                         <li class="dropdown"><a href="corpoAcademico.html"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="#">Coordenação</a></li>
