@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </section><!-- End Top Bar -->
 
         <header id="header" class="header d-flex align-items-center">
-            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
-                    <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <!-- <img src="assets/img/logo.png" alt=""> -->
+                    <!-- <img src="assets/img/logoBio.png" alt=""> -->
                     <h1>PPG <span>Biociências</span></h1>
                 </a>
 
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </ul>
                         </li>
                         <!--Menu dropdown-->
-                        <li class="dropdown"><a href="#"><span>Documentos</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <li class="dropdown"><a href="#"><span>Documentos</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="regimentosPPGBIO.html">Regimento do Curso</a></li>
                                 <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
@@ -57,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </nav><!-- end navbar -->
+
+                <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+                <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
                 <!--<i class="mobile-nav-toggle mobile-nav-show bi bi-list" onclick="viewNavbar()"></i>-->
                 <!--<i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onclick="closedNavbar()"></i>-->
