@@ -780,7 +780,31 @@
 <!-- JS Noticias -->
 <script src="assets/js/script-noticias.js">
 </script>
+<script>
+  const nav = document.getElementById('navbar');
+  function viewNavbar(){
 
+    console.log(nav);
+    nav.style.display = 'flex'; 
+}
+
+  function closedNavbar(){
+    console.log(nav);
+    nav.style.display ='none';
+  }
+
+  function checkWidth() {
+    console.log(screen.width)
+  if (screen.width > 1279) {
+    nav.style.display = 'flex';
+  } else {
+    nav.style.display = 'none';
+  }
+}
+
+   window.addEventListener('resize', checkWidth);
+   window.addEventListener('load', checkWidth);
+</script>
 </body>
 
 </html>
