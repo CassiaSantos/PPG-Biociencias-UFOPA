@@ -63,6 +63,45 @@
             "instagram": "https://www.instagram.com/lucia_fernandes"
         },
         "curriculo_lattes": "https://lattes.cnpq.br/1357924680"
+    },
+    {
+        "nome": "Rogério Santos",
+        "foto": "https://exemplo.com/lucia_fernandes.jpg",
+        "cargo": "Professor de Química",
+        "resumo": "Especialista em Química Orgânica e Química Inorgânica. Desenvolve pesquisas em novos materiais.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/lucia_fernandes",
+            "linkedin": "https://www.linkedin.com/in/lucia_fernandes",
+            "facebook": "https://www.facebook.com/lucia_fernandes",
+            "instagram": "https://www.instagram.com/lucia_fernandes"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/1357924680"
+    },
+    {
+        "nome": "Carmem Costa",
+        "foto": "https://exemplo.com/lucia_fernandes.jpg",
+        "cargo": "Professora de Química",
+        "resumo": "Especialista em Química Orgânica e Química Inorgânica. Desenvolve pesquisas em novos materiais.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/lucia_fernandes",
+            "linkedin": "https://www.linkedin.com/in/lucia_fernandes",
+            "facebook": "https://www.facebook.com/lucia_fernandes",
+            "instagram": "https://www.instagram.com/lucia_fernandes"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/1357924680"
+    },
+    {
+        "nome": "Lucia Braga",
+        "foto": "https://exemplo.com/lucia_fernandes.jpg",
+        "cargo": "Professora de Química",
+        "resumo": "Especialista em Química Orgânica e Química Inorgânica. Desenvolve pesquisas em novos materiais.",
+        "redes_sociais": {
+            "twitter": "https://twitter.com/lucia_fernandes",
+            "linkedin": "https://www.linkedin.com/in/lucia_fernandes",
+            "facebook": "https://www.facebook.com/lucia_fernandes",
+            "instagram": "https://www.instagram.com/lucia_fernandes"
+        },
+        "curriculo_lattes": "https://lattes.cnpq.br/1357924680"
     }
 ]
 

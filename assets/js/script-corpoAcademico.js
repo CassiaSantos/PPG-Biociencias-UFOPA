@@ -2,7 +2,7 @@ const teamSection = document.getElementById("div-prof");
 
 // Função para preencher os membros com os dados do JSON
 function preencherMembros() {
-    const corpoAcademico = "assets/js/teachers.json";
+    const corpoAcademico = "assets/js/corpoAcademico.json";
     fetch(corpoAcademico)
     .then((response) => response.json())
     .then((data) => {
@@ -14,7 +14,7 @@ function preencherMembros() {
         
           memberDiv.innerHTML = `
             <div class="member">
-              <img src="assets/img/${membro.foto}" class="img-fluid" alt="">
+              <img src="assets/img/team/${membro.foto}" class="img-fluid" alt="">
               <h4>${membro.nomeCompleto}</h4>
               <span>${membro.cargo}</span>
               <div class="social">
