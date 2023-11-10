@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Conteúdo do cabeçalho
     const headerHTML = `
+
+        <!--
         <section id="topbar" class="topbar d-flex align-items-center">
             <div class="container d-flex justify-content-center justify-content-md-between">
                 <div class="contact-info d-flex align-items-center">
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
                 </div>
             </div>
-        </section><!-- End Top Bar -->
+        </section> End Top Bar -->
 
         <header id="header" class="header d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
