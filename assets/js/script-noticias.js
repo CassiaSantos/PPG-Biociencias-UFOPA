@@ -1,58 +1,48 @@
 function createNoticias() {
   const noticiasContainer = document.getElementById("noticiasContainer");
   // Alterar posteriormente a URL para a API
-  const jsonURL = "assets/js/Noticias.json";
+  const jsonURL = "http://localhost:3000/noticias-recentes";
+  const pagNoticias = "blog-details.html";
 
   fetch(jsonURL)
     .then((response) => response.json())
     .then((data) => {
+      let noticiasHTML = "";
+      let btnMais = "";
+
       data.forEach((item, index) => {
-        const divNotice = document.createElement("div");
-        divNotice.className = "col-xl-4 col-md-6";
-
-        const article = document.createElement("article");
-        const divImage = document.createElement("div");
-        divImage.className = "post-img";
-
-        const image = document.createElement("img");
-        image.src = "assets/img/" + item.imagem;
-        image.className = "img-fluid";
-
-        const p_cat_post = document.createElement("p");
-        p_cat_post.className = "post-category";
-        p_cat_post.innerText = item.categorias[0];
-
-        const title = document.createElement("h2");
-        title.className = "title";
-        title.innerText = item.titulo;
-
-        const a1 = document.createElement("a");
-        a1.href = "blog-details.html?id=78978";
-
-        const div_data_post = document.createElement("div");
-        div_data_post.className = "d-flex align-items-center";
-        const p_data_post = document.createElement("p");
-        p_data_post.className = "post-date";
-        const time_post = document.createElement("time");
-        time_post.innerText = item.data + " às " + item.hora;
-
-        p_data_post.appendChild(time_post);
-        div_data_post.appendChild(p_data_post);
-
-        divImage.appendChild(image);
-        title.appendChild(a1);
-
-        article.appendChild(divImage);
-        article.appendChild(p_cat_post);
-        article.appendChild(title);
-        article.appendChild(div_data_post);
-        divNotice.appendChild(article);
-        noticiasContainer.appendChild(divNotice);
-
-        // Criando a pagina de noticias de forma automatica via json
+        noticiasHTML += `
+          <div class="col-xl-4 col-md-6">
+            <article>
+              <div class="post-img">
+                <img src="assets/img/${item.imagem}" class="img-fluid">
+              </div>
+              <p class="post-category">${item.categorias[0]}</p>
+              <h2 class="title">
+                <a href="${pagNoticias}?id=${item._id}">${item.titulo}</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <p class="post-date">
+                  <time>${item.data} às ${item.hora}</time>
+                </p>
+              </div>
+            </article>
+          </div>
+        `;
       });
+
+      btnMais = `
+        <div class="text-center pt-4">
+        <a class="button-green" href="${pagNoticias}">Todas as notícias</a>
+        </div>
+      `;
+
+      noticiasContainer.innerHTML = noticiasHTML;
+      noticiasContainer.innerHTML += btnMais;
+
+
     })
     .catch((error) => console.error("Erro ao carregar o JSON: ", error));
 }
-window.addEventListener('DOMContentLoaded', createNoticias);
 
+window.addEventListener('DOMContentLoaded', createNoticias);
