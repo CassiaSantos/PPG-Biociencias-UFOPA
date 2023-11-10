@@ -374,10 +374,8 @@
         </div>
 
         <div class="row gy-4" id="noticiasContainer">
-          <div class="text-center pt-4">
-            <a class="button-green" href="blog.html">Todas as notícias</a>
+          
         </div>
-
       </div> 
     </section><!-- End Recent Blog Posts Section -->
 
@@ -594,31 +592,7 @@
 <!-- JS Noticias -->
 <script src="assets/js/script-noticias.js">
 </script>
-<script>
-  const nav = document.getElementById('navbar');
-  function viewNavbar(){
 
-    console.log(nav);
-    nav.style.display = 'flex'; 
-}
-
-  function closedNavbar(){
-    console.log(nav);
-    nav.style.display ='none';
-  }
-
-  function checkWidth() {
-    console.log(screen.width)
-  if (screen.width > 1279) {
-    nav.style.display = 'flex';
-  } else {
-    nav.style.display = 'none';
-  }
-}
-
-   window.addEventListener('resize', checkWidth);
-   window.addEventListener('load', checkWidth);
-</script>
 </body>
 
 </html>
