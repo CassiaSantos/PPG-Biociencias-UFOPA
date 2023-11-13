@@ -12,10 +12,10 @@ function createNoticias() {
     .then((data) => {
       let noticiasHTML = "";
       let button = `
-      <ul class="justify-content-center">
+      <div class="justify-content-center d-flex">
             <button class="button-green p-1" id="paginaAnterior">Página Anterior</button>
             <button class="button-green p-1" id="proximaPagina">Próxima Página</button>
-      </ul>     
+      </div>     
       `;
       console.log(data);
 
