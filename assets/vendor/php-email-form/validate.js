@@ -1,7 +1,5 @@
-/**
-* PHP Email Form Validation - v3.6
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
+/*
+Arquivo de validação do e-mail da página de contato
 */
 (function () {
   "use strict";
@@ -41,7 +39,7 @@
             }
           });
         } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          displayError(thisForm, 'O URL da API javascript reCaptcha não foi carregado!')
         }
       } else {
         php_email_form_submit(thisForm, action, formData);
@@ -68,7 +66,7 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'O envio do formulário falhou e nenhuma mensagem de erro foi retornada de: ' + action); 
       }
     })
     .catch((error) => {
