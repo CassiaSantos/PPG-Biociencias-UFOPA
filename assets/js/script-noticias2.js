@@ -1,14 +1,23 @@
 function createNoticias() {
   const noticiasContainer = document.getElementById("noticiasContainer");
+  const noticiasBtn = document.getElementById("blog-pagination");
+
   // Alterar posteriormente a URL para a API
-  const jsonURL = "http://localhost:3000/noticia";
-  const pagNoticias = "blog.html";
+  const jsonURL = "http://localhost:3000/noticias";
+  const pagNoticias = "blog-details.html";
+  let currentPage = 1;
 
   fetch(jsonURL)
     .then((response) => response.json())
     .then((data) => {
       let noticiasHTML = "";
-      let btnMais = "";
+      let button = `
+      <ul class="justify-content-center">
+            <button class="button-green p-1" id="paginaAnterior">Página Anterior</button>
+            <button class="button-green p-1" id="proximaPagina">Próxima Página</button>
+      </ul>     
+      `;
+      console.log(data);
 
       data.forEach((item, index) => {
         noticiasHTML += `
@@ -31,14 +40,11 @@ function createNoticias() {
         `;
       });
 
-      btnMais = `
-        <div class="text-center pt-4">
-        <a class="button-green" href="${pagNoticias}">Todas as notícias</a>
-        </div>
-      `;
+
+
 
       noticiasContainer.innerHTML = noticiasHTML;
-      noticiasContainer.innerHTML += btnMais;
+      noticiasBtn.innerHTML = button;
 
 
     })
