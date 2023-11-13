@@ -491,9 +491,9 @@ section {
     position: fixed;
     top: 250px;
     right: -100%;
-    width: 100%;
+    width: 120%;
     height: 70vh;
-    max-width: 400px;
+    max-width: 1000px !important;
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
