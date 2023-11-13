@@ -18,7 +18,7 @@
   
   //Emails para quem será enviado o formulário
   $destino = "cassia.oliveira.profissional@gmail.com";
-  $assunto = "Mesagem Site Biociências";
+  $assunto = "Mensagem Site Biociências";
 
   //Este sempre deverá existir para garantir a exibição correta dos caracteres
   $headers  = "MIME-Version: 1.0\n";
