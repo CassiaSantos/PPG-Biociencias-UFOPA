@@ -84,25 +84,30 @@
         
                         <!-- Formulário de contato -->
                         <div class="col-lg-8">
-                            <form action="./forms/form-contato.php" method="post" role="form" class="php-email-form">
+                            <form action="https://formsubmit.co/cassia.oliveira.profissional@gmail.com" method="POST" class="contact-form">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome completo" required>
+                                        <input type="text" name="nome" class="form-control" id="name" placeholder="Seu nome completo" required>
                                     </div>
                                     <div class="col-md-6 form-group mt-3 mt-md-0">
                                         <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
                                     </div>
                                 </div>
-
                                 <div class="form-group mt-3">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto da mensagem" required>
+                                    <input type="text" class="form-control" name="_subject" id="subject" placeholder="Assunto da mensagem" required>
                                 </div>
                                 
                                 <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" rows="7" placeholder="Escreva sua mensagem para nós aqui" required></textarea>
+                                    <textarea class="form-control" name="mensagem" rows="7" placeholder="Escreva sua mensagem para nós aqui" required></textarea>
                                 </div>
 
-                                <div class="text-center"><button type="submit">Enviar mensagem</button></div>
+                                <div class="text-center phcontact-form"><button type="submit">Enviar mensagem</button></div>
+
+                                <input type="hidden" name="_captcha" value="true">
+                                <input type="text" name="_honey" style="display:none">
+                                
+                                <!--Página de obrigado!-->
+                                <input type="hidden" name="_next" value="https://cassiasantos.github.io/PPG-Biociencias-UFOPA/agradecimento.html">
                             </form>
                         </div><!-- Fim do formulário de contato -->
                     </div>
