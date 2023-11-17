@@ -50,12 +50,11 @@ h6 {
 
 .access-button {
   border-radius: 50px !important;
-  border: 5px solid !important;
-  border-color: var(--color-primary) !important;
 }
 
 .access-button:hover {
-  border: none !important;
+  bor
+  der: none !important;
 }
 
 section h2 span {

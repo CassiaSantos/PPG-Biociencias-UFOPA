@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+<html>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -27,7 +27,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <!--<link href="assets/css/main.css" rel="stylesheet">-->
+    <link href="assets/css/main.css" rel="stylesheet">
 
     <!-- CSS Botstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -36,7 +36,7 @@
         
         <!-- ======== Header ======= -->
         <div class="header-container" id="header-container">
-            <!--Renderização do cabeçalho aqui-->
+            <!-- Renderização do cabeçalho aqui -->
         </div>
 
         <!-- ======= Breadcrumbs ======= -->
@@ -45,114 +45,143 @@
                 <div class="container position-relative">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-6 text-center">
-                            <h2><span>Template</span></h2>
-                            <p>Aqui você pode acessar os regimentos relativos ao curso de Mestrado em Biociências da UFOPA</p>
+                            <h2><span>Formulários de cadastro</span></h2>
+                            <p>Aqui você pode cadastrar conteúdos para o site</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- End Breadcrumbs -->
+        
+        <div class="contact-container" id="contact-container">
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                    <div class="container" data-aos="fade-up">
 
-        <section>
-            <div>    
-                <p id="mostrarFormulario" onclick="mostrarForm()">Clique aqui para mostrar o formulário</p>
+                <!-- Formulário de cadastro de notícia -->            
+                <div class="section-header">
+                    <h2 class="pt-4">Notícia</h2>
+                    <p>Crie aqui uma notícia</p>
+                </div>
                 
-            </div>
+                <div class="row gx-lg-0 gy-4">
+                    <div class="col-lg-8">
+                        <form action="" method="POST" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <h4>Título da Notícia</h4>
+                                    <input type="text" name="titulo-noticia" id="titulo-noticia" class="form-control" placeholder="Título da notícia" required>
+                                </div>
 
-            <div id="formulario" style="">
-                <form id="meuForm" onsubmit="enviarDados(); return false;" method="post">
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password">
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="check-box">
-                      <label class="form-check-label" for="check-box">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                  <div id="resultado"></div>
-            </div>
-        </section>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <h4>Categoria da Notícia</h4>
+                                    <input type="checkbox" id="extensao" name="extensao" value="extensao">
+                                    <label for="extensao">Extensão</label><br>
+                                    <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
+                                    <label for="defesa-tese">Defesa de tese</label><br>
+                                    <input type="checkbox" id="processo-seletivo" name="processo-seletivo" value="Processo seletivo">
+                                    <label for="processo-seletivo">Processo seletivo</label><br>
+                                    <input type="projeto" id="projeto" name="projeto" value="projeto">
+                                    <label for="extensao">Projeto</label><br>
+                                </div>
+                                    
+                                <div class="form-group mt-3">
+                                    <h4>Conteúdo da Notícia</h4>
+                                    <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7" placeholder=" Escreva o texto da notícia aqui" class="form-control" required></textarea>
+                                </div>
 
-        <!--Form cadastro notícias:-->
-        <section>
-            
-                <h4>Título da notícia</h4>
-                <input type="text" name="titulo-noticia" id="titulo-noticia" placeholder="Título da notícia" required><br>
-    
-                <h4>Categoria da Notícia</h4>
-                <input type="checkbox" id="extensao" name="extensao" value="extensao">
-                <label for="extensao">Extensão</label><br>
-                <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
-                <label for="defesa-tese">Defesa de tese</label><br>
-                <input type="checkbox" id="processo-seletivo" name="processo-seletivo" value="Processo seletivo">
-                <label for="processo-seletivo">Processo seletivo</label><br>
-                <input type="projeto" id="projeto" name="projeto" value="projeto">
-                <label for="extensao">Projeto</label><br>
-    
-                <h4>Conteúdo da Notícia</h4>
-                <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="8" required></textarea>
-    
-                <h4>Imagem na Notícia</h4>
-                <input type="file" name="imagem-noticia" id="imagem-noticia">
-    
-                <h4>Link na Notícia</h4>
-                <input type="text" name="links-noticia" id="links-noticia">
-            
-        </section>
-
-        <section>
-
-           <form action="" method="post">
-
-               <!-- cargo do Professor -->
-               <div>
-                   <h4>Nome do Professor</h4>
-                   <input type="text" name="nome-professor" id="nome-professor" placeholder="Nome do professor" required><br>
-               </div>
-
-               <!-- cargo do Professor -->
-               <div>
-                   <h4>cargo do Professor</h4>
-                   <select name="cargo-professor" id="cargo-professor" required>
-                       <option value="selecione">selecione</option>
-                       <option value="cordenacao">Coordenação</option>
-                       <option value="docente">Docente</option>
-                       <option value="colegiado">Colegiado</option>
-                       <option value="discente">discente</option>
-                   </select>
-               </div>
-   
-               <!-- Redes Sociais -->
-               <div>
-                   <h4>Mídias Sociais do Professor</h4>
-                   <label for="twitter-social-midia">Twitter</label><br>
-                   <input type="text" name="twitter-social-midia" id="twitter-social-midia" placeholder="Link para o Twitter"><br>
-                   <label for="facebook-social-midia">Facebook</label><br>
-                   <input type="text" name="facebook-social-midia" id="facebook-social-midia" placeholder="Link para o Facebook"><br>
-                   <label for="instagram-social-midia">Instagram</label><br>
-                   <input type="text" name="instagram-social-midia" id="instagram-social-midia" placeholder="Link para o Instagram"><br>
-                   <label for="linkedin-social-midia">LinkedIn</label><br>
-                   <input type="text" name="linkedin-social-midia" id="linkedin-social-midia" placeholder="Link para LinkedIn"><br>
+                                <div class="form-group mt-3">
+                                    <h4>Imagem na Notícia</h4>
+                                    <input type="file" name="imagem-noticia" id="imagem-noticia" class="form-control">
+                                </div>
+        
+                                <div class="form-group mt-3">
+                                    <h4>Link na Notícia</h4>
+                                    <input type="text" name="links-noticia" id="links-noticia" class="form-control" placeholder="Link para outra página ou arquivo">
+                                </div>
+                                    
+                                <div class="text-center phcontact-form"><button type="submit">Gravar Notícia</button></div>
+                            </div>
+                        </form>
+                    </div><!-- Fim do formulário de cadastro de notícia -->
                 </div>
 
-                <button type="submit">Enviar Dados</button>
-            </form>
-           
-        </section>
 
+                 <!-- Formulário de cadastro de pessoa do corpo acadêmico -->            
+                <div class="section-header">
+                    <h2 class="pt-4">Corpo Acadêmico</h2>
+                        <p>Cadastre aqui uma pessoa do corpo acadêmico do curso</p>
+                    </div>
 
+                    <div class="row gx-lg-0 gy-4">
+                        <div class="col-lg-8">
+                            <form action="" method="POST" class="contact-form">
+                                <div class="row">
 
+                                <!-- Nome do integrante -->
+                                <div class="col-md-6 form-group">
+                                    <h4>Nome do Professor</h4>
+                                        <input type="text" name="nome-professor" id="nome-professor" class="form-control" placeholder="Nome do professor" required>
+                                    </div>
+
+                                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                                        <!-- cargo do integrante  -->
+                                        <div>
+                                            <h4>cargo do Professor</h4>
+                                            <select name="cargo-professor" id="cargo-professor" class="form-control" required>
+                                                <option value="selecione" class="form-control">--selecione--</option>
+                                                <option value="cordenacao" class="form-control">Coordenação</option>
+                                                <option value="docente" class="form-control">Docente</option>
+                                                <option value="colegiado" class="form-control">Colegiado</option>
+                                                <option value="discente" class="form-control">Discente</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Redes Sociais -->
+                                    <div class="form-group mt-3">
+                                        <h4>Mídias Sociais</h4>
+                                        <label for="twitter-social-midia">Twitter</label><br>
+                                        <input type="text" name="twitter-social-midia" id="twitter-social-midia" class="form-control" placeholder="Link para o Twitter"><br>
+                                        <label for="facebook-social-midia">Facebook</label><br>
+                                        <input type="text" name="facebook-social-midia" id="facebook-social-midia" class="form-control" placeholder="Link para o Facebook"><br>
+                                        <label for="instagram-social-midia">Instagram</label><br>
+                                        <input type="text" name="instagram-social-midia" id="instagram-social-midia" class="form-control" placeholder="Link para o Instagram"><br>
+                                        <label for="linkedin-social-midia">LinkedIn</label><br>
+                                        <input type="text" name="linkedin-social-midia" id="linkedin-social-midia" class="form-control" placeholder="Link para LinkedIn">
+                                    </div>
+
+                                    <!-- Resumo profissional -->
+                                    <div class="form-group mt-3">
+                                        <h4>Pequeno resumo profissional do Integrante</h4>
+                                        <textarea name="resumo-profissional" id="resumo-profissional" cols="90" rows="7" placeholder="Escreva um pequeno resumo profissional deste integrante aqui" class="form-control" required></textarea>
+                                    </div>
+
+                                    <!-- Foto do Integrante -->
+                                    <div class="form-group mt-3">
+                                        <h4>Foto do Integrante</h4>
+                                        <input type="file" name="foto-integrante" id="foto-integrante" class="form-control" required>
+                                    </div>    
+
+                                    <!-- Currículo Lattes do Integrante -->
+                                    <div class="form-group mt-3">
+                                        <h4>Currículo Lattes</h4>
+                                        <input type="text" name="curriculo-lattes" id="curriculo-lattes" class="form-control" placeholder="Link para página do currículo Lattes" required>
+                                    </div>
+
+                                    <!-- Botão de submeter dados do formulário -->
+                                    <div class="text-center phcontact-form"><button type="submit">Gravar Integrante</button></div>
+                                </div>
+                            </form>
+                        </div><!-- Fim do formulário de contato -->
+                    </div>
+                </div>
+            </section><!-- End Contact Section -->
+        </div>
 
         <!-- ======= Footer ======= -->
-        <div class="footer-container" id="footer-container"> <!--Ver arquivo assets/js/footer.html-->
-            <!--Renderização do footer da página-->
+        <div class="footer-container" id="footer-container"> Ver arquivo assets/js/footer.html
+            <!-- Renderização do footer da página -->
         </div>
         <!-- End Footer -->
 
