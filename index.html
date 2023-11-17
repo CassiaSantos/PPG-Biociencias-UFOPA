@@ -30,6 +30,18 @@
 </head>
 
 <body>
+  <!-- acessivel em libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div> 
+  <script src="./assets/js/libras.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!--fim acessivel em libras -->
 
   <!-- ======= Header ======= -->
   <div class="header-container" id="header-container">
@@ -696,15 +708,14 @@
 
     <div id="preloader"></div>
 
-      <!-- Cabeçalho da página-->
-      <script src="assets/js/header.js"></script>
-      <!-- Footer da página-->
-      <script src="assets/js/footer.js"></script>
-      <!-- Main JS File -->
-      <script src="assets/js/main.js"></script>
-      <!--JS Corpo Acadêmico-->
-      <script src="assets/js/script-corpoAcademico.js"></script>
-
+    <!-- Cabeçalho da página-->
+    <script src="assets/js/header.js"></script>
+    <!-- Footer da página-->
+    <script src="assets/js/footer.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!--JS Corpo Acadêmico-->
+    <script src="assets/js/script-corpoAcademico.js"></script>
     
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

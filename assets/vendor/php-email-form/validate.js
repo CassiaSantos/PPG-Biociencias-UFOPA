@@ -1,5 +1,6 @@
 /*
 Arquivo de validação do e-mail da página de contato
+*/
 
 (function () {
   "use strict";
@@ -81,4 +82,3 @@ Arquivo de validação do e-mail da página de contato
   }
 
 })();
-*/
