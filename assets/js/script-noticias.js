@@ -1,48 +1,86 @@
 function createNoticias() {
   const noticiasContainer = document.getElementById("noticiasContainer");
-  // Alterar posteriormente a URL para a API
-  const jsonURL = "http://localhost:3000/noticias-recentes";
   const pagNoticias = "blog-details.html";
 
-  fetch(jsonURL)
-    .then((response) => response.json())
-    .then((data) => {
-      let noticiasHTML = "";
-      let btnMais = "";
+  let noticiasData = JSON.parse(sessionStorage.getItem("noticiasRecData")) || [];
+  let lastFetchTime = sessionStorage.getItem("lastFetchTime")
+    ? parseInt(sessionStorage.getItem("lastFetchTimeNR"))
+    : 0;
 
-      data.forEach((item, index) => {
-        noticiasHTML += `
-          <div class="col-xl-4 col-md-6">
-            <article>
-              <div class="post-img">
-                <img src="assets/img/${item.imagem}" class="img-fluid">
-              </div>
-              <p class="post-category">${item.categorias[0]}</p>
-              <h2 class="title">
-                <a href="${pagNoticias}?id=${item._id}">${item.titulo}</a>
-              </h2>
-              <div class="d-flex align-items-center">
-                <p class="post-date">
-                  <time>${item.data} às ${item.hora}</time>
-                </p>
-              </div>
-            </article>
-          </div>
-        `;
-      });
+  if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
+    renderNoticias(noticiasData, noticiasContainer, pagNoticias);
+  } else {
+    const jsonURL = "http://localhost:3000/noticias-recentes";
 
-      btnMais = `
-        <div class="text-center pt-4">
-        <a class="button-green" href="${pagNoticias}">Todas as notícias</a>
+    fetch(jsonURL)
+      .then((response) => response.json())
+      .then((data) => {
+        noticiasData = data;
+        sessionStorage.setItem("noticiasRecData", JSON.stringify(data));
+        sessionStorage.setItem("lastFetchTimeNR", Date.now().toString());
+
+        renderNoticias(data, noticiasContainer, pagNoticias);
+      })
+      .catch((error) => console.error("Erro ao carregar o JSON: ", error));
+  }
+}
+
+function renderNoticias(data, noticiasContainer, pagNoticias) {
+  let noticiasHTML = "";
+  let btnMais = "";
+
+  if(window.innerWidth <= 767){
+    data.slice(0, 3).forEach((item, index) => {
+      noticiasHTML += `
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="assets/img/${item.imagem}" class="img-fluid">
+            </div>
+            <p class="post-category">${item.categorias[0]}</p>
+            <h2 class="title">
+              <a href="${pagNoticias}?id=${item._id}">${item.titulo}</a>
+            </h2>
+            <div class="d-flex align-items-center">
+              <p class="post-date">
+                <time>${item.data} às ${item.hora}</time>
+              </p>
+            </div>
+          </article>
         </div>
       `;
+    });
+  }else{
+    data.forEach((item, index) => {
+      noticiasHTML += `
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="assets/img/${item.imagem}" class="img-fluid">
+            </div>
+            <p class="post-category">${item.categorias[0]}</p>
+            <h2 class="title">
+              <a href="${pagNoticias}?id=${item._id}">${item.titulo}</a>
+            </h2>
+            <div class="d-flex align-items-center">
+              <p class="post-date">
+                <time>${item.data} às ${item.hora}</time>
+              </p>
+            </div>
+          </article>
+        </div>
+      `;
+    });
+  }
 
-      noticiasContainer.innerHTML = noticiasHTML;
-      noticiasContainer.innerHTML += btnMais;
+  btnMais = `
+    <div class="text-center pt-4">
+      <a class="button-green" href="blog.html">Todas as notícias</a>
+    </div>
+  `;
 
-
-    })
-    .catch((error) => console.error("Erro ao carregar o JSON: ", error));
+  noticiasContainer.innerHTML = noticiasHTML;
+  noticiasContainer.innerHTML += btnMais;
 }
 
 window.addEventListener('DOMContentLoaded', createNoticias);
