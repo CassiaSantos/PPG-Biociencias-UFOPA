@@ -70,7 +70,7 @@ section {
 .sections-bg {
   background-color: #ffffff;
 }
-.section #topbar1{
+.section #topbar{
   hover: var(--color-secondary)
 }
 
@@ -243,7 +243,24 @@ section {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.topbar1 {
+/*.top{
+  background: var(--color-primary);
+  height: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  color: #fff;
+  padding: 0;
+  font-style: normal;
+  color: #fff;
+  line-height: 0;
+  text-decoration: none !important;
+  padding-left: 5px;
+  color: #fff;
+  line-height: 0;
+  transition: 0.3s;
+}
+*/
+.topbar {
   background: var(--color-primary);
   height: 40px;
   font-size: 14px;
@@ -252,50 +269,44 @@ section {
   padding: 0;
 }
 
-.topbar1 .contact-info i {
+.topbar .contact-info i {
   font-style: normal;
   color: #fff;
   line-height: 0;
 }
 
-.topbar1 .contact-info i a,
-.topbar1 .contact-info i span {
+.topbar .contact-info i a,
+.topbar .contact-info i span {
   padding-left: 5px;
   color: #fff;
 }
 
 @media (max-width: 575px) {
 
-  .topbar1 .contact-info i a,
-  .topbar1 .contact-info i span {
+  .topbar .contact-info i a,
+  .topbar .contact-info i span {
     font-size: 13px;
-    margin: auto;
-    max-width: 100vh;
-  }
-  section .topbar1 .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Divisão do conteúdo em 2 colunas */
   }
 }
 
-.topbar1 .contact-info i a {
+.topbar .contact-info i a {
   line-height: 0;
   transition: 0.3s;
 }
 
-.topbar1 .contact-info i a:hover {
+.topbar .contact-info i a:hover {
   color: #fff;
-  text-decoration: none !important;
+  
 }
 
-.topbar1 .social-links a {
+.topbar .social-links a {
   color: rgba(255, 255, 255, 0.7);
   line-height: 0;
   transition: 0.3s;
   margin-left: 20px;
 }
 
-.topbar1 .social-links a:hover {
+.topbar .social-links a:hover {
   color: var(--color-secondary);
 }
 
