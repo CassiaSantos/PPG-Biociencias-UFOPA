@@ -270,6 +270,11 @@ section {
   .topbar1 .contact-info i span {
     font-size: 13px;
     margin: auto;
+    max-width: 100vh;
+  }
+  section .topbar1 .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divisão do conteúdo em 2 colunas */
   }
 }
 
