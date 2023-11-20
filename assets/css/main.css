@@ -53,8 +53,7 @@ h6 {
 }
 
 .access-button:hover {
-  bor
-  der: none !important;
+  border: none !important;
 }
 
 section h2 span {
@@ -270,6 +269,7 @@ section {
   .topbar1 .contact-info i a,
   .topbar1 .contact-info i span {
     font-size: 13px;
+    margin: auto;
   }
 }
 

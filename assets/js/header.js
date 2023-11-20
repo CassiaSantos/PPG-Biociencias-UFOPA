@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerHTML = `
 
         
-        <section id="topbar1" class="topbar1 d-flex align-items-center">
-            <div class="container d-flex justify-content-center justify-content-md-between">
+     <section id="topbar1" class="topbar1 d-flex align-items-center">
+            <div class="container d-flex justify-content-center justify-content-md-between"><!---->
                 <div class="contact-info d-flex align-items-center">
                     <i class="bi bi-envelope d-flex align-items-center"><a  href="mailto:ppgbio@ufopa.edu.br">e-mail: ppgbio@ufopa.edu.br</a></i>
                 </div>
@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
                 </div>
             </div>
-        </section> <!-- End Top Bar -->
+        </section>  <!--End Top Bar -->
 
         <header id="header" class="header d-flex align-items-center">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- <img src="assets/img/logoBio.png" alt=""> -->
                     <h1>PPG <span>Biociências</span></h1>
