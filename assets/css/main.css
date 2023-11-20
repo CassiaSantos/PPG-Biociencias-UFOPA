@@ -102,7 +102,7 @@ section {
 
 .section-header p {
   margin-bottom: 0;
-  color: #ffffff;
+  color: var(--color-default);
 }
 
 /*--------------------------------------------------------------
