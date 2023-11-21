@@ -1,3 +1,19 @@
+function formatarData(dataString) {
+  const meses = [
+    "Janeiro", "Fevereiro", "Março",
+    "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro",
+    "Outubro", "Novembro", "Dezembro"
+  ];
+
+  const data = new Date(dataString);
+  const dia = data.getDate();
+  const mes = meses[data.getMonth()];
+  const ano = data.getFullYear();
+
+  return `${dia} de ${mes} de ${ano}`;
+};
+
 function createNoticias() {
   const noticiasContainer = document.getElementById("noticiasContainer");
   const pagNoticias = "blog-details.html";
@@ -12,21 +28,7 @@ function createNoticias() {
   } else {
     const jsonURL = "http://localhost:3000/noticias-recentes";
 
-    function formatarData(dataString) {
-      const meses = [
-        "Janeiro", "Fevereiro", "Março",
-        "Abril", "Maio", "Junho",
-        "Julho", "Agosto", "Setembro",
-        "Outubro", "Novembro", "Dezembro"
-      ];
     
-      const data = new Date(dataString);
-      const dia = data.getDate();
-      const mes = meses[data.getMonth()];
-      const ano = data.getFullYear();
-    
-      return `${dia} de ${mes} de ${ano}`;
-    };
 
     fetch(jsonURL)
       .then((response) => response.json())
@@ -60,7 +62,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
             </h2>
             <div class="d-flex align-items-center">
               <p class="post-date">
-                <time>${dataFormatada} às ${item.hora}h</time>
+                <time>${dataFormatada} às ${item.hora}</time>
               </p>
             </div>
           </article>

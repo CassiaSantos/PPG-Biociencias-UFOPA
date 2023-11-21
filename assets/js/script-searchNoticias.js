@@ -33,7 +33,7 @@ function searchNoticeByTitle() {
 
 
 function createLastNoticias() {
-    const noticiasContainer = document.getElementById("last-notices");
+    const lastNoticiasContainer = document.getElementById("last-notices");
     const pagNoticias = "blog-details.html";
     
 
@@ -44,7 +44,7 @@ function createLastNoticias() {
         : 0;
 
     if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
-        renderNoticias(noticiasData, noticiasContainer, pagNoticias);
+        renderNoticias2(noticiasData, lastNoticiasContainer, pagNoticias);
         renderCategorias(categoriasData);
     } else {
         const jsonURL1 = "http://localhost:3000/noticias-recentes";
@@ -57,7 +57,7 @@ function createLastNoticias() {
                 sessionStorage.setItem("noticiasRecData", JSON.stringify(data));
                 sessionStorage.setItem("lastFetchTimeNR", Date.now().toString());
 
-                renderNoticias(data, noticiasContainer, pagNoticias);
+                renderNoticias2(data, lastNoticiasContainer, pagNoticias);
             }).then(
                 fetch(jsonURL2).then((response) => response.json())
                 .then((data)=>{
@@ -73,7 +73,7 @@ function createLastNoticias() {
     }
 }
 
-function renderNoticias(data, noticiasContainer, pagNoticias) {
+function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
     function formatarData(dataString) {
         const meses = [
             "Janeiro", "Fevereiro", "Março",
@@ -90,26 +90,26 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
         return `${dia} de ${mes} de ${ano}`;
     };
 
-    let noticiasHTML = "";
+    var lastNoticiasHTML = "";
 
 
 
     data.forEach((item, index) => {
         const dataFormatada = formatarData(item.data);
-        noticiasHTML += `
+        lastNoticiasHTML += `
 
             <div class="post-item mt-3">
                 <img src="assets/img/${item.imagem} alt="">
                 <div>
                     <h4><a href="${pagNoticias}?id=${item._id}">${item.titulo}</a></h4>
-                    <time>${dataFormatada} às ${item.hora}h</time>
+                    <time>${dataFormatada} às ${item.hora}</time>
                 </div>
             </div>
         `;
     });
 
 
-    noticiasContainer.innerHTML = noticiasHTML;
+    lastNoticiasContainer.innerHTML += lastNoticiasHTML;
 }
 
 function renderCategorias(data) {

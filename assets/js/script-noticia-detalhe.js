@@ -1,5 +1,6 @@
 function renderNotice() {  
     const noticiaDetail = document.getElementById("noticeDetail");
+    const mapBar = document.getElementById("mapBar");
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get("id");
@@ -29,8 +30,6 @@ function renderNotice() {
         let noticiasHTML = "";
         let dataFormatada = formatarData(data.data);
         
-        console.log(dataFormatada);
-          // Substitua as informações fixas pelos dados reais da API
           noticiasHTML += `
             <article class="blog-details">
               <div class="post-img">
@@ -39,7 +38,7 @@ function renderNotice() {
               <h2 class="title">${data.titulo}</h2>
               <div class="meta-top">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="blog.html?cat">${data.categorias[0]}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="blog.html?categoria=${data.categorias[0]}">${data.categorias[0]}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a><time datetime="${data.data}">${dataFormatada} às ${data.hora}</time></a></li>
                 </ul>
               </div>
@@ -50,6 +49,8 @@ function renderNotice() {
           `;
   
         noticiaDetail.innerHTML = noticiasHTML;
+        const cat = `<li>${data.categorias[0]}</li>`
+        mapBar.innerHTML += cat;
   
     
       })
