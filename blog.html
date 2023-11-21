@@ -16,7 +16,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +37,7 @@
     <!--Renderização do cabeçalho da página-->
   </div>
   <!-- End Header -->
-  
+
 
   <main id="main">
 
@@ -82,8 +84,101 @@
     <!--Renderização do footer da página-->
   </div>
   <!-- End Footer -->
-  
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+
+  <p href="" class="search-top d-flex align-items-center justify-content-center" data-aos="fade-up" data-toggle="modal"
+    data-target=".bd-search-modal-lg">
+    <i class="bi bi-search"></i>
+      <div class="modal fade bd-search-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content blog">
+            <div id="sidebar-notice-detail">
+
+              <div class="sidebar">
+
+                <div class="sidebar-item search-form">
+                  <h3 class="sidebar-title pb-2">Pesquisar noticias</h3>
+                  <form action="" id="form-search">
+                    <input type="text" id="search-notice" placeholder="Pesquise por noticias" onblur="">
+                    <button type="submit" id="search-submit"><i class="bi bi-search"></i></button>
+                  </form>
+                </div><!-- End sidebar search formn-->
+
+                <div class="sidebar-item categories">
+                  <h3 class="sidebar-title">Categorias</h3>
+                  <ul class="mt-3">
+                    <li><a href="#">General <span>(25)</span></a></li>
+                    <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                    <li><a href="#">Travel <span>(5)</span></a></li>
+                    <li><a href="#">Design <span>(22)</span></a></li>
+                    <li><a href="#">Creative <span>(8)</span></a></li>
+                    <li><a href="#">Educaion <span>(14)</span></a></li>
+                  </ul>
+                </div><!-- End sidebar categories-->
+
+                <div class="sidebar-item recent-posts">
+                  <h3 class="sidebar-title">Noticias Rencentes</h3>
+
+                  <div class="mt-3">
+
+                    <div class="post-item mt-3">
+                      <img src="assets/img/blog/blog-recent-1.jpg" alt="">
+                      <div>
+                        <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                      </div>
+                    </div><!-- End recent post item-->
+
+                    <div class="post-item">
+                      <img src="assets/img/blog/blog-recent-2.jpg" alt="">
+                      <div>
+                        <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                      </div>
+                    </div><!-- End recent post item-->
+
+                    <div class="post-item">
+                      <img src="assets/img/blog/blog-recent-3.jpg" alt="">
+                      <div>
+                        <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                      </div>
+                    </div><!-- End recent post item-->
+
+                    <div class="post-item">
+                      <img src="assets/img/blog/blog-recent-4.jpg" alt="">
+                      <div>
+                        <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                      </div>
+                    </div><!-- End recent post item-->
+
+                    <div class="post-item">
+                      <img src="assets/img/blog/blog-recent-5.jpg" alt="">
+                      <div>
+                        <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                      </div>
+                    </div><!-- End recent post item-->
+
+                  </div>
+
+                </div><!-- End sidebar recent posts-->
+
+
+              </div><!-- End Blog Sidebar -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p>
 
   <div id="preloader"></div>
 
@@ -106,7 +201,15 @@
   <script src="assets/js/script-noticias2.js"></script>
 
   <!-- JS bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
 </body>

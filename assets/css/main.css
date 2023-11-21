@@ -198,6 +198,38 @@ section {
   bottom: 15px;
 }
 
+
+/*--------------------------------------------------------------
+# Search top button
+--------------------------------------------------------------*/
+.search-top {
+  position: fixed;
+  visibility: visible;
+  right: 15px;
+  top: 90px;
+  z-index: 10;
+  background: var(--color-secondary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+}
+
+.search-top i {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 0;
+  margin: 0 !important;
+}
+
+.search-top:hover {
+  background: rgba(248, 90, 64, 0.8);
+  cursor: pointer;
+}
+
+.search-top:hover i {
+  color: var(--color-primary);
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -2611,10 +2643,10 @@ section .container .section-header {
 /*--------------------------------------------------------------
 # form contact
 --------------------------------------------------------------*/
-form input{
+/* form input{
   display: none;
   border: none;
-}
+} */
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
