@@ -237,7 +237,7 @@ section {
   z-index: 999999;
   overflow: hidden;
   background: #fff;
-  transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;; font-size: 24px
 }
 
 #preloader:before {
