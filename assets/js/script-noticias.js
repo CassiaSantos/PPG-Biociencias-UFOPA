@@ -3,7 +3,7 @@ function createNoticias() {
   const pagNoticias = "blog-details.html";
 
   let noticiasData = JSON.parse(sessionStorage.getItem("noticiasRecData")) || [];
-  let lastFetchTime = sessionStorage.getItem("lastFetchTime")
+  let lastFetchTime = sessionStorage.getItem("lastFetchTimeNR")
     ? parseInt(sessionStorage.getItem("lastFetchTimeNR"))
     : 0;
 
@@ -11,6 +11,22 @@ function createNoticias() {
     renderNoticias(noticiasData, noticiasContainer, pagNoticias);
   } else {
     const jsonURL = "http://localhost:3000/noticias-recentes";
+
+    function formatarData(dataString) {
+      const meses = [
+        "Janeiro", "Fevereiro", "Março",
+        "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro",
+        "Outubro", "Novembro", "Dezembro"
+      ];
+    
+      const data = new Date(dataString);
+      const dia = data.getDate();
+      const mes = meses[data.getMonth()];
+      const ano = data.getFullYear();
+    
+      return `${dia} de ${mes} de ${ano}`;
+    };
 
     fetch(jsonURL)
       .then((response) => response.json())
@@ -31,6 +47,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
 
   if(window.innerWidth <= 767){
     data.slice(0, 3).forEach((item, index) => {
+      const dataFormatada = formatarData(item.data);
       noticiasHTML += `
         <div class="col-xl-4 col-md-6">
           <article>
@@ -43,7 +60,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
             </h2>
             <div class="d-flex align-items-center">
               <p class="post-date">
-                <time>${item.data} às ${item.hora}</time>
+                <time>${dataFormatada} às ${item.hora}h</time>
               </p>
             </div>
           </article>
@@ -52,6 +69,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
     });
   }else{
     data.forEach((item, index) => {
+      const dataFormatada = formatarData(item.data);
       noticiasHTML += `
         <div class="col-xl-4 col-md-6">
           <article>
@@ -64,7 +82,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
             </h2>
             <div class="d-flex align-items-center">
               <p class="post-date">
-                <time>${item.data} às ${item.hora}</time>
+                <time>${dataFormatada} às ${item.hora}</time>
               </p>
             </div>
           </article>

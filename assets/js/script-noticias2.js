@@ -7,27 +7,64 @@ let lastFetchTime = sessionStorage.getItem("lastFetchTime")
   : 0;
 
 const noticiasBtn = document.getElementById("btn-more-notice");
+const mapBar = document.getElementById("mapBar");
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const categoria = urlParams.get('categoria');
+const titulo = urlParams.get('titulo');
+
 
 function loadNews(currentSize) {
   const noticiasContainer = document.getElementById("noticiasContainer");
   const pagNoticias = "blog-details.html";
-  const jsonURL = "http://localhost:3000/noticias";
-
-  if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
-    renderNews(noticiasData, currentSize, noticiasContainer, pagNoticias);
-  } else {
+  let jsonURL = "";
+  if (categoria != null) {
+    const cat = `<li>${categoria}</li>`
+    mapBar.innerHTML += cat;
+    jsonURL = "http://localhost:3000/noticias/categoria/" + categoria;
     fetch(jsonURL)
-      .then((response) => response.json())
-      .then((data) => {
-        noticiasData = data;
-        sessionStorage.setItem("noticiasData", JSON.stringify(data));
-        sessionStorage.setItem("lastFetchTime", Date.now().toString());
+    .then((response) => response.json())
+    .then((data) => {
+      noticiasData = data;
+      renderNews(data, currentSize, noticiasContainer, pagNoticias);
+    })
+    .catch((error) => console.error("Erro ao carregar o JSON: ", error));
 
-        renderNews(data, currentSize, noticiasContainer, pagNoticias);
-      })
-      .catch((error) => console.error("Erro ao carregar o JSON: ", error));
+  }else if(titulo != null){
+    const title = `<li>Busca por: ${titulo}</li>`
+    mapBar.innerHTML += title;
+    jsonURL = "http://localhost:3000/noticias/titulo/" + titulo;
+    fetch(jsonURL)
+    .then((response) => response.json())
+    .then((data) => {
+      noticiasData = data;
+      renderNews(data, currentSize, noticiasContainer, pagNoticias);
+    })
+    .catch((error) => console.error("Erro ao carregar o JSON: ", error));
   }
+   else {
+    jsonURL = "http://localhost:3000/noticias";
+    if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
+      
+      renderNews(noticiasData, currentSize, noticiasContainer, pagNoticias);
+    } else {
+      fetch(jsonURL)
+        .then((response) => response.json())
+        .then((data) => {
+          noticiasData = data;
+          sessionStorage.setItem("noticiasData", JSON.stringify(data));
+          sessionStorage.setItem("lastFetchTime", Date.now().toString());
+
+          renderNews(data, currentSize, noticiasContainer, pagNoticias);
+        })
+        .catch((error) => console.error("Erro ao carregar o JSON: ", error));
+    }
+  }
+
 }
+
+
 
 function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
   let noticiasHTML = "";
@@ -35,8 +72,25 @@ function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
     noticiasBtn.style.display = "none";
   }
 
+  function formatarData(dataString) {
+    const meses = [
+      "Janeiro", "Fevereiro", "Março",
+      "Abril", "Maio", "Junho",
+      "Julho", "Agosto", "Setembro",
+      "Outubro", "Novembro", "Dezembro"
+    ];
+
+    const data = new Date(dataString);
+    const dia = data.getDate();
+    const mes = meses[data.getMonth()];
+    const ano = data.getFullYear();
+
+    return `${dia} de ${mes} de ${ano}`;
+  };
+
   for (let index = 0; index < Math.min(currentSize, data.length); index++) {
     const item = data[index];
+    const dataFormatada = formatarData(item.data);
     noticiasHTML += `
       <div class="col-xl-4 col-md-6">
         <article>
@@ -49,7 +103,7 @@ function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
           </h2>
           <div class="d-flex align-items-center">
             <p class="post-date">
-              <time>${item.data} às ${item.hora}</time>
+              <time>${dataFormatada} às ${item.hora}h</time>
             </p>
           </div>
         </article>
@@ -68,7 +122,7 @@ function loadMoreNews(event) {
 }
 
 function createNoticias() {
-  loadNews(currentSize);
+    loadNews(currentSize);
 }
 
 noticiasBtn.addEventListener("click", loadMoreNews);
