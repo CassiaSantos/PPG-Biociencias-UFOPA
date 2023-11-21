@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerHTML = `
 
         
-    <!-- <section id="topbar" class="topbar d-flex align-items-center">
+        <!-- <section id="topbar" class="topbar d-flex align-items-center">
             <div class="container d-flex justify-content-center">
                 <div class="contact-info d-flex align-items-center">
                     <i class="bi bi-envelope d-flex align-items-center"><a  href="mailto:ppgbio@ufopa.edu.br">e-mail: ppgbio@ufopa.edu.br</a></i>
