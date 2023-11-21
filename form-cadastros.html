@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<html>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/" rel="icon"> -->
+    <!-- <link href="assets/img/" rel="apple-touch-icon"> -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- CSS Botstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <body>
+        
+        <!-- ======== Header ======= -->
+        <div class="header-container" id="header-container">
+            <!-- Renderização do cabeçalho aqui -->
+        </div>
+
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center" style="background-image: url('');">
+                <div class="container position-relative">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h2><span>Formulários de cadastro</span></h2>
+                            <p>Aqui você pode cadastrar conteúdos para o site</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Breadcrumbs -->
+        
+        <div class="contact-container" id="contact-container">
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                    <div class="container" data-aos="fade-up">
+
+                <!-- Formulário de cadastro de notícia -->            
+                <div class="section-header">
+                    <h2 class="pt-4">Notícia</h2>
+                    <p>Crie aqui uma notícia</p>
+                </div>
+                
+                <div class="row gx-lg-0 gy-4">
+                    <div class="col-lg-8">
+                        <form action="" method="POST" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <h4>Título da Notícia</h4>
+                                    <input type="text" name="titulo-noticia" id="titulo-noticia" class="form-control" placeholder="Título da notícia" required>
+                                </div>
+
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <h4>Categoria da Notícia</h4>
+                                    <input type="checkbox" id="extensao" name="extensao" value="extensao">
+                                    <label for="extensao">Extensão</label><br>
+                                    <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
+                                    <label for="defesa-tese">Defesa de tese</label><br>
+                                    <input type="checkbox" id="processo-seletivo" name="processo-seletivo" value="Processo seletivo">
+                                    <label for="processo-seletivo">Processo seletivo</label><br>
+                                    <input type="projeto" id="projeto" name="projeto" value="projeto">
+                                    <label for="extensao">Projeto</label><br>
+                                </div>
+                                    
+                                <div class="form-group mt-3">
+                                    <h4>Conteúdo da Notícia</h4>
+                                    <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7" placeholder=" Escreva o texto da notícia aqui" class="form-control" required></textarea>
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <h4>Imagem na Notícia</h4>
+                                    <input type="file" name="imagem-noticia" id="imagem-noticia" class="form-control">
+                                </div>
+        
+                                <div class="form-group mt-3">
+                                    <h4>Link na Notícia</h4>
+                                    <input type="text" name="links-noticia" id="links-noticia" class="form-control" placeholder="Link para outra página ou arquivo">
+                                </div>
+                                    
+                                <div class="text-center phcontact-form"><button type="submit">Gravar Notícia</button></div>
+                            </div>
+                        </form>
+                    </div><!-- Fim do formulário de cadastro de notícia -->
+                </div>
+
+
+                 <!-- Formulário de cadastro de pessoa do corpo acadêmico -->            
+                <div class="section-header">
+                    <h2 class="pt-4">Corpo Acadêmico</h2>
+                        <p>Cadastre aqui uma pessoa do corpo acadêmico do curso</p>
+                    </div>
+
+                    <div class="row gx-lg-0 gy-4">
+                        <div class="col-lg-8">
+                            <form action="" method="POST" class="contact-form">
+                                <div class="row">
+
+                                <!-- Nome do integrante -->
+                                <div class="col-md-6 form-group">
+                                    <h4>Nome do Professor</h4>
+                                        <input type="text" name="nome-professor" id="nome-professor" class="form-control" placeholder="Nome do professor" required>
+                                    </div>
+
+                                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                                        <!-- cargo do integrante  -->
+                                        <div>
+                                            <h4>cargo do Professor</h4>
+                                            <select name="cargo-professor" id="cargo-professor" class="form-control" required>
+                                                <option value="selecione" class="form-control">--selecione--</option>
+                                                <option value="cordenacao" class="form-control">Coordenação</option>
+                                                <option value="docente" class="form-control">Docente</option>
+                                                <option value="colegiado" class="form-control">Colegiado</option>
+                                                <option value="discente" class="form-control">Discente</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Redes Sociais -->
+                                    <div class="form-group mt-3">
+                                        <h4>Mídias Sociais</h4>
+                                        <label for="twitter-social-midia">Twitter</label><br>
+                                        <input type="text" name="twitter-social-midia" id="twitter-social-midia" class="form-control" placeholder="Link para o Twitter"><br>
+                                        <label for="facebook-social-midia">Facebook</label><br>
+                                        <input type="text" name="facebook-social-midia" id="facebook-social-midia" class="form-control" placeholder="Link para o Facebook"><br>
+                                        <label for="instagram-social-midia">Instagram</label><br>
+                                        <input type="text" name="instagram-social-midia" id="instagram-social-midia" class="form-control" placeholder="Link para o Instagram"><br>
+                                        <label for="linkedin-social-midia">LinkedIn</label><br>
+                                        <input type="text" name="linkedin-social-midia" id="linkedin-social-midia" class="form-control" placeholder="Link para LinkedIn">
+                                    </div>
+
+                                    <!-- Resumo profissional -->
+                                    <div class="form-group mt-3">
+                                        <h4>Pequeno resumo profissional do Integrante</h4>
+                                        <textarea name="resumo-profissional" id="resumo-profissional" cols="90" rows="7" placeholder="Escreva um pequeno resumo profissional deste integrante aqui" class="form-control" required></textarea>
+                                    </div>
+
+                                    <!-- Foto do Integrante -->
+                                    <div class="form-group mt-3">
+                                        <h4>Foto do Integrante</h4>
+                                        <input type="file" name="foto-integrante" id="foto-integrante" class="form-control" required>
+                                    </div>    
+
+                                    <!-- Currículo Lattes do Integrante -->
+                                    <div class="form-group mt-3">
+                                        <h4>Currículo Lattes</h4>
+                                        <input type="text" name="curriculo-lattes" id="curriculo-lattes" class="form-control" placeholder="Link para página do currículo Lattes" required>
+                                    </div>
+
+                                    <!-- Botão de submeter dados do formulário -->
+                                    <div class="text-center phcontact-form"><button type="submit">Gravar Integrante</button></div>
+                                </div>
+                            </form>
+                        </div><!-- Fim do formulário de contato -->
+                    </div>
+                </div>
+            </section><!-- End Contact Section -->
+        </div>
+
+        <!-- ======= Footer ======= -->
+        <div class="footer-container" id="footer-container"> Ver arquivo assets/js/footer.html
+            <!-- Renderização do footer da página -->
+        </div>
+        <!-- End Footer -->
+
+        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <div id="preloader"></div>
+    
+        <!-- Cabeçalho da página-->
+        <script src="assets/js/header.js"></script>
+        <!-- Footer da página-->
+        <script src="assets/js/footer.js"></script>
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+        <script src="./assets/js/script-login.js"></script>
+    
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- JS bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </body>
+</html>
