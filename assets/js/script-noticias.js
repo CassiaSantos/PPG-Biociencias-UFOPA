@@ -51,7 +51,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
     data.slice(0, 3).forEach((item, index) => {
       const dataFormatada = formatarData(item.data);
       noticiasHTML += `
-        <div class="col-xl-4 col-md-6">
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <article>
             <div class="post-img">
               <img src="assets/img/${item.imagem}" class="img-fluid">

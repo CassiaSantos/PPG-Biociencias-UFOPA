@@ -9,7 +9,7 @@ function searchNoticeByTitle() {
   
 
 
-    fetch(`http://localhost:3000/noticias/titulo/${searchInput}`)
+    fetch(`https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/titulo/${searchInput}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
@@ -47,8 +47,8 @@ function createLastNoticias() {
         renderNoticias2(noticiasData, lastNoticiasContainer, pagNoticias);
         renderCategorias(categoriasData);
     } else {
-        const jsonURL1 = "http://localhost:3000/noticias-recentes";
-        const jsonURL2 = "http://localhost:3000/noticias/categorias";
+        const jsonURL1 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias-recentes";
+        const jsonURL2 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categorias";
 
         fetch(jsonURL1)
             .then((response) => response.json())
@@ -98,7 +98,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
         const dataFormatada = formatarData(item.data);
         lastNoticiasHTML += `
 
-            <div class="post-item mt-3">
+            <div class="post-item mt-3" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/img/${item.imagem} alt="">
                 <div>
                     <h4><a href="${pagNoticias}?id=${item._id}">${item.titulo}</a></h4>
@@ -121,7 +121,7 @@ function renderCategorias(data) {
         if (data.hasOwnProperty(chave)){
             let valor = data[chave];
             categoriasHTML += `
-                <li>
+                <li data-aos="fade-up" data-aos-delay="100">
                     <a href="${allNoticias}?categoria=${chave}">${chave}<span>(${valor})</span>
                     </a>
                 </li>
