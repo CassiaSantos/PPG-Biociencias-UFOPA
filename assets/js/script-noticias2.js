@@ -70,13 +70,13 @@ function loadNews(currentSize) {
   if (categoria != null) {
     const cat = `<li>${categoria}</li>`;
     mapBar.innerHTML += cat;
-    jsonURL = "http://localhost:3000/noticias/categoria/" + categoria;
+    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categoria/" + categoria;
   } else if (titulo != null) {
     const title = `<li>Busca por "<i>${titulo}</i>".</li>`;
     mapBar.innerHTML += title;
-    jsonURL = "http://localhost:3000/noticias/titulo/" + titulo;
+    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/titulo/" + titulo;
   } else {
-    jsonURL = "http://localhost:3000/noticias";
+    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias";
     if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
       renderNews(noticiasData, currentSize, noticiasContainer, pagNoticias);
       return;

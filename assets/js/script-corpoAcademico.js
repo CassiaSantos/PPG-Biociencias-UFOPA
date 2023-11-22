@@ -2,7 +2,7 @@ const teamSection = document.getElementById("div-prof");
 
 // Função para preencher os membros com os dados do JSON
 function preencherMembros() {
-    const corpoAcademico = "assets/js/corpoAcademico.json";
+    const corpoAcademico = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/corpo-academico";
     fetch(corpoAcademico)
     .then((response) => response.json())
     .then((data) => {

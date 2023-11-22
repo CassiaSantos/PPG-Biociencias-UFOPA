@@ -26,7 +26,7 @@ function createNoticias() {
   if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
     renderNoticias(noticiasData, noticiasContainer, pagNoticias);
   } else {
-    const jsonURL = "http://localhost:3000/noticias-recentes";
+    const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias-recentes";
 
     
 

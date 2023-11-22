@@ -6,7 +6,7 @@ function renderNotice() {
     const id = urlParams.get("id");
 
     // Alterar posteriormente a URL para a API
-    const jsonURL = "http://localhost:3000/noticia/id/" + id;
+    const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticia/id/" + id;
 
     function formatarData(dataString) {
       const meses = [
