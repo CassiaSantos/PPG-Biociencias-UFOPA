@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Template</title>
+    <title>Formulário de Cadastro</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -64,64 +64,83 @@
                 </div>
             </div>
         </div><!-- End Breadcrumbs -->
-        
+
         <div class="contact-container" id="contact-container">
-            <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact">
-                    <div class="container" data-aos="fade-up">
+                <div class="container" data-aos="fade-up">
 
-                <!-- Formulário de cadastro de notícia -->            
-                <div class="section-header">
-                    <h2 class="pt-4">Notícia</h2>
-                    <p>Crie aqui uma notícia</p>
-                </div>
+                    <!-- Formulário para cadastro de imagens no carrossel -->
+                    <div class="section-header">
+                        <h2>Imagem no carrossel</h2>
+                        <p>Cadastre a URL aqui as imagens que quer que apareça no carrossel. </p>
+                    </div>
+
+                    <div class="row gx-lg-0 gy-4">
+                        <div class="col-lg-8">
+                            <form action="" method="POST" class="contact-form">
+                                <div class="row">
+                                    <div class="form-group mt-3 form-group">
+                                        <h4>URL da imagem</h4>
+                                        <input type="url" name="titulo-noticia" id="titulo-noticia" class="form-control" placeholder="Insira a URL de uma imagem para o carrossel do site no formato: https://www.urlAqui.com" required>
+                                    </div>
+                                    <div class="text-center phcontact-form"><button type="submit">Gravar URL da imagem</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- Fim do formulário para cadastro de imagens no carrossel -->
+
+                    <!-- Formulário de cadastro de notícia -->            
+                    <div class="section-header">
+                        <h2 class="pt-4">Notícia</h2>
+                        <p>Crie aqui uma notícia</p>
+                    </div>
                 
-                <div class="row gx-lg-0 gy-4">
-                    <div class="col-lg-8">
-                        <form action="" method="POST" class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <h4>Título da Notícia</h4>
-                                    <input type="text" name="titulo-noticia" id="titulo-noticia" class="form-control" placeholder="Título da notícia" required>
-                                </div>
+                    <div class="row gx-lg-0 gy-4">
+                        <div class="col-lg-8">
+                            <form action="" method="POST" class="contact-form">
+                                <div class="row">
+                                    <div class="form-group mt-3">
+                                        <h4>Título da Notícia</h4>
+                                        <input type="text" name="titulo-noticia" id="titulo-noticia" class="form-control" placeholder="Título da notícia" required>
+                                    </div>
 
-                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <h4>Categoria da Notícia</h4>
-                                    <input type="checkbox" id="extensao" name="extensao" value="extensao">
-                                    <label for="extensao">Extensão</label><br>
-                                    <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
-                                    <label for="defesa-tese">Defesa de tese</label><br>
-                                    <input type="checkbox" id="processo-seletivo" name="processo-seletivo" value="Processo seletivo">
-                                    <label for="processo-seletivo">Processo seletivo</label><br>
-                                    <input type="projeto" id="projeto" name="projeto" value="projeto">
-                                    <label for="extensao">Projeto</label><br>
-                                </div>
+                                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                                        <h4>Categoria da Notícia</h4>
+                                        <input type="checkbox" id="extensao" name="extensao" value="extensao">
+                                        <label for="extensao">Extensão</label><br>
+                                        <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
+                                        <label for="defesa-tese">Defesa de tese</label><br>
+                                        <input type="checkbox" id="processo-seletivo" name="processo-seletivo" value="Processo seletivo">
+                                        <label for="processo-seletivo">Processo seletivo</label><br>
+                                        <input type="checkbox" id="projeto" name="projeto" value="projeto">
+                                        <label for="extensao">Projeto</label><br>
+                                        <input type="checkbox" id="Outros" name="Outros" value="Outros">
+                                        <label for="extensao">Outros</label><br>
+                                    </div>
                                     
-                                <div class="form-group mt-3">
-                                    <h4>Conteúdo da Notícia</h4>
-                                    <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7" placeholder=" Escreva o texto da notícia aqui" class="form-control" required></textarea>
-                                </div>
+                                    <div class="form-group mt-3">
+                                        <h4>Conteúdo da Notícia</h4>
+                                        <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7" placeholder="Escreva o texto da notícia aqui" class="form-control" required></textarea>
+                                    </div>
 
-                                <div class="form-group mt-3">
-                                    <h4>Imagem na Notícia</h4>
-                                    <input type="file" name="imagem-noticia" id="imagem-noticia" class="form-control">
-                                </div>
+                                    <div class="form-group mt-3">
+                                        <h4>Imagem na Notícia</h4>
+                                        <input type="url" name="imagem-noticia" id="imagem-noticia" class="form-control" placeholder="Link para a imagem que haverá na notícia">
+                                    </div>
         
-                                <div class="form-group mt-3">
-                                    <h4>Link na Notícia</h4>
-                                    <input type="text" name="links-noticia" id="links-noticia" class="form-control" placeholder="Link para outra página ou arquivo">
-                                </div>
+                                    <div class="form-group mt-3">
+                                        <h4>URL na Notícia para outra página ou arquivo</h4>
+                                        <input type="url" name="links-noticia" id="links-noticia" class="form-control" placeholder="URL aceita apenas no formato: https://www.urlAqui.com">
+                                    </div>
                                     
                                 <div class="text-center phcontact-form"><button type="submit">Gravar Notícia</button></div>
                             </div>
                         </form>
                     </div><!-- Fim do formulário de cadastro de notícia -->
-                </div>
-
-
-                 <!-- Formulário de cadastro de pessoa do corpo acadêmico -->            
-                <div class="section-header">
-                    <h2 class="pt-4">Corpo Acadêmico</h2>
+                
+                    <!-- Formulário de cadastro de pessoa do corpo acadêmico -->            
+                    <div class="section-header">
+                        <h2 class="pt-4">Corpo Acadêmico</h2>
                         <p>Cadastre aqui uma pessoa do corpo acadêmico do curso</p>
                     </div>
 
@@ -130,9 +149,9 @@
                             <form action="" method="POST" class="contact-form">
                                 <div class="row">
 
-                                <!-- Nome do integrante -->
-                                <div class="col-md-6 form-group">
-                                    <h4>Nome do Professor</h4>
+                                    <!-- Nome do integrante -->
+                                    <div class="form-group mt-3"><!--col-md-6 form-group form-group mt-3-->
+                                        <h4>Nome do Professor</h4>
                                         <input type="text" name="nome-professor" id="nome-professor" class="form-control" placeholder="Nome do professor" required>
                                     </div>
 
@@ -154,13 +173,13 @@
                                     <div class="form-group mt-3">
                                         <h4>Mídias Sociais</h4>
                                         <label for="twitter-social-midia">Twitter</label><br>
-                                        <input type="text" name="twitter-social-midia" id="twitter-social-midia" class="form-control" placeholder="Link para o Twitter"><br>
+                                        <input type="url" name="twitter-social-midia" id="twitter-social-midia" class="form-control" placeholder="Link para o Twitter no formato https://www.twitter"><br>
                                         <label for="facebook-social-midia">Facebook</label><br>
-                                        <input type="text" name="facebook-social-midia" id="facebook-social-midia" class="form-control" placeholder="Link para o Facebook"><br>
+                                        <input type="url" name="facebook-social-midia" id="facebook-social-midia" class="form-control" placeholder="Link para o Facebook"><br>
                                         <label for="instagram-social-midia">Instagram</label><br>
-                                        <input type="text" name="instagram-social-midia" id="instagram-social-midia" class="form-control" placeholder="Link para o Instagram"><br>
+                                        <input type="url" name="instagram-social-midia" id="instagram-social-midia" class="form-control" placeholder="Link para o Instagram"><br>
                                         <label for="linkedin-social-midia">LinkedIn</label><br>
-                                        <input type="text" name="linkedin-social-midia" id="linkedin-social-midia" class="form-control" placeholder="Link para LinkedIn">
+                                        <input type="url" name="linkedin-social-midia" id="linkedin-social-midia" class="form-control" placeholder="Link para LinkedIn">
                                     </div>
 
                                     <!-- Resumo profissional -->
@@ -172,13 +191,13 @@
                                     <!-- Foto do Integrante -->
                                     <div class="form-group mt-3">
                                         <h4>Foto do Integrante</h4>
-                                        <input type="file" name="foto-integrante" id="foto-integrante" class="form-control" required>
+                                        <input type="url" name="foto-integrante" id="foto-integrante" class="form-control" placeholder="Insira a URL da foto deste integrante no formato: https://www.urlAqui.com" required>
                                     </div>    
 
                                     <!-- Currículo Lattes do Integrante -->
                                     <div class="form-group mt-3">
                                         <h4>Currículo Lattes</h4>
-                                        <input type="text" name="curriculo-lattes" id="curriculo-lattes" class="form-control" placeholder="Link para página do currículo Lattes" required>
+                                        <input type="url" name="curriculo-lattes" id="curriculo-lattes" class="form-control" placeholder="Link para página do currículo Lattes" required>
                                     </div>
 
                                     <!-- Botão de submeter dados do formulário -->

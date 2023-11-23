@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
                                         <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
                                     </ul>
+                                <li>
                             </ul>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
@@ -70,9 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
                 <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-                <!--<i class="mobile-nav-toggle mobile-nav-show bi bi-list" onclick="viewNavbar()"></i>-->
-                <!--<i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onclick="closedNavbar()"></i>-->
 
             </div>
         </header>
