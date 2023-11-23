@@ -70,8 +70,9 @@ section {
 .sections-bg {
   background-color: #ffffff;
 }
-.section #topbar{
-  hover: var(--color-secondary)
+
+.section #topbar:hover{
+  color: var(--color-secondary)
 }
 
 .section-header {
