@@ -554,7 +554,7 @@ section .container .section-header {
 --------------------------------------------------------------*/
 @media (max-width: 1279px) {
   .navbar {
-    position: fixed;
+    /* position: fixed; */
     top: 250px;
     right: -100%;
     width: 120%;
