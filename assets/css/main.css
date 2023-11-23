@@ -76,7 +76,7 @@ section {
 
 .section-header {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .section-header h2 {
@@ -1916,7 +1916,9 @@ section .container .section-header {
 }
 
 .contact .contact-form input,
-.contact .contact-form textarea {
+.contact .contact-form textarea,
+.contact .contact-form select,
+.contact .contact-form input[type=checkbox] {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1929,8 +1931,11 @@ section .container .section-header {
 }
 
 .contact .contact-form input[type=text]:focus,
+.contact .contact-form input[type=url]:focus,
+.contact .contact-form input[type=checkbox]:focus,
 .contact .contact-form input[type=email]:focus,
-.contact .contact-form textarea:focus {   
+.contact .contact-form textarea:focus,
+.contact .contact-form select:focus {   
   border-color: var(--color-primary);
 }
 
