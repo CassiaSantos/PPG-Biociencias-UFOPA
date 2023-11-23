@@ -2,7 +2,7 @@ function createCarousel() {
   const carouselContainer = document.getElementById("carousel");
   const indicatorsContainer = document.getElementById("carousel-indicators");
   // Alterar posteriormente a URL para a API
-  const jsonURL = "assets/js/data-img.json"; 
+  const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app"; 
 
   fetch(jsonURL)
     .then((response) => response.json())
@@ -28,7 +28,6 @@ function createCarousel() {
 
         indicatorsContainer.appendChild(indicator);
         carouselContainer.appendChild(carouselItem);
-        console.log('Pagina carregada');
       });
     })
     .catch((error) => console.error("Erro ao carregar o JSON: ", error));

@@ -6,9 +6,9 @@ function preencherMembros() {
     fetch(corpoAcademico)
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((membro, index) => {          
+      data.slice(0, 4).forEach((membro, index) => {          
           const memberDiv = document.createElement("div");
-          memberDiv.className = "col-xl-3 col-md-6 d-flex";
+          memberDiv.className = "col-xl-3 col-md-6 d-flex justify-content-center ";
           memberDiv.dataset.aos = "fade-up";
           memberDiv.dataset.aosDelay = 100 * (index + 1);
         
