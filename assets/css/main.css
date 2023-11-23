@@ -70,9 +70,9 @@ section {
 .sections-bg {
   background-color: #ffffff;
 }
-.section #topbar{
+/* .section #topbar{
   hover: var(--color-secondary)
-}
+} */
 
 .section-header {
   text-align: center;
@@ -1997,7 +1997,7 @@ section .container .section-header {
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 14px 40px;
+  padding: 14px;
   border-radius: 50px;
   transition: 0.3s;
   color: #fff;
@@ -2038,6 +2038,7 @@ section .container .section-header {
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 14px;
+    padding: 5px;
   }
 }
 
