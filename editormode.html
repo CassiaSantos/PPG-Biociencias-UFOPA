@@ -99,6 +99,7 @@
   <!-- End Hero Section -->
 
   <main id="main">
+    <div class="gtranslate_wrapper"></div>
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -530,7 +531,20 @@
 <!-- JS Noticias -->
 <script src="assets/js/script-noticias.js"></script>
 <!-- JS Contato -->
-<script src="./assets/js/contato.js"></script> 
+<script src="./assets/js/contato.js"></script>
+
+<script>
+  window.gtranslateSettings = {
+    "default_language":"pt",
+    "detect_browser_language":true,
+    "languages":["pt","en","es"],
+    "wrapper_selector":".gtranslate_wrapper",
+    "flag_style":"3d",
+    "alt_flags":{"pt":"brazil", "en":"usa"}
+  }
+</script>
+
+<script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 
 </body>
 
