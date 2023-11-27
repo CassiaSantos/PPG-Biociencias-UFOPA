@@ -2,7 +2,7 @@ function createCarousel() {
   const carouselContainer = document.getElementById("carousel");
   const indicatorsContainer = document.getElementById("carousel-indicators");
   // Alterar posteriormente a URL para a API
-  const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app"; 
+  const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/carrousel-img"; 
 
   fetch(jsonURL)
     .then((response) => response.json())
@@ -10,7 +10,7 @@ function createCarousel() {
       data.forEach((item, index) => {
         const image = document.createElement("img");
         image.className = "d-block w-100 glightbox";
-        image.src = "assets/img/" + item.url;
+        image.src = item.url;
 
         const carouselItem = document.createElement("div");
         carouselItem.className = "carousel-item";
