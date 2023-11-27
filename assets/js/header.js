@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <li>
                             </ul>
                         <li><a href="contato.html">Contato</a></li>
+                        <li hef="" class="gtranslate_wrapper"></li>
                     </ul>
                 </nav><!-- end navbar -->
 
