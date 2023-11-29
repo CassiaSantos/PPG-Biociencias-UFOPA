@@ -223,6 +223,8 @@ section {
 }
 
 
+
+
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
@@ -455,6 +457,11 @@ section .container .section-header {
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
+
+.container-fluid.container-xl.d-flex.align-items-center.justify-content-between{
+  max-height: 30px;
+}
+
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
