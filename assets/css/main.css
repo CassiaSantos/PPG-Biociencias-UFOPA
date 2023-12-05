@@ -294,8 +294,8 @@ section {
   position: fixed;
   visibility: visible;
   left: 5px;
-  top: 350px;
-  z-index: 10;
+  top: 370px;
+  z-index: 99999;
   /* background: var(--color-secondary); */
   width: 44px;
   height: 44px;
