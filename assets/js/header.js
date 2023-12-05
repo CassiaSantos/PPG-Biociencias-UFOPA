@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <li><a href="#">Coordenação</a></li>
                                 <li><a href="#">Colegiado</a></li>
                                 <li><a href="#">Docentes</a></li>
-                                <li><a href="#">Discentes</a></li>
+                                <!--<li><a href="#">Discentes</a></li>-->
                             </ul>
                         </li>
                         <!--Menu dropdown-->
@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
                                     </ul>
                                 <li>
+                                <li><a href="../formulariosPPGBIO.html">Formulários</a><li>
                             </ul>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
