@@ -296,7 +296,7 @@ section {
   position: fixed;
   visibility: visible;
   left: 5px;
-  top: 420px;
+  top: 415px;
   z-index: 99999;
   /* background: var(--color-secondary); */
   width: 44px;
