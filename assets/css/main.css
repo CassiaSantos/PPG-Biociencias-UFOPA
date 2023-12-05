@@ -48,6 +48,10 @@ h6 {
   font-family: var(--font-primary);
 }
 
+.negrito {
+  font-weight: bold;
+}
+
 .access-button {
   border-radius: 50px !important;
 }
