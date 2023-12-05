@@ -289,12 +289,14 @@ section {
   color: var(--color-primary);
 }
 
-
+/*--------------------------------------------------------------
+# traducao-top button
+--------------------------------------------------------------*/
 .traducao-top {
   position: fixed;
   visibility: visible;
   left: 5px;
-  top: 370px;
+  top: 420px;
   z-index: 99999;
   /* background: var(--color-secondary); */
   width: 44px;
