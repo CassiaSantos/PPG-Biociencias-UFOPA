@@ -293,8 +293,8 @@ section {
 .traducao-top {
   position: fixed;
   visibility: visible;
-  right: 15px;
-  top: 175px;
+  left: 15px;
+  top: 350px;
   z-index: 10;
   /* background: var(--color-secondary); */
   width: 44px;
