@@ -6,6 +6,8 @@ let lastFetchTime = sessionStorage.getItem("lastFetchTime")
   ? parseInt(sessionStorage.getItem("lastFetchTime"))
   : 0;
 
+const pagNoticias = "blog-details.html";
+
 const noticiasBtn = document.getElementById("btn-more-notice");
 const mapBar = document.getElementById("mapBar");
 
@@ -64,7 +66,6 @@ function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
 
 function loadNews(currentSize) {
   const noticiasContainer = document.getElementById("noticiasContainer");
-  const pagNoticias = "blog-details.html";
   let jsonURL = "";
 
   if (categoria != null) {
