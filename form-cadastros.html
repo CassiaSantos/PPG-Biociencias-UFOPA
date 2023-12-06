@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Modo Editor</title>
-<meta content="" name="description">
-<meta content="" name="keywords">
+        <title>Formulário de Cadastro</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
 
         <!-- Ícone da página -->
         <link href="assets/img/logo.jpg" rel="icon">
@@ -35,43 +35,59 @@
 
     <body>
 
-    <!-- ======== Header ======= -->
-    <div class="header-container" id="header-container">
-        <!-- Renderização do cabeçalho aqui -->
-    </div>
+        <!-- ======== Header ======= -->
+        <div class="header-container" id="header-container">
+            <!-- Renderização do cabeçalho aqui -->
+        </div>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-        <div class="page-header d-flex align-items-center" style="background-image: url('');">
-            <div class="container position-relative">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-6 pt-5 text-center">
-                        <h2><span>Modo Editor</span></h2>
-                        <p>Aqui você pode gerenciar os conteúdos do site</p>
+        <!-- =========== Conversão Idiomas ================== -->
+        <p href="" class="traducao-top  d-flex align-items-center justify-content-center" data-aos="zoom-in"><i class=" gtranslate_wrapper"></i></p>
+        <!-- fim conversão idiomas -->
+
+        <!-- ======== Acessibilidade em libras ========== -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="./assets/js/libras.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <!-- fim Acessibilidade em libras -->
+
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center" style="background-image: url('');">
+                <div class="container position-relative">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h2><span>Formulários de cadastro</span></h2>
+                            <p>Aqui você pode cadastrar conteúdos para o site</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!-- End Breadcrumbs -->
+        </div><!-- End Breadcrumbs -->
 
         <container class="contact-container" id="contact-container">
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
 
-                <!-- Formulário para cadastro de imagens no carrossel -->
-                <section class="p-5" style="border: 1px solid var(--color-primary); border-radius: 10px;">
-                    <div class="section-header">
-                        <h2>Imagens do carrossel</h2>
-                        <p>Adicione, edite ou exclua as imagens do carrosel</p>
-                        <br>
-                        <button class="btn button-green" data-toggle="modal" data-target=".modal-insert-img">Inserir
-                            imagem</button>
-                        <button class="btn button-green" data-toggle="modal" data-target=".modal-edit-img">Editar
-                            imagem</button>
-                        <button class="btn button-green" data-toggle="modal" data-target=".modal-del-img">Excluir
-                            imagem</button>
-                    </div>
-                    <div id="div-view-carrosel">
+                    <!-- Formulário para cadastro de imagens no carrossel -->
+                    <section class="p-5" style="border: 1px solid var(--color-primary); border-radius: 10px;">
+                        <div class="section-header">
+                            <h2>Imagens do carrossel</h2>
+                            <p>Adicione, edite ou exclua as imagens do carrosel</p>
+                            <br>
+                            <button class="btn button-green" data-toggle="modal" data-target=".modal-insert-img">Inserir
+                                imagem</button>
+                            <button class="btn button-green" data-toggle="modal" data-target=".modal-edit-img">Editar
+                                imagem</button>
+                            <button class="btn button-green" data-toggle="modal" data-target=".modal-del-img">Excluir imagem</button>
+                        </div>
+                        <div id="div-view-carrosel">
 
                             <!-- Div Carousel -->
 
@@ -95,302 +111,239 @@
                             </div>
                         </div>
 
-                    <!-- Modal Insert img -->
-                    <div class="modal fade modal-insert-img" tabindex="-1" role="dialog"
-                        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <br>
-                                <div id="insert-img">
-                                    <div class="section-header">
-                                        <h2>Imagens do carrossel</h2>
-                                        <p>Cadastre a URL da imagem que irá aparecer no carrossel. </p>
-                                    </div>
-                                    <div class="row gx-lg-0 gy-4 justify-content-center">
-                                        <div class="col-lg-8">
-                                            <form class="contact-form"
-                                                onsubmit="event.preventDefault(); newImgCarousel();">
-                                                <div class="row ">
-                                                    <div class="form-group mt-3 form-group text-center">
-                                                        <h4>URL da imagem</h4>
-                                                        <input type="url" name="titulo-noticia" id="url-img-carrosel"
-                                                            class="form-control" placeholder="Insira a URL" required>
-                                                    </div>
-                                                    <div class="text-center ">
-                                                        <button class="btn button-green" style="padding: 7px;"
-                                                            type="submit">Adicionar
-                                                            imagem</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div><!-- Fim do formulário para cadastro de imagens no carrossel -->
-                                </div>
-                                <br>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal edit img -->
-                    <div class="modal fade modal-edit-img" tabindex="-1" role="dialog"
-                        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <br>
-                                <div id="insert-img">
-                                    <div class="section-header">
-                                        <h2>Imagens do carrossel</h2>
-                                        <p>Subistitua uma imagem por outra.</p>
-                                    </div>
-                                    <div class="thumbnail-container" id="thumbnailContainer">
-                                        <!-- Miniaturas serão adicionadas dinamicamente aqui usando JavaScript -->
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal delete img -->
-                    <div class="modal fade modal-del-img" tabindex="-1" role="dialog"
-                        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <br>
-                                <div id="insert-img">
-                                    <div class="section-header">
-                                        <h2>Imagens do carrossel</h2>
-                                        <p>Exclua uma imagem.</p>
-                                    </div>
-                                    <div class="thumbnail-container" id="thumbnailContainer2">
-                                        <!-- Miniaturas serão adicionadas dinamicamente aqui usando JavaScript -->
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <br>
-
-                <!-- Formulário de cadastro de notícia -->
-                <br>
-                <section class="justify-content-center d-flex flex-column align-items-center" style="border: 1px solid var(--color-primary); border-radius: 10px;"">
-                    <div class=" section-header">
-                        <h2 class="pt-4">Notícias</h2>
-                        <p>Gerencie as notícias</p>
-                        <br>
-                        <div>
-                            <button class="btn button-green" data-toggle="modal" data-target=".modal-insert-notice">Nova
-                            notícia</button>
-                            <button class="btn button-green" id="btnEditNotice" onclick="btnEditNotice()">Editar
-                            noticias</button>
-                            <button class="btn button-green" data-toggle="modal" data-target=".modal-del-notice">Excluir
-                            noticias</button>
-                        </div>
-                    </div>
-                    <!-- Inserir noticia -->
-                    <div class="modal fade modal-insert-notice" tabindex="-1" role="dialog"
+                        <!-- Modal Insert img -->
+                        <div class="modal fade modal-insert-img" tabindex="-1" role="dialog"
                             aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <br>
-                                <div class="section-header">
-                                    <h2 class="pt-4">Notícias</h2>
-                                    <p>Gerencie as notícias</p>
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
                                     <br>
-                            </div>
-                                <div class="row gx-lg-0 gy-4 justify-content-center" id="create-notice">
-                                    <div class="col-lg-10">
-                                        <form action="" method="POST" class="contact-form">
-                                            <div class="row">
-                                                <div class="form-group mt-3">
-                                                    <h4>Título da Notícia</h4>
-                                                    <input type="text" name="titulo-noticia" id="titulo-noticia"
-                                                class="form-control" placeholder="Título da notícia" required>
-                                                </div>
-
-                                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                                    <h4>Categoria da Notícia</h4>
-                                                    <input type="checkbox" id="extensao" name="extensao" value="extensao">
-                                                    <label for="extensao">Extensão</label><br>
-                                                    <input type="checkbox" id="defesa-tese" name="defesa-tese"
-                                                value="defesa-tese">
-                                                    <label for="defesa-tese">Defesa de tese</label><br>
-                                                    <input type="checkbox" id="processo-seletivo" name="processo-seletivo"
-                                                value="Processo seletivo">
-                                                    <label for="processo-seletivo">Processo seletivo</label><br>
-                                                    <input type="checkbox" id="projeto" name="projeto" value="projeto">
-                                                    <label for="extensao">Projeto</label><br>
-                                                    <input type="checkbox" id="Outros" name="Outros" value="Outros">
-                                                    <label for="extensao">Outros</label><br>
-                                                </div>
-
-                                                <div class="form-group mt-3">
-                                                    <h4>Conteúdo da Notícia</h4>
-                                                    <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7"
-                                                placeholder="Escreva o texto da notícia aqui" class="form-control"
-                                                required></textarea>
-                                                </div>
-
-                                                <div class="form-group mt-3">
-                                                    <h4>Imagem na Notícia</h4>
-                                                    <input type="url" name="imagem-noticia" id="imagem-noticia"
-                                                class="form-control"
-                                                placeholder="Link para a imagem que haverá na notícia">
-                                                </div>
-
-
-
-                                                <div class="text-center "><button class="btn button-green" type="submit">Gravar
-                                                Notícia</button>
-                                                </div>
+                                    <div id="insert-img" >
+                                        <div class="section-header">
+                                            <h2>Imagens do carrossel</h2>
+                                            <p>Cadastre a URL da imagem que irá aparecer no carrossel. </p>
+                                        </div>
+                                        <div class="row gx-lg-0 gy-4 justify-content-center">
+                                            <div class="col-lg-8">
+                                                <form class="contact-form" onsubmit="event.preventDefault(); newImgCarousel();">
+                                                    <div class="row ">
+                                                        <div class="form-group mt-3 form-group text-center">
+                                                            <h4>URL da imagem</h4>
+                                                            <input type="url" name="titulo-noticia" id="url-img-carrosel"
+                                                                class="form-control" placeholder="Insira a URL" required>
+                                                        </div>
+                                                        <div class="text-center phcontact-form">
+                                                            <button class="btn button-green" style="padding: 7px;"
+                                                                type="submit">Adicionar
+                                                                imagem</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </form>
-                                    </div><!-- Fim do formulário de cadastro de notícia -->
-                                </div>
-                                <br>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                        </div><!-- Fim do formulário para cadastro de imagens no carrossel -->
+                                    </div>
+                                    <br>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                        <!-- Editar noticias -->
-                    <section id="sectionEditNotice" class="p-3" style="display: none; width: 80vw; flex-direction: column; ">
-                        <div style="width: 60vw; align-self: center;">
-                            <form class="contact-form" >
-                                <div class="row">
-                                    <div class="form-group text-center">
-                                        <h4>Pesquise pela notícia</h4>
-                                        <input type="text" name="titulo-noticia" id="search-notice-edit" class="form-control"
-                                            placeholder="Titulo da noticia" required>
+                        <!-- Modal edit img -->
+                        <div class="modal fade modal-edit-img" tabindex="-1" role="dialog"
+                            aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <br>
+                                    <div id="insert-img">
+                                        <div class="section-header">
+                                            <h2>Imagens do carrossel</h2>
+                                            <p>Subistitua uma imagem por outra.</p>
+                                        </div>
+                                        <div class="thumbnail-container" id="thumbnailContainer">
+                                            <!-- Miniaturas serão adicionadas dinamicamente aqui usando JavaScript -->
+                                        </div>
                                     </div>
-                                    <div class="text-center">
-                                        <button class="btn button-green" onclick="searchNoticeByTitle2(event)" type="submit" style="padding: 6px 12px;">Buscar</button>
+                                    <br>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-    
-                        <div class="mt-4" id="showSearchEditNotices">
-                            <br>
-                            <!-- Resultado da Pesquisa -->
-                        </div>
-                        <div class="d-flex justify-content-center flex-column">
-                            <br>
-                            <button class="btn button-green" onclick="showAllNoticesEdit()">Exibir todas as noticias</button>
-                            <br>
-                            <div id="showAllNotices" style="display: none;">
-                                <br>
-    
                             </div>
-                            <!-- Todas as noticias -->
+                        </div>
+
+                        <!-- Modal delete img -->
+                        <div class="modal fade modal-del-img" tabindex="-1" role="dialog"
+                            aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <br>
+                                    <div id="insert-img">
+                                        <div class="section-header">
+                                            <h2>Imagens do carrossel</h2>
+                                            <p>Exclua uma imagem.</p>
+                                        </div>
+                                        <div class="thumbnail-container" id="thumbnailContainer2">
+                                            <!-- Miniaturas serão adicionadas dinamicamente aqui usando JavaScript -->
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
-                    
-                </section>
 
-
-            <!-- Editar e exlcuir noticias -->
-
-
-        </section>
-
-
-        <section>
-            <!-- Formulário de cadastro de pessoa do corpo acadêmico -->
-            <div class="section-header">
-                <h2 class="pt-4">Corpo Acadêmico</h2>
-                <p>Cadastre aqui uma pessoa do corpo acadêmico do curso</p>
-            </div>
-
-            <div class="row gx-lg-0 gy-4 justify-content-center">
-                <div class="col-lg-8">
-                    <form action="" method="POST" class="contact-form">
-                        <div class="row">
-
-                            <!-- Nome do integrante -->
-                            <div class="form-group mt-3"><!--col-md-6 form-group form-group mt-3-->
-                                <h4>Nome do Professor</h4>
-                                <input type="text" name="nome-professor" id="nome-professor" class="form-control"
-                                    placeholder="Nome do professor" required>
-                            </div>
-
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <!-- cargo do integrante  -->
-                                <div>
-                                    <h4>cargo do Professor</h4>
-                                    <select name="cargo-professor" id="cargo-professor" class="form-control" required>
-                                        <option value="selecione" class="form-control">--selecione--</option>
-                                        <option value="cordenacao" class="form-control">Coordenação</option>
-                                        <option value="docente" class="form-control">Docente</option>
-                                        <option value="colegiado" class="form-control">Colegiado</option>
-                                        <option value="discente" class="form-control">Discente</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Redes Sociais -->
-                            <div class="form-group mt-3">
-                                <h4>Mídias Sociais</h4>
-                                <label for="twitter-social-midia">Twitter</label><br>
-                                <input type="url" name="twitter-social-midia" id="twitter-social-midia"
-                                    class="form-control"
-                                    placeholder="Link para o Twitter no formato https://www.twitter"><br>
-                                <label for="facebook-social-midia">Facebook</label><br>
-                                <input type="url" name="facebook-social-midia" id="facebook-social-midia"
-                                    class="form-control" placeholder="Link para o Facebook"><br>
-                                <label for="instagram-social-midia">Instagram</label><br>
-                                <input type="url" name="instagram-social-midia" id="instagram-social-midia"
-                                    class="form-control" placeholder="Link para o Instagram"><br>
-                                <label for="linkedin-social-midia">LinkedIn</label><br>
-                                <input type="url" name="linkedin-social-midia" id="linkedin-social-midia"
-                                    class="form-control" placeholder="Link para LinkedIn">
-                            </div>
-
-                            <!-- Resumo profissional -->
-                            <div class="form-group mt-3">
-                                <h4>Pequeno resumo profissional do Integrante</h4>
-                                <textarea name="resumo-profissional" id="resumo-profissional" cols="90" rows="7"
-                                    placeholder="Escreva um pequeno resumo profissional deste integrante aqui"
-                                    class="form-control" required></textarea>
-                            </div>
-
-                            <!-- Foto do Integrante -->
-                            <div class="form-group mt-3">
-                                <h4>Foto do Integrante</h4>
-                                <input type="url" name="foto-integrante" id="foto-integrante" class="form-control"
-                                    placeholder="Insira a URL da foto deste integrante no formato: https://www.urlAqui.com"
-                                    required>
-                            </div>
-
-                            <!-- Currículo Lattes do Integrante -->
-                            <div class="form-group mt-3">
-                                <h4>Currículo Lattes</h4>
-                                <input type="url" name="curriculo-lattes" id="curriculo-lattes" class="form-control"
-                                    placeholder="Link para página do currículo Lattes" required>
-                            </div>
-
-                            <!-- Botão de submeter dados do formulário -->
-                            <div class="text-center"><button class="btn button-green" type="submit">Gravar
-                                    Integrante</button></div>
+                    <!-- Formulário de cadastro de notícia -->
+                    <section>
+                        <div class="section-header">
+                            <h2 class="pt-4">Notícia</h2>
+                            <p>Crie aqui uma notícia</p>
                         </div>
-                    </form>
-                </div><!-- Fim do formulário de contato -->
-            </div>
-        </section>
-        </div>
-        </section><!-- End Contact Section -->
-    </container>
+
+                        <div class="row gx-lg-0 gy-4 justify-content-center">
+                            <div class="col-lg-8">
+                                <form action="" method="POST" class="contact-form">
+                                    <div class="row">
+                                        <div class="form-group mt-3">
+                                            <h4>Título da Notícia</h4>
+                                            <input type="text" name="titulo-noticia" id="titulo-noticia"
+                                                class="form-control" placeholder="Título da notícia" required>
+                                        </div>
+
+                                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                                            <h4>Categoria da Notícia</h4>
+                                            <input type="checkbox" id="extensao" name="extensao" value="extensao">
+                                            <label for="extensao">Extensão</label><br>
+                                            <input type="checkbox" id="defesa-tese" name="defesa-tese" value="defesa-tese">
+                                            <label for="defesa-tese">Defesa de tese</label><br>
+                                            <input type="checkbox" id="processo-seletivo" name="processo-seletivo"
+                                                value="Processo seletivo">
+                                            <label for="processo-seletivo">Processo seletivo</label><br>
+                                            <input type="checkbox" id="projeto" name="projeto" value="projeto">
+                                            <label for="extensao">Projeto</label><br>
+                                            <input type="checkbox" id="Outros" name="Outros" value="Outros">
+                                            <label for="extensao">Outros</label><br>
+                                        </div>
+
+                                        <div class="form-group mt-3">
+                                            <h4>Conteúdo da Notícia</h4>
+                                            <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7"
+                                                placeholder="Escreva o texto da notícia aqui" class="form-control"
+                                                required></textarea>
+                                        </div>
+
+                                        <div class="form-group mt-3">
+                                            <h4>Imagem na Notícia</h4>
+                                            <input type="url" name="imagem-noticia" id="imagem-noticia" class="form-control"
+                                                placeholder="Link para a imagem que haverá na notícia">
+                                        </div>
+
+                                        <div class="form-group mt-3">
+                                            <h4>URL na Notícia para outra página ou arquivo</h4>
+                                            <input type="url" name="links-noticia" id="links-noticia" class="form-control"
+                                                placeholder="URL aceita apenas no formato: https://www.urlAqui.com">
+                                        </div>
+
+                                        <div class="text-center phcontact-form"><button type="submit">Gravar Notícia</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- Fim do formulário de cadastro de notícia -->
+
+
+                    </section>
+
+
+                    <section>
+                        <!-- Formulário de cadastro de pessoa do corpo acadêmico -->
+                        <div class="section-header">
+                            <h2 class="pt-4">Corpo Acadêmico</h2>
+                            <p>Cadastre aqui uma pessoa do corpo acadêmico do curso</p>
+                        </div>
+
+                        <div class="row gx-lg-0 gy-4 justify-content-center">
+                            <div class="col-lg-8">
+                                <form action="" method="POST" class="contact-form">
+                                    <div class="row">
+
+                                        <!-- Nome do integrante -->
+                                        <div class="form-group mt-3"><!--col-md-6 form-group form-group mt-3-->
+                                            <h4>Nome do Professor</h4>
+                                            <input type="text" name="nome-professor" id="nome-professor"
+                                                class="form-control" placeholder="Nome do professor" required>
+                                        </div>
+
+                                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                                            <!-- cargo do integrante  -->
+                                            <div>
+                                                <h4>cargo do Professor</h4>
+                                                <select name="cargo-professor" id="cargo-professor" class="form-control"
+                                                    required>
+                                                    <option value="selecione" class="form-control">--selecione--</option>
+                                                    <option value="cordenacao" class="form-control">Coordenação</option>
+                                                    <option value="docente" class="form-control">Docente</option>
+                                                    <option value="colegiado" class="form-control">Colegiado</option>
+                                                    <option value="discente" class="form-control">Discente</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Redes Sociais -->
+                                        <div class="form-group mt-3">
+                                            <h4>Mídias Sociais</h4>
+                                            <label for="twitter-social-midia">Twitter</label><br>
+                                            <input type="url" name="twitter-social-midia" id="twitter-social-midia"
+                                                class="form-control"
+                                                placeholder="Link para o Twitter no formato https://www.twitter"><br>
+                                            <label for="facebook-social-midia">Facebook</label><br>
+                                            <input type="url" name="facebook-social-midia" id="facebook-social-midia"
+                                                class="form-control" placeholder="Link para o Facebook"><br>
+                                            <label for="instagram-social-midia">Instagram</label><br>
+                                            <input type="url" name="instagram-social-midia" id="instagram-social-midia"
+                                                class="form-control" placeholder="Link para o Instagram"><br>
+                                            <label for="linkedin-social-midia">LinkedIn</label><br>
+                                            <input type="url" name="linkedin-social-midia" id="linkedin-social-midia"
+                                                class="form-control" placeholder="Link para LinkedIn">
+                                        </div>
+
+                                        <!-- Resumo profissional -->
+                                        <div class="form-group mt-3">
+                                            <h4>Pequeno resumo profissional do Integrante</h4>
+                                            <textarea name="resumo-profissional" id="resumo-profissional" cols="90" rows="7"
+                                                placeholder="Escreva um pequeno resumo profissional deste integrante aqui"
+                                                class="form-control" required></textarea>
+                                        </div>
+
+                                        <!-- Foto do Integrante -->
+                                        <div class="form-group mt-3">
+                                            <h4>Foto do Integrante</h4>
+                                            <input type="url" name="foto-integrante" id="foto-integrante"
+                                                class="form-control"
+                                                placeholder="Insira a URL da foto deste integrante no formato: https://www.urlAqui.com"
+                                                required>
+                                        </div>
+
+                                        <!-- Currículo Lattes do Integrante -->
+                                        <div class="form-group mt-3">
+                                            <h4>Currículo Lattes</h4>
+                                            <input type="url" name="curriculo-lattes" id="curriculo-lattes"
+                                                class="form-control" placeholder="Link para página do currículo Lattes"
+                                                required>
+                                        </div>
+
+                                        <!-- Botão de submeter dados do formulário -->
+                                        <div class="text-center phcontact-form"><button type="submit">Gravar
+                                                Integrante</button></div>
+                                    </div>
+                                </form>
+                            </div><!-- Fim do formulário de contato -->
+                        </div>
+                    </section>
+                </div>
+            </section><!-- End Contact Section -->
+        </container>
 
         <!-- ======= Footer ======= -->
         <div class="footer-container" id="footer-container"> Ver arquivo assets/js/footer.html
