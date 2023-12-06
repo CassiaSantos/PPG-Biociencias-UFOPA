@@ -226,6 +226,30 @@ section {
   opacity: 70%;
 }
 
+#showSearchEditNotices .cardNotice, #showAllNotices .cardNotice{
+  display: flex;
+  width: 45%;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+#showSearchEditNotices, #showAllNotices{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#btn-edit-cardNotice{
+  align-self: center;
+  justify-self: center;
+}
+
+
 
 /*--------------------------------------------------------------
 # Scroll top button
@@ -522,6 +546,11 @@ section .container .section-header {
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
+
+.container-fluid.container-xl.d-flex.align-items-center.justify-content-between{
+  max-height: 30px;
+}
+
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;

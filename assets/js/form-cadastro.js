@@ -1,6 +1,6 @@
 const urlAPI = 'https://apippgbio-or3c.vercel.app/carrousel-img';
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQ5ODZmZmEwYzMyOTFlMjA5MjE0OWIiLCJpYXQiOjE3MDEwMDEwMjQsImV4cCI6MTcwMTAwNDYyNH0.05Sz1DOG_4vs9CMiaug6y4jfa-ZIdm_xy0w-6sZODFk";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQ5ODZmZmEwYzMyOTFlMjA5MjE0OWIiLCJpYXQiOjE3MDExMDg5MTMsImV4cCI6MTcwMTExMjUxM30.Gh1MtYSYnbGJ_PoPlYrS7rjCchWH2dJj5uuqTK2GSpo";
 
 function newImgCarousel() {
     let inputUrl = document.getElementById("url-img-carrosel");
@@ -17,7 +17,7 @@ function newImgCarousel() {
         },
         body: JSON.stringify(data),
     };
-    
+
 
     fetch(urlAPI, options)
         .then(response => {
@@ -210,8 +210,8 @@ function showDelAlert(id) {
                         title: "Excluido!",
                         text: "A imagem foi excluida.",
                         icon: "success"
-                    }).then((result) =>{
-                        if (result.isConfirmed){
+                    }).then((result) => {
+                        if (result.isConfirmed) {
                             window.location.reload();
                         }
                     })
@@ -226,6 +226,143 @@ function showDelAlert(id) {
         }
     });
 
+}
+
+function showAllNoticesEdit() {
+    const noticiasContainer = document.getElementById("showAllNotices");
+    const noticiasSearch = document.getElementById("showSearchEditNotices");
+    noticiasSearch.style.display = "none";
+
+    function formatarData(dataString) {
+        const meses = [
+            "Janeiro", "Fevereiro", "Março",
+            "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro",
+            "Outubro", "Novembro", "Dezembro"
+        ];
+
+        const data = new Date(dataString);
+        const dia = data.getDate();
+        const mes = meses[data.getMonth()];
+        const ano = data.getFullYear();
+
+        return `${dia} de ${mes} de ${ano}`;
+    };
+
+    let noticiasHTML = "";
+    jsonURL = "https://apippgbio-or3c.vercel.app/noticias";
+
+    fetch(jsonURL)
+    .then((response) => response.json())
+    .then((data) => {
+    
+      data.forEach(item =>{
+        const dataFormatada = formatarData(item.data);
+        noticiasHTML += `
+            <div class="post-item cardNotice" data-aos="fade-up">
+                <div>
+                    <h5>${item.titulo}</h5>
+                    <div class="d-flex column">
+                        <div>
+                            <time>${dataFormatada} às ${item.hora}</time>
+                            <p>Editor: ${item.autor}</p>
+                        </div>
+                        <button id="btn-edit-cardNotice" type="button" onclick="" class="btn button-green">Editar</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    })
+        
+
+    noticiasContainer.innerHTML = noticiasHTML;
+    noticiasContainer.style.display = "flex";
+
+      
+    })
+    .catch((error) => console.error("Erro ao carregar o JSON: ", error));
+}
+
+function renderNoticesSearchEdit(data) {
+    const divAllNotices = document.getElementById("showAllNotices");
+    divAllNotices.style.display = "none";
+    function formatarData(dataString) {
+        const meses = [
+            "Janeiro", "Fevereiro", "Março",
+            "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro",
+            "Outubro", "Novembro", "Dezembro"
+        ];
+
+        const data = new Date(dataString);
+        const dia = data.getDate();
+        const mes = meses[data.getMonth()];
+        const ano = data.getFullYear();
+
+        return `${dia} de ${mes} de ${ano}`;
+    };
+
+    const divRender = document.getElementById("showSearchEditNotices");
+
+
+    let noticiasSeachEdit = "";
+
+    if (data) {
+        data.forEach(item => {
+            const dataFormatada = formatarData(item.data);
+            noticiasSeachEdit += `
+            <div class="post-item cardNotice" data-aos="fade-up">
+                <div>
+                    <h5>${item.titulo}</h5>
+                    <div class="d-flex column">
+                        <div>
+                            <time>${dataFormatada} às ${item.hora}</time>
+                            <p>Editor: ${item.autor}</p>
+                        </div>
+                        <button id="btn-edit-cardNotice" type="button" onclick="" class="btn button-green">Editar</button>
+                    </div>
+                </div>
+            </div>
+            `
+        });
+        divRender.innerHTML = noticiasSeachEdit;
+        divRender.style.display = "flex";
+    }
+}
+
+function btnEditNotice(){
+    const divEditNotice = document.getElementById("sectionEditNotice");
+    divEditNotice.style.display = "flex";
+}
+
+async function searchNoticeByTitle2(event) {
+
+    event.preventDefault();
+    const searchInput = document.getElementById("search-notice-edit");
+    const searchInputValue = document.getElementById("search-notice-edit").value;
+
+
+
+    await fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInputValue}`)
+        .then(response => {
+            if (!response.ok) {
+                Swal.fire({
+                    title: "Nenhum resultado!",
+                    text: "Tente novamente usando outra palavra-chave",
+                    icon: "info"
+                });
+
+                throw new Error(`Erro na requisição: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            searchInput.value = "";
+            renderNoticesSearchEdit(data);
+        })
+        .catch(error => {
+            console.error('Erro na requisição:', error.message);
+        });
 }
 
 // Inicializa o processo de busca e exibição de miniaturas
