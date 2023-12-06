@@ -87,6 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "alt_flags":{"en":"usa","pt":"brazil"}
   }
 
+  let btn = document.querySelector('.lnr-eye');
+  btn.addEventListener('click', function() {
+      let input = document.querySelector('#senhaAdmin');
+      if(input.getAttribute('type') == 'password') {
+          input.setAttribute('type', 'text');
+      } else {
+          input.setAttribute('type', 'password');
+      }
+  });
+
   /**
    * Mobile nav toggle
    */
