@@ -78,15 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', navbarlinksActive);
   document.addEventListener('scroll', navbarlinksActive);
 
-  window.gtranslateSettings = {
-    "default_language":"pt",
-    "detect_browser_language":true,
-    "languages":["pt","en","es"],
-    "wrapper_selector":".gtranslate_wrapper",
-    "flag_style":"3d",
-    "alt_flags":{"en":"usa","pt":"brazil"}
-  }
+  // window.gtranslateSettings = {
+  //   "default_language":"pt",
+  //   "detect_browser_language":true,
+  //   "languages":["pt","en","es"],
+  //   "wrapper_selector":".gtranslate_wrapper",
+  //   "flag_style":"3d",
+  //   "alt_flags":{"en":"usa","pt":"brazil"}
+  // }
 
+  /**
+   * visualização da senha.
+   */
   let btn = document.querySelector('.lnr-eye');
   btn.addEventListener('click', function() {
       let input = document.querySelector('#senhaAdmin');
