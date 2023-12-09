@@ -29,6 +29,9 @@ function renderNotice() {
       .then((data) => {
         let noticiasHTML = "";
         let dataFormatada = formatarData(data.data);
+
+        //Necessário alterar o src da imagem
+        //Necessário implementar o conteudo da noticia depois de renderizar a variável noticiasHTML
         
           noticiasHTML += `
             <article class="blog-details">
@@ -42,7 +45,7 @@ function renderNotice() {
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a><time datetime="${data.data}">${dataFormatada} às ${data.hora}</time></a></li>
                 </ul>
               </div>
-              <div class="content">
+              <div class="content" id="noticeRenderHtml">
                 <p>${data.texto}</p>
               </div>
             </article>
