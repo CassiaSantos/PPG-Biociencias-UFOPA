@@ -332,7 +332,9 @@ function renderNoticesSearchEdit(data) {
 
 function btnEditNotice(){
     const divEditNotice = document.getElementById("sectionEditNotice");
+    let div = document.getElementById('section-new-notice');
     divEditNotice.style.display = "flex";
+    div.style.display = 'none';
 }
 
 async function searchNoticeByTitle2(event) {
@@ -363,6 +365,111 @@ async function searchNoticeByTitle2(event) {
         .catch(error => {
             console.error('Erro na requisição:', error.message);
         });
+}
+
+function showNewNotice(){
+    let div = document.getElementById('section-new-notice');
+    const divEditNotice = document.getElementById("sectionEditNotice");
+    div.style.display = 'flex';
+    divEditNotice.style.display = "none";
+    renderCategorias();
+}
+
+function renderCategorias() {
+    const categorySelect = document.getElementById('categorySelect');
+    const newCategoryInput = document.getElementById('newCategoryInput');
+    const categoriesList = document.getElementById('categoriesList');
+    const selectedCategories = [];
+
+    // Função para adicionar opção ao select
+    function addOptionToSelect(value, text) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = text;
+        categorySelect.appendChild(option);
+    }
+
+    // Função para remover opção do select
+    function removeOptionFromSelect(value) {
+        const optionToRemove = categorySelect.querySelector(`option[value="${value}"]`);
+        if (optionToRemove) {
+            categorySelect.removeChild(optionToRemove);
+        }
+    }
+
+    // Adicione as opções ao menu suspenso
+    fetch('https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categorias')
+        .then(response => response.json())
+        .then(data => {
+            for (const category in data) {
+                if (data.hasOwnProperty(category)) {
+                    addOptionToSelect(category, category);
+                }
+            }
+        });
+
+    // Adicione uma opção para adicionar nova categoria
+    addOptionToSelect('new', 'Nova Categoria');
+
+    // Adicione um ouvinte de evento ao formulário
+    const categorySubmit = document.getElementById('categorySubmit');
+    categorySubmit.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Obtenha o valor selecionado
+        const selectedCategory = categorySelect.value;
+
+        // Se a opção selecionada for 'new', use a nova categoria digitada
+        const newCategoryValue = newCategoryInput.value;
+        const newCategory = (selectedCategory === 'new' && newCategoryValue) ? newCategoryValue : null;
+
+        // Limitando a quantidade de categorias
+        console.log(selectedCategories.length)
+        if (selectedCategories.length == 3){return}
+
+        // Adicione a categoria selecionada ou nova ao array
+        if (selectedCategory !== 'new' || newCategory) {
+            selectedCategories.push(selectedCategory !== 'new' ? selectedCategory : newCategory);
+
+            // Remova a opção selecionada do select
+            if(selectedCategory !== 'new'){
+                removeOptionFromSelect(selectedCategory);
+            }
+        }
+        
+
+        // Exiba as categorias selecionadas
+        renderSelectedCategories();
+
+        // Limpe o formulário (opcional)
+        newCategoryInput.value = "";
+    });
+
+    // Função para renderizar categorias selecionadas
+    function renderSelectedCategories() {
+        categoriesList.innerHTML = selectedCategories.map(category => `<li>${category}</li><button style="margin: 2px; width: 50%; color: white; background-color: var(--color-primary); border-radius:0.25rem; border: none" onmouseover="this.style.backgroundColor='var(--color-tertiary)'"
+        onmouseout="this.style.backgroundColor= 'var(--color-primary)'"  class="delete-btn" data-category="${category}">Excluir</button>`).join('');
+
+         // Adicione um ouvinte de evento para os botões de exclusão
+         document.querySelectorAll('.delete-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const categoryToRemove = this.getAttribute('data-category');
+                // Remova a categoria do array
+                const index = selectedCategories.indexOf(categoryToRemove);
+                if (index !== -1) {
+                    selectedCategories.splice(index, 1);
+                }
+                // Adicione a opção de volta ao select
+                addOptionToSelect(categoryToRemove, categoryToRemove);
+                // Exiba as categorias atualizadas
+                renderSelectedCategories();
+            });
+        });
+    }
+
+
+  
+
 }
 
 // Inicializa o processo de busca e exibição de miniaturas
