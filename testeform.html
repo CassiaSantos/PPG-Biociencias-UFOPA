@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Categorias</title>
+</head>
+<body>
+
+<h1>Formulário de Categorias</h1>
+
+<form id="categoryForm">
+    <label for="categorySelect">Escolha uma categoria:</label>
+    <select id="categorySelect" name="category">
+        <!-- As opções serão carregadas dinamicamente pela API -->
+    </select>
+    <br>
+    <div id="newCategoryContainer">
+        <label for="newCategoryInput">Ou adicione uma nova categoria:</label>
+        <input type="text" id="newCategoryInput" name="newCategory">
+    </div>
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+
+<div id="selectedCategories">
+    <h2>Categorias Selecionadas:</h2>
+    <ol id="categoriesList"></ol>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const categorySelect = document.getElementById('categorySelect');
+    const newCategoryInput = document.getElementById('newCategoryInput');
+    const categoriesList = document.getElementById('categoriesList');
+    const selectedCategories = [];
+
+    // Função para adicionar opção ao select
+    function addOptionToSelect(value, text) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = text;
+        categorySelect.appendChild(option);
+    }
+
+    // Função para remover opção do select
+    function removeOptionFromSelect(value) {
+        const optionToRemove = categorySelect.querySelector(`option[value="${value}"]`);
+        if (optionToRemove) {
+            categorySelect.removeChild(optionToRemove);
+        }
+    }
+
+    // Adicione as opções ao menu suspenso
+    fetch('https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categorias')
+        .then(response => response.json())
+        .then(data => {
+            for (const category in data) {
+                if (data.hasOwnProperty(category)) {
+                    addOptionToSelect(category, category);
+                }
+            }
+        });
+
+    // Adicione uma opção para adicionar nova categoria
+    addOptionToSelect('new', 'Nova Categoria');
+
+    // Adicione um ouvinte de evento ao formulário
+    const categoryForm = document.getElementById('categoryForm');
+    categoryForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Obtenha o valor selecionado
+        const selectedCategory = categorySelect.value;
+
+        // Se a opção selecionada for 'new', use a nova categoria digitada
+        const newCategoryValue = newCategoryInput.value;
+        const newCategory = (selectedCategory === 'new' && newCategoryValue) ? newCategoryValue : null;
+
+        // Adicione a categoria selecionada ou nova ao array
+        if (selectedCategory !== 'new' || newCategory) {
+            selectedCategories.push(selectedCategory !== 'new' ? selectedCategory : newCategory);
+
+            // Remova a opção selecionada do select
+            if(selectedCategory !== 'new'){
+                removeOptionFromSelect(selectedCategory);
+            }
+        }
+
+        // Exiba as categorias selecionadas
+        renderSelectedCategories();
+
+        // Limpe o formulário (opcional)
+        categoryForm.reset();
+    });
+
+    // Função para renderizar categorias selecionadas
+    function renderSelectedCategories() {
+        categoriesList.innerHTML = selectedCategories.map(category => `<li>${category} <button class="delete-btn" data-category="${category}">Excluir</button></li>`).join('');
+
+         // Adicione um ouvinte de evento para os botões de exclusão
+         document.querySelectorAll('.delete-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const categoryToRemove = this.getAttribute('data-category');
+                // Remova a categoria do array
+                const index = selectedCategories.indexOf(categoryToRemove);
+                if (index !== -1) {
+                    selectedCategories.splice(index, 1);
+                }
+                // Adicione a opção de volta ao select
+                addOptionToSelect(categoryToRemove, categoryToRemove);
+                // Exiba as categorias atualizadas
+                renderSelectedCategories();
+            });
+        });
+    }
+});
+</script>
+
+</body>
+</html>

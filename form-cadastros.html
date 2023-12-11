@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Modo Editor</title>
-<meta content="" name="description">
-<meta content="" name="keywords">
+    <title>Modo Editor</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-        <!-- Ícone da página -->
-        <link href="assets/img/logo.jpg" rel="icon">
-        <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <!-- Ícone da página -->
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon">
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 
-        <!-- Vendor CSS Files -->
-        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-        <!-- Main CSS File -->
-        <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Editor QuilJS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
-        <!-- CSS Botstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    </head>
+    <!-- CSS Botstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
 
-    <body>
+<body>
 
     <!-- ======== Header ======= -->
     <div class="header-container" id="header-container">
@@ -54,9 +59,9 @@
         </div>
     </div><!-- End Breadcrumbs -->
 
-        <container class="contact-container" id="contact-container">
-            <section id="contact" class="contact">
-                <div class="container" data-aos="fade-up">
+    <container class="contact-container" id="contact-container">
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
 
                 <!-- Formulário para cadastro de imagens no carrossel -->
                 <section class="p-5" style="border: 1px solid var(--color-primary); border-radius: 10px;">
@@ -73,27 +78,27 @@
                     </div>
                     <div id="div-view-carrosel">
 
-                            <!-- Div Carousel -->
+                        <!-- Div Carousel -->
 
-                            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel"
-                                data-pause="false">
+                        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel"
+                            data-pause="false">
 
 
-                                <ol class="carousel-indicators" id="carousel-indicators">
-                                </ol>
-                                <div class="carousel-inner" id="carousel" style="max-height: 420px"></div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                                    data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Anterior</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                                    data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Próximo</span>
-                                </a>
-                            </div>
+                            <ol class="carousel-indicators" id="carousel-indicators">
+                            </ol>
+                            <div class="carousel-inner" id="carousel" style="max-height: 420px"></div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Próximo</span>
+                            </a>
                         </div>
+                    </div>
 
                     <!-- Modal Insert img -->
                     <div class="modal fade modal-insert-img" tabindex="-1" role="dialog"
@@ -103,7 +108,7 @@
                                 <br>
                                 <div id="insert-img">
                                     <div class="section-header">
-                                        <h2>Imagens do carrossel</h2>
+                                        <h3>Adicione uma imagem ao carrossel</h3>
                                         <p>Cadastre a URL da imagem que irá aparecer no carrossel. </p>
                                     </div>
                                     <div class="row gx-lg-0 gy-4 justify-content-center">
@@ -112,7 +117,7 @@
                                                 onsubmit="event.preventDefault(); newImgCarousel();">
                                                 <div class="row ">
                                                     <div class="form-group mt-3 form-group text-center">
-                                                        <h4>URL da imagem</h4>
+                                                        <p>URL da imagem</p>
                                                         <input type="url" name="titulo-noticia" id="url-img-carrosel"
                                                             class="form-control" placeholder="Insira a URL" required>
                                                     </div>
@@ -183,124 +188,151 @@
 
                 <!-- Formulário de cadastro de notícia -->
                 <br>
-                <section class="justify-content-center d-flex flex-column align-items-center" style="border: 1px solid var(--color-primary); border-radius: 10px;"">
+                <section class="justify-content-center d-flex flex-column align-items-center"
+                    style="border: 1px solid var(--color-primary); border-radius: 10px;">
                     <div class=" section-header">
                         <h2 class="pt-4">Notícias</h2>
                         <p>Gerencie as notícias</p>
                         <br>
                         <div>
-                            <button class="btn button-green" data-toggle="modal" data-target=".modal-insert-notice">Nova
-                            notícia</button>
+                            <button class="btn button-green" onclick="showNewNotice()">Nova
+                                notícia</button>
                             <button class="btn button-green" id="btnEditNotice" onclick="btnEditNotice()">Editar
-                            noticias</button>
+                                noticias</button>
                             <button class="btn button-green" data-toggle="modal" data-target=".modal-del-notice">Excluir
-                            noticias</button>
+                                noticias</button>
                         </div>
                     </div>
                     <!-- Inserir noticia -->
-                    <div class="modal fade modal-insert-notice" tabindex="-1" role="dialog"
-                            aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
+                    <section class="container flex-column justify-content-center" id="section-new-notice"
+                        style="display: none;" data-aos="fade-up">
+                        <div class="col-10 pb-4 d-flex align-self-center flex-column"
+                            style="border: 1px solid var(--color-primary); border-radius: 10px;">
+                            <div class="section-header">
+                                <h3 class="pt-4">Nova Notícia</h3>
                                 <br>
-                                <div class="section-header">
-                                    <h2 class="pt-4">Notícias</h2>
-                                    <p>Gerencie as notícias</p>
-                                    <br>
                             </div>
-                                <div class="row gx-lg-0 gy-4 justify-content-center" id="create-notice">
-                                    <div class="col-lg-10">
-                                        <form action="" method="POST" class="contact-form">
-                                            <div class="row">
-                                                <div class="form-group mt-3">
-                                                    <h4>Título da Notícia</h4>
-                                                    <input type="text" name="titulo-noticia" id="titulo-noticia"
-                                                class="form-control" placeholder="Título da notícia" required>
+                            <div class="justify-content-center d-flex" id="create-notice">
+                                <div class="col-10 justify-self-center">
+                                    <form action="" method="POST" class="contact-form">
+                                        <div class="column">
+                                            <div class="form-group mt-3">
+                                                <h4>Título da Notícia</h4>
+                                                <input type="text" name="titulo-noticia" id="titulo-noticia"
+                                                    class="form-control" placeholder="Título da notícia" required>
+                                            </div>
+                                            <div class="form-group mt-3">
+                                                <h4>Imagem de capa</h4>
+                                                <input type="url" name="imagem-noticia" id="imagem-noticia"
+                                                    class="form-control" placeholder="Link da imagem de capa">
+                                            </div>
+                                            <div class="col-12 form-group mt-3 mt-md-0">
+                                                <h4>Categoria</h4>
+                                                <div class="d-flex justify-content-around" style="width: 100%;">
+                                                    <div class="form-group ">
+                                                    
+                                                        <label for="categorySelect">Escolha uma categoria:</label>
+                                                        <select class="form-control" id="categorySelect" name="category">
+                                                            <!-- As opções serão carregadas dinamicamente pela API -->
+                                                        </select>
+                                                        <br>
+                                                        <label for="newCategoryInput">Ou adicione uma nova categoria:</label>
+                                                        <input class="form-control" type="text" id="newCategoryInput" name="newCategory" placeholder="Nova categoria">
+                                                        <button id="categorySubmit" class="btn button-green mt-3" type="button">Adicionar</button>
+                                                        </div>
+                                                        
+                                                        <div id="selectedCategories" class="d-flex flex-column">
+                                                            <p>Categorias Selecionadas:</p>
+                                                            <ol id="categoriesList" ></ol>
+                                                        </div>
                                                 </div>
+                                                
+                                            </div>
 
-                                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                                    <h4>Categoria da Notícia</h4>
-                                                    <input type="checkbox" id="extensao" name="extensao" value="extensao">
-                                                    <label for="extensao">Extensão</label><br>
-                                                    <input type="checkbox" id="defesa-tese" name="defesa-tese"
-                                                value="defesa-tese">
-                                                    <label for="defesa-tese">Defesa de tese</label><br>
-                                                    <input type="checkbox" id="processo-seletivo" name="processo-seletivo"
-                                                value="Processo seletivo">
-                                                    <label for="processo-seletivo">Processo seletivo</label><br>
-                                                    <input type="checkbox" id="projeto" name="projeto" value="projeto">
-                                                    <label for="extensao">Projeto</label><br>
-                                                    <input type="checkbox" id="Outros" name="Outros" value="Outros">
-                                                    <label for="extensao">Outros</label><br>
-                                                </div>
-
-                                                <div class="form-group mt-3">
-                                                    <h4>Conteúdo da Notícia</h4>
-                                                    <textarea name="conteudo-noticia" id="conteudo-noticia" cols="90" rows="7"
-                                                placeholder="Escreva o texto da notícia aqui" class="form-control"
-                                                required></textarea>
-                                                </div>
-
-                                                <div class="form-group mt-3">
-                                                    <h4>Imagem na Notícia</h4>
-                                                    <input type="url" name="imagem-noticia" id="imagem-noticia"
-                                                class="form-control"
-                                                placeholder="Link para a imagem que haverá na notícia">
-                                                </div>
-
-
-
-                                                <div class="text-center "><button class="btn button-green" type="submit">Gravar
-                                                Notícia</button>
+                                            <div class="form-group mt-3">
+                                                <h4>Conteúdo da notícia</h4>
+                                                <div>
+                                                    <div id="editorQuil" style="font-size: 16px;"></div>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div><!-- Fim do formulário de cadastro de notícia -->
-                                </div>
-                                <br>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                                </div>
+                                        </div>
+                                        <div class="text-center ">
+                                            <button class="btn button-green" onclick="dataQuill()" type="submit">Gravar
+                                                Notícia</button>
+                                            <button class="btn button-green" data-toggle="modal"
+                                                data-target="#modalPreview"> Preview</button>
+                                        </div>
+                                    </form>
+
+                                </div> <!-- Fim do formulário de cadastro de notícia -->
                             </div>
                         </div>
-                    </div>
-                        <!-- Editar noticias -->
-                    <section id="sectionEditNotice" class="p-3" style="display: none; width: 80vw; flex-direction: column; ">
-                        <div style="width: 60vw; align-self: center;">
-                            <form class="contact-form" >
-                                <div class="row">
-                                    <div class="form-group text-center">
-                                        <h4>Pesquise pela notícia</h4>
-                                        <input type="text" name="titulo-noticia" id="search-notice-edit" class="form-control"
-                                            placeholder="Titulo da noticia" required>
+                        <div class="modal fade" id="modalPreview" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-xl">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">Pré-visualização</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                    <div class="text-center">
-                                        <button class="btn button-green" onclick="searchNoticeByTitle2(event)" type="submit" style="padding: 6px 12px;">Buscar</button>
+                                    <div class="modal-body" id="previewNotice">
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fechar</button>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-    
-                        <div class="mt-4" id="showSearchEditNotices">
-                            <br>
-                            <!-- Resultado da Pesquisa -->
-                        </div>
-                        <div class="d-flex justify-content-center flex-column">
-                            <br>
-                            <button class="btn button-green" onclick="showAllNoticesEdit()">Exibir todas as noticias</button>
-                            <br>
-                            <div id="showAllNotices" style="display: none;">
-                                <br>
-    
                             </div>
-                            <!-- Todas as noticias -->
                         </div>
                     </section>
-                    
+                    <!-- Editar noticias -->
+                    <section id="sectionEditNotice" class="container"
+                        style="display: none; width: 80vw; flex-direction: column;">
+                        <div class="d-flex col-10 align-self-center"
+                            style="flex-direction: column; border: 1px solid var(--color-primary); border-radius: 10px;">
+                            <div class=" d-flex flex-column "
+                                style="width: 60vw; align-items: center; align-self: center; justify-self: center; ">
+                                <h3 class="pt-4 mb-5">Pesquise pela notícia</h3>
+                                <form class="contact-form col-10">
+                                    <div class="row">
+                                        <div class="form-group text-center">
+                                            <input type="text" name="titulo-noticia" id="search-notice-edit"
+                                                class="form-control" placeholder="Titulo da noticia" required>
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn button-green" onclick="searchNoticeByTitle2(event)"
+                                                type="submit" style="padding: 6px 12px;">Buscar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="mt-4" id="showSearchEditNotices">
+                                <br>
+                                <!-- Resultado da Pesquisa -->
+                            </div>
+                            <div class="d-flex justify-content-center flex-column">
+                                <br>
+                                <button class="btn button-green" onclick="showAllNoticesEdit()">Exibir todas as
+                                    noticias</button>
+                                <br>
+                                <div id="showAllNotices" style="display: none;">
+                                    <br>
+
+                                </div>
+                                <!-- Todas as noticias -->
+                            </div>
+                        </div>
+
+                    </section>
+
                 </section>
 
 
-            <!-- Editar e exlcuir noticias -->
+                <!-- Editar e exlcuir noticias -->
 
 
         </section>
@@ -392,54 +424,132 @@
         </section><!-- End Contact Section -->
     </container>
 
-        <!-- ======= Footer ======= -->
-        <div class="footer-container" id="footer-container"> Ver arquivo assets/js/footer.html
-            <!-- Renderização do footer da página -->
-        </div>
-        <!-- End Footer -->
+    <!-- ======= Footer ======= -->
+    <div class="footer-container" id="footer-container"> Ver arquivo assets/js/footer.html
+        <!-- Renderização do footer da página -->
+    </div>
+    <!-- End Footer -->
 
-        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-        <div id="preloader"></div>
+    <div id="preloader"></div>
 
-        <!-- Cabeçalho da página-->
-        <script src="assets/js/header.js"></script>
-        <!-- Footer da página-->
-        <script src="assets/js/footer.js"></script>
-        <!-- Main JS File -->
-        <script src="assets/js/main.js"></script>
-        <!-- <script src="/assets/js/script-login.js"></script> -->
-        <script src="/assets/js/script-carrosel.js"></script>
+    <!-- Cabeçalho da página-->
+    <script src="assets/js/header.js"></script>
+    <!-- Footer da página-->
+    <script src="assets/js/footer.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- <script src="/assets/js/script-login.js"></script> -->
+    <script src="/assets/js/script-carrosel.js"></script>
 
-        <!-- Script para tradução do site -->
-        <script src="./assets/js/idiomas.js"></script>
-        <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+    <!-- Script para tradução do site -->
+    <script src="./assets/js/idiomas.js"></script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
-        <!-- JS bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
+    <!-- JS bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-        <script src="assets/js/form-cadastro.js"></script>
+    <script src="assets/js/form-cadastro.js"></script>
 
-    </body>
+    <!-- Editor QuilJS -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var toolbarOptions = [
+            ['bold', 'italic', 'underline', 'strike',],
+            [{ 'script': 'super' }, { 'script': 'sub' }, 'blockquote', 'link'],
+            [{ 'align': '' }, { 'align': 'center' }, { 'align': 'right' }, { 'align': 'justify' }],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '+1' }, { 'indent': '-1' }],
+            ['image']
+        ]
+        var quill = new Quill('#editorQuil', {
+            theme: 'snow',
+            placeholder: 'Escreva a notícia aqui...',
+            modules: {
+                toolbar: {
+                    container: toolbarOptions,
+                    handlers: {
+                        image: urlImage
+                    }
+                }
+            }
+        });
+
+        async function urlImage() {
+            let mousePosition = this.quill.getSelection();
+            const { value: url } = await Swal.fire({
+                input: "text",
+                inputLabel: "URL da Imagem",
+                inputPlaceholder: "Digite a URL"
+            });
+            if (url === null) { return };
+            this.quill.insertEmbed(mousePosition.index, 'image', url);
+
+        }
+
+        function dataQuill() {
+            let data = quill.root.innerHTML;
+            console.log(data);
+            return data;
+        }
+
+        function previewNotice() {
+            let inputTitulo = document.getElementById("titulo-noticia");
+            let inputImagemCapa = document.getElementById("imagem-noticia");
+
+
+            let divRender = document.getElementById("previewNotice");
+
+            let htmlRender = `
+            <article class="blog-details">
+              <div class="post-img">
+                <img src="assets/img/${data.imagem}" alt="" class="img-fluid">
+              </div>
+              <h2 class="title">${data.titulo}</h2>
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="blog.html?categoria=${data.categorias[0]}">${data.categorias[0]}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a><time datetime="${data.data}">${dataFormatada} às ${data.hora}</time></a></li>
+                </ul>
+              </div>
+              <div class="content" id="noticeRenderHtml">
+              </div>
+            </article>
+            `;
+
+            divRender.innerHTML = htmlRender;
+
+            let conteudoNotice = document.getElementById("noticeRenderHtml");
+            conteudoNotice.innerHTML = dataQuill();
+
+        }
+
+    </script>
+
+
+
+</body>
+
 </html>

@@ -63,7 +63,7 @@ function createLastNoticias() {
                 .then((data)=>{
                     categoriasData = data;
                     sessionStorage.setItem("categoriasData", JSON.stringify(data));
-                    renderCategorias(data);
+                    renderCategorias(categoriasData);
                 })
             )
             .catch((error) => console.error("Erro ao carregar o JSON: ", error));
@@ -117,12 +117,12 @@ function renderCategorias(data) {
     const listcat = document.getElementById("listcat");
     let categoriasHTML = "";
     
-    for (const chave in data){
-        if (data.hasOwnProperty(chave)){
-            let valor = data[chave];
+    for (const item in data){
+        if (data.hasOwnProperty(item)){
+            let valor = data[item];
             categoriasHTML += `
                 <li data-aos="fade-up" data-aos-delay="100">
-                    <a href="${allNoticias}?categoria=${chave}">${chave}<span>(${valor})</span>
+                    <a href="${allNoticias}?categoria=${item}">${item}<span>(${valor})</span>
                     </a>
                 </li>
             `
