@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Conteúdo do cabeçalho
     const headerHTML = `
 
-        
         <!-- <section id="topbar" class="topbar d-flex align-items-center">
             <div class="container d-flex justify-content-center">
                 <div class="contact-info d-flex align-items-center">
@@ -21,13 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </section>  End Top Bar -->
 
         <header id="header" class="header d-flex align-items-center">
-
-            <!--<div class="top">
-                <p><a  href="mailto:ppgbio@ufopa.edu.br">e-mail: ppgbio@ufopa.edu.br</a></p>
-            </div>-->
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
-                    <!-- <img src="assets/img/logoBio.png" alt=""> -->
+                    <!-- <img src="assets/img/logoBio.png" alt="logo do site do mestrado"> -->
                     <h1>PPG <span>Biociências</span></h1>
                 </a>
 
@@ -37,19 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li class="dropdown"><a href="#"><span>Institucional</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
+                                <li><a href="corpoAcademico.html">Corpo acadêmico</a></li>
                                 <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
                                 <li><a href="projetosPPGBIO.html">Projetos</a></li>
                             </ul>
                         </li>
                         <li><a href="blog.html">Notícias</a></li>
-                        <li class="dropdown"><a href="corpoAcademico.html"><span>Corpo acadêmico</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
+                        <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="#">Coordenação</a></li>
-                                <li><a href="#">Colegiado</a></li>
-                                <li><a href="#">Docentes</a></li>
-                                <!--<li><a href="#">Discentes</a></li>-->
+                                <li><a href="PS-PPGBIO.html">Processos seletivos</a></li>
+                                <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
+                                <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
                             </ul>
                         </li>
+
                         <!--Menu dropdown-->
                         <li class="dropdown"><a href="#"><span>Documentos</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
@@ -57,14 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
                                 <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
                                 <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
-                                <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                    <ul>
-                                        <li><a href="PS-PPGBIO.html">Processos seletivos</a></li>
-                                        <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
-                                        <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
-                                    </ul>
-                                <li>
-                                <li><a href="../formulariosPPGBIO.html">Formulários</a><li>
+                                <li><a href="formulariosPPGBIO.html">Formulários</a><li>
                             </ul>
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
