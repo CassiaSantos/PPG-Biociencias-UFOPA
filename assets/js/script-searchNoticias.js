@@ -9,7 +9,7 @@ function searchNoticeByTitle() {
   
 
 
-    fetch(`https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/titulo/${searchInput}`)
+    fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInput}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
@@ -47,8 +47,8 @@ function createLastNoticias() {
         renderNoticias2(noticiasData, lastNoticiasContainer, pagNoticias);
         renderCategorias(categoriasData);
     } else {
-        const jsonURL1 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias-recentes";
-        const jsonURL2 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categorias";
+        const jsonURL1 = "https://apippgbio-or3c.vercel.app/noticias-recentes";
+        const jsonURL2 = "https://apippgbio-or3c.vercel.app/noticias/categorias";
 
         fetch(jsonURL1)
             .then((response) => response.json())
