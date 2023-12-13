@@ -99,7 +99,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
         lastNoticiasHTML += `
 
             <div class="post-item mt-3">
-                <img src="assets/img/${item.imagem} alt="">
+                <img src="${item.imagem} alt="">
                 <div>
                     <h4><a href="${pagNoticias}?id=${item._id}">${item.titulo}</a></h4>
                     <time>${dataFormatada} às ${item.hora}</time>
