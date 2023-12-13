@@ -45,7 +45,7 @@ function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
       <div class="col-xl-4 col-md-6" data-aos="fade-up">
         <article>
           <div class="post-img">
-            <img src="assets/img/${item.imagem}" class="img-fluid">
+            <img src="${item.imagem}" class="img-fluid">
           </div>
           <p class="post-category">${item.categorias[0]}</p>
           <h2 class="title">

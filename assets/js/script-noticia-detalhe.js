@@ -36,7 +36,7 @@ function renderNotice() {
           noticiasHTML += `
             <article class="blog-details">
               <div class="post-img">
-                <img src="assets/img/${data.imagem}" alt="" class="img-fluid">
+                <img src="${data.imagem}" alt="" class="img-fluid">
               </div>
               <h2 class="title">${data.titulo}</h2>
               <div class="meta-top">

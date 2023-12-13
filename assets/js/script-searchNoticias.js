@@ -98,7 +98,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
         const dataFormatada = formatarData(item.data);
         lastNoticiasHTML += `
 
-            <div class="post-item mt-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="post-item mt-3">
                 <img src="assets/img/${item.imagem} alt="">
                 <div>
                     <h4><a href="${pagNoticias}?id=${item._id}">${item.titulo}</a></h4>
@@ -121,7 +121,7 @@ function renderCategorias(data) {
         if (data.hasOwnProperty(item)){
             let valor = data[item];
             categoriasHTML += `
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li>
                     <a href="${allNoticias}?categoria=${item}">${item}<span>(${valor})</span>
                     </a>
                 </li>
