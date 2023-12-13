@@ -25,6 +25,10 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
     <!-- CSS Botstrap -->
@@ -71,21 +75,21 @@
             <div class="row gx-lg-0 gy-4 justify-content-center">
                 <div class="col-lg-8">
                     <form action="" method="POST" class="contact-form">
-                        <div class="row">
+                        <div class="d-flex flex-column align-items-center">
                             <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control input-wrapper" name="email" id="email" placeholder="Digite aqui seu e-mail de acesso" required>
+                                <label for="emailLogin">Email:</label>
+                                <input type="email" class="form-control input-wrapper" name="email" id="emailLogin" placeholder="Digite aqui seu e-mail de acesso" required>
                             </div>
 
                             <div class="col-md-6 form-group mt-3 mt-md-0">
                                 <label for="senhaAdmin">Senha:</label>
                                 <div id="pwd">
-                                    <input type="password" class="form-control input-wrapper" name="senhaAdmin" id="senhaAdmin" placeholder="Digite aqui sua senha de acesso" required>
+                                    <input type="password" class="form-control input-wrapper" name="senha" id="senhaAdmin" placeholder="Digite aqui sua senha de acesso" required>
                                     <i class="bi bi-eye lnr lnr-eye" onclick="showPassword()"></i>
                                 </div>
                             </div>
 
-                            <div class="text-center login-form"><button type="submit">Fazer Login</button></div>
+                            <div class="text-center login-form"><button type="button" onclick="loginAdmin()">Fazer Login</button></div>
                     
                         </div>
                     </form>

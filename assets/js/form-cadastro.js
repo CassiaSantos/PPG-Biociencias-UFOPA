@@ -1,7 +1,7 @@
 const urlAPI = 'https://apippgbio-or3c.vercel.app/carrousel-img';
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTQ5ODZmZmEwYzMyOTFlMjA5MjE0OWIiLCJpYXQiOjE3MDIzNTc2MTgsImV4cCI6MTcwMjM2MTIxOH0.nrgkaz_Qj4n1yW6C7xKom4sjMs19Po-vr7K5YMhTNyk";
+const token = sessionStorage.getItem('token');
 
-let autorNome = "Fernando Carvalho";
+let autorNome = sessionStorage.getItem('autor');
 let inputTitulo = '';
 let inputImagemCapa = '';
 let categoriasList = '';
@@ -20,9 +20,12 @@ function formatarData(dataString) {
         "Julho", "Agosto", "Setembro",
         "Outubro", "Novembro", "Dezembro"
     ];
+    console.log(dataString);
+    const data = new Date(`${dataString}T00:00:00-03:00`);
 
-    const data = new Date(dataString);
+    console.log(data);
     const dia = data.getDate();
+    console.log(dia);
     const mes = meses[data.getMonth()];
     const ano = data.getFullYear();
 
@@ -69,14 +72,20 @@ function newImgCarousel() {
     fetch(urlAPI, options)
         .then(response => {
             if (!response.ok) {
-                console.log(response.status);
                 if (response.status === 401) {
                     Swal.fire({
-                        titleText: "Ocorreu um erro ao salvar a imagem! ",
-                        text: "Acesso não autorizado! ",
-                        icon: "warning"
+                        titleText: "Token expirado!",
+                        text: "Faça login novamente para obter acesso ao site.",
+                        icon: "error"
+                    });
+                    throw new Error(`Erro ao salvar a imagem: ${response.statusText}`);
+                } else {
+                    Swal.fire({
+                        titleText: "Ocorreu um erro ao salvar a imagem!",
+                        text:"Tente novamente.",
+                        icon: "error"
                     })
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    throw new Error('Erro na requisição');
                 }
             }
             return response.json();
@@ -91,10 +100,7 @@ function newImgCarousel() {
             )
         })
         .catch(error => {
-            Swal.fire({
-                titleText: "Ocorreu um erro ao salvar a imagem! ",
-                icon: "error"
-            })
+            
             console.error('Erro na solicitação fetch:', error);
         });
 
@@ -190,17 +196,25 @@ async function showEditAlert(id) {
         fetch(urlAPI, options)
             .then(response => {
                 if (!response.ok) {
-                    Swal.fire({
-                        titleText: "Ocorreu um erro ao salvar a imagem! ",
-                        icon: "error"
-                    })
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    if (response.status === 401) {
+                        Swal.fire({
+                            titleText: "Token expirado!",
+                            text: "Faça login novamente para obter acesso ao site.",
+                            icon: "error"
+                        });
+                        throw new Error(`Erro ao atualiza a imagem: ${response.statusText}`);
+                    } else {
+                        Swal.fire({
+                            titleText: "Ocorreu um erro ao atualizar a imagem!",
+                            text:"Tente novamente.",
+                            icon: "error"
+                        })
+                        throw new Error('Erro na requisição');
+                    }
                 }
                 return response.json();
             })
             .then(data => {
-                // Faça algo com os dados retornados
-                console.log('Resposta:', data);
                 Swal.fire({
                     titleText: "Imagem alterada!",
                     icon: "success"
@@ -244,8 +258,21 @@ function showDelAlert(id) {
             fetch(delAPI, options)
                 .then(response => {
                     if (!response.ok) {
-
-                        throw new Error(`HTTP error! Status: ${response.status}`);
+                        if (response.status === 401) {
+                            Swal.fire({
+                                titleText: "Token expirado!",
+                                text: "Faça login novamente para obter acesso ao site.",
+                                icon: "error"
+                            });
+                            throw new Error(`Erro ao excluir a imagem: ${response.statusText}`);
+                        } else {
+                            Swal.fire({
+                                titleText: "Ocorreu um erro ao excluir a imagem!",
+                                text:"Tente novamente.",
+                                icon: "error"
+                            })
+                            throw new Error('Erro na requisição');
+                        }
                     }
                     return response.json();
                 })
@@ -262,10 +289,7 @@ function showDelAlert(id) {
                     })
                 })
                 .catch(error => {
-                    Swal.fire({
-                        titleText: "Ocorreu um erro ao excluir a imagem! ",
-                        icon: "error"
-                    })
+                    
                     console.error('Erro na solicitação fetch:', error);
                 });
         }
@@ -674,7 +698,22 @@ function salvarNoticia() {
         fetch(urlUp, requestOptionsUp)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Erro ao salvar notícia: ${response.statusText}`);
+                    if (response.status === 401) {
+                        Swal.fire({
+                            titleText: "Token expirado!",
+                            text: "Faça login novamente para obter acesso ao site.",
+                            icon: "error"
+                        });
+                        throw new Error(`Erro ao atualizar a notícia: ${response.statusText}`);
+                    } else {
+                        Swal.fire({
+                            titleText: "Ocorreu um erro ao atualizar a notícia!",
+                            text:"Tente novamente.",
+                            icon: "error"
+                        })
+                        throw new Error('Erro na requisição');
+                    }
+
                 }
                 return response.json();
             })
@@ -690,16 +729,27 @@ function salvarNoticia() {
             })
             .catch(error => {
                 console.error('Erro durante a solicitação de salvamento da notícia:', error);
-                Swal.fire({
-                    titleText: "Ocorreu um erro ao atualizar a notícia! ",
-                    icon: "error"
-                })
+                
             });
     } else {
         fetch(urlNew, requestOptionsNew)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Erro ao salvar notícia: ${response.statusText}`);
+                    if (response.status === 401) {
+                        Swal.fire({
+                            titleText: "Token expirado!",
+                            text: "Faça login novamente para obter acesso ao site.",
+                            icon: "error"
+                        });
+                        throw new Error(`Erro ao salvar notícia: ${response.statusText}`);
+                    } else {
+                        Swal.fire({
+                            titleText: "Ocorreu um erro ao salvar a notícia!",
+                            text:"Tente novamente.",
+                            icon: "error"
+                        })
+                        throw new Error('Erro na requisição');
+                    }
                 }
                 return response.json();
             })
@@ -717,10 +767,7 @@ function salvarNoticia() {
             })
             .catch(error => {
                 console.error('Erro durante a solicitação de salvamento da notícia:', error);
-                Swal.fire({
-                    titleText: "Ocorreu um erro ao salvar a notícia! ",
-                    icon: "error"
-                })
+                
                 
             });
     }
