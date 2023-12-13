@@ -82,7 +82,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
             "Outubro", "Novembro", "Dezembro"
         ];
 
-        const data = new Date(dataString);
+        const data = new Date(`${dataString}T00:00:00-03:00`);
         const dia = data.getDate();
         const mes = meses[data.getMonth()];
         const ano = data.getFullYear();
