@@ -653,9 +653,13 @@ function editQuillNotice(id) {
 function salvarNoticia() {
     inputTitulo = document.getElementById("titulo-noticia");
     inputImagemCapa = document.getElementById("imagem-noticia");
-    var hora = new Date();
-    var horaH = hora.getHours();
-    var horaM = hora.getMinutes();
+
+    if(idNoticeUpdate != ''){
+        
+    }
+    var hora2 = new Date();
+    var horaH = hora2.getHours();
+    var horaM = hora2.getMinutes();
     horaH = (horaH < 10) ? "0" + horaH : horaH;
     horaM = (horaM < 10) ? "0" + horaM : horaM;
     let horaAtual = horaH + ":" + horaM;
@@ -665,16 +669,21 @@ function salvarNoticia() {
     var mes = (dataP.getMonth() + 1).toString().padStart(2, '0');
     var dia = dataP.getDate().toString().padStart(2, '0'); 
 
-    let dataFormatada = ano + '-' + mes + '-' + dia;
+    let dataFormatada2 = ano + '-' + mes + '-' + dia;
 
     let data = {
-        data: dataFormatada,
+        data: dataFormatada2,
         hora: horaAtual,
         titulo: inputTitulo.value,
         categorias: selectedCategories,
         imagem: inputImagemCapa.value,
         texto: dataQuill(),
         autor: autorNome,
+    }
+
+    if(idNoticeUpdate != ''){
+        data.data = dataFormatada;
+        data.hora = hora;
     }
 
     const urlNew = 'https://apippgbio-or3c.vercel.app/noticia/new';
