@@ -7,6 +7,7 @@ let inputImagemCapa = '';
 let categoriasList = '';
 let dataNoticia = '';
 let dataFormatada = '';
+let hora = '';
 let selectedCategories = [];
 const categoriesList = document.getElementById('categoriesList');
 
@@ -451,6 +452,7 @@ function showNewNotice(data) {
         categoriasList.value = '';
         dataNoticia = data.data;
         dataFormatada = formatarData(data.data);
+        hora = data.hora;
         selectedCategories = data.categorias;
         renderSelectedCategories();
         idNoticeUpdate = data._id;
@@ -592,19 +594,20 @@ function previewNotice() {
     inputTitulo = document.getElementById("titulo-noticia");
     inputImagemCapa = document.getElementById("imagem-noticia");
     categoriasList = (selectedCategories.length > 0 ? selectedCategories : ["Categoria não definida"]);
+
+    if(idNoticeUpdate != ''){
+        var horaAtual = hora;
+    }else{
     dataNoticia = new Date();
     dataFormatada = formatarData(dataNoticia);
-
     var horas = dataNoticia.getHours();
     var minutos = dataNoticia.getMinutes();
-
-
-    // Formate a hora conforme necessário (por exemplo, adicione zeros à esquerda para garantir dois dígitos)
     horas = (horas < 10) ? "0" + horas : horas;
     minutos = (minutos < 10) ? "0" + minutos : minutos;
 
-    // Crie uma string representando a hora atual no formato HH:MM:SS
     var horaAtual = horas + ":" + minutos + "h";
+    }
+    
 
 
     let divRender = document.getElementById("previewNotice");
