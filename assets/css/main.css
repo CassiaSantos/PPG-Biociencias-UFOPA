@@ -2470,7 +2470,7 @@ section .container .section-header {
 .blog .blog-details .content blockquote {
   overflow: hidden;
   background-color: rgba(34, 34, 34, 0.06);
-  padding: 60px;
+  padding: 30px;
   position: relative;
   text-align: center;
   margin: 20px 0;
@@ -2492,7 +2492,7 @@ section .container .section-header {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: var(--color-secondary);
+  /* background-color: var(--color-secondary); */
   margin-top: 20px;
   margin-bottom: 20px;
 }

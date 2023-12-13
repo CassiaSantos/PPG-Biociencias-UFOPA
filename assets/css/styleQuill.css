@@ -1,26 +1,48 @@
 .title {
-    font-size: 28px;
-    font-weight: 700;
-    padding: 0;
-    margin: 20px;
-    font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0;
+  margin: 20px;
+  font-family: var(--font-primary);
 }
 
-.bi-bookmarks-fill, .bi-clock {
-    font-size: 16px;
-    margin-right: 8px;
-    line-height: 0;
-    color: var(--color-primary);
+.bi-bookmarks-fill,
+.bi-clock {
+  font-size: 16px;
+  margin-right: 8px;
+  line-height: 0;
+  color: var(--color-primary);
 }
 
 /* Tags ql */
 #noticeRenderHtml blockquote {
-    border-left: 4px solid var(--color-primary);
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding-left: 16px;
-  }
+  background-color: rgba(34, 34, 34, 0.06);
+  border-left: 4px solid var(--color-secondary);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 30px;
+  text-align: center;
 
+  color: var(--color-default);
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.modal-body .meta-top ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.modal-body .meta-top li {
+  margin-right: 10px;
+}
+ 
 #noticeRenderHtml .ql-align-center {
   text-align: center;
 }
@@ -33,255 +55,334 @@
   text-align: right;
 }
 
-#noticeRenderHtml ol li, ul li {
+#noticeRenderHtml ol li,
+ul li {
   list-style-type: none;
 }
 
 #editorQuil img {
-  max-width: 75%;
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #noticeRenderHtml p img {
-  align-self: center;
-  vertical-align: middle;
-  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
 }
 
 #noticeRenderHtml ul[data-checked="true"],
 #noticeRenderHtml ul[data-checked="false"] {
   pointer-events: none;
 }
-#noticeRenderHtml ul[data-checked="true"] > li *,
-#noticeRenderHtml ul[data-checked="false"] > li * {
+
+#noticeRenderHtml ul[data-checked="true"]>li *,
+#noticeRenderHtml ul[data-checked="false"]>li * {
   pointer-events: all;
 }
-#noticeRenderHtml ul[data-checked="true"] > li::before,
-#noticeRenderHtml ul[data-checked="false"] > li::before {
+
+#noticeRenderHtml ul[data-checked="true"]>li::before,
+#noticeRenderHtml ul[data-checked="false"]>li::before {
   color: #777;
   cursor: pointer;
   pointer-events: all;
 }
-#noticeRenderHtml ul[data-checked="true"] > li::before {
+
+#noticeRenderHtml ul[data-checked="true"]>li::before {
   content: "\2611";
 }
-#noticeRenderHtml ul > li::before {
+
+#noticeRenderHtml ul>li::before {
   content: "\2022";
 }
-#noticeRenderHtml ul[data-checked="false"] > li::before {
+
+#noticeRenderHtml ul[data-checked="false"]>li::before {
   content: "\2610";
 }
+
 #noticeRenderHtml li::before {
   display: inline-block;
   white-space: nowrap;
   width: 1.2em;
 }
+
 #noticeRenderHtml li:not(.ql-direction-rtl)::before {
   margin-left: -1.5em;
   margin-right: 0.3em;
   text-align: right;
 }
+
 #noticeRenderHtml li.ql-direction-rtl::before {
   margin-left: 0.3em;
   margin-right: -1.5em;
 }
+
 #noticeRenderHtml ol li:not(.ql-direction-rtl),
 #noticeRenderHtml ul li:not(.ql-direction-rtl) {
   padding-left: 1.5em;
 }
+
 #noticeRenderHtml ol li.ql-direction-rtl,
 #noticeRenderHtml ul li.ql-direction-rtl {
   padding-right: 1.5em;
 }
+
 #noticeRenderHtml ol li {
   counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
   counter-increment: list-0;
 }
+
 #noticeRenderHtml ol li:before {
   content: counter(list-0, decimal) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-1 {
   counter-increment: list-1;
 }
+
 #noticeRenderHtml ol li.ql-indent-1:before {
   content: counter(list-1, lower-alpha) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-1 {
   counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-2 {
-  counter-increment: list-2; 
+  counter-increment: list-2;
 }
+
 #noticeRenderHtml ol li.ql-indent-2:before {
   content: counter(list-2, lower-roman) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-2 {
   counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-3 {
   counter-increment: list-3;
 }
+
 #noticeRenderHtml ol li.ql-indent-3:before {
   content: counter(list-3, decimal) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-3 {
   counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-4 {
   counter-increment: list-4;
 }
+
 #noticeRenderHtml ol li.ql-indent-4:before {
   content: counter(list-4, lower-alpha) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-4 {
   counter-reset: list-5 list-6 list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-5 {
   counter-increment: list-5;
 }
+
 #noticeRenderHtml ol li.ql-indent-5:before {
   content: counter(list-5, lower-roman) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-5 {
   counter-reset: list-6 list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-6 {
   counter-increment: list-6;
 }
+
 #noticeRenderHtml ol li.ql-indent-6:before {
   content: counter(list-6, decimal) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-6 {
   counter-reset: list-7 list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-7 {
   counter-increment: list-7;
 }
+
 #noticeRenderHtml ol li.ql-indent-7:before {
   content: counter(list-7, lower-alpha) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-7 {
   counter-reset: list-8 list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-8 {
   counter-increment: list-8;
 }
+
 #noticeRenderHtml ol li.ql-indent-8:before {
   content: counter(list-8, lower-roman) ". ";
 }
+
 #noticeRenderHtml ol li.ql-indent-8 {
   counter-reset: list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-9 {
   counter-increment: list-9;
 }
+
 #noticeRenderHtml ol li.ql-indent-9:before {
   content: counter(list-9, decimal) ". ";
 }
+
 #noticeRenderHtml .ql-indent-1:not(.ql-direction-rtl) {
   padding-left: 3em;
 }
+
 #noticeRenderHtml li.ql-indent-1:not(.ql-direction-rtl) {
   padding-left: 4.5em;
 }
+
 #noticeRenderHtml .ql-indent-1.ql-direction-rtl.ql-align-right {
   padding-right: 3em;
 }
+
 #noticeRenderHtml li.ql-indent-1.ql-direction-rtl.ql-align-right {
   padding-right: 4.5em;
 }
+
 #noticeRenderHtml .ql-indent-2:not(.ql-direction-rtl) {
   padding-left: 6em;
 }
+
 #noticeRenderHtml li.ql-indent-2:not(.ql-direction-rtl) {
   padding-left: 7.5em;
 }
+
 #noticeRenderHtml .ql-indent-2.ql-direction-rtl.ql-align-right {
   padding-right: 6em;
 }
+
 #noticeRenderHtml li.ql-indent-2.ql-direction-rtl.ql-align-right {
   padding-right: 7.5em;
 }
+
 #noticeRenderHtml .ql-indent-3:not(.ql-direction-rtl) {
   padding-left: 9em;
 }
+
 #noticeRenderHtml li.ql-indent-3:not(.ql-direction-rtl) {
   padding-left: 10.5em;
 }
+
 #noticeRenderHtml .ql-indent-3.ql-direction-rtl.ql-align-right {
   padding-right: 9em;
 }
+
 #noticeRenderHtml li.ql-indent-3.ql-direction-rtl.ql-align-right {
   padding-right: 10.5em;
 }
+
 #noticeRenderHtml .ql-indent-4:not(.ql-direction-rtl) {
   padding-left: 12em;
 }
+
 #noticeRenderHtml li.ql-indent-4:not(.ql-direction-rtl) {
   padding-left: 13.5em;
 }
+
 .ql-indent-4.ql-direction-rtl.ql-align-right {
   padding-right: 12em;
 }
+
 #noticeRenderHtml li.ql-indent-4.ql-direction-rtl.ql-align-right {
   padding-right: 13.5em;
 }
+
 #noticeRenderHtml .ql-indent-5:not(.ql-direction-rtl) {
   padding-left: 15em;
 }
+
 #noticeRenderHtml li.ql-indent-5:not(.ql-direction-rtl) {
   padding-left: 16.5em;
 }
+
 #noticeRenderHtml .ql-indent-5.ql-direction-rtl.ql-align-right {
   padding-right: 15em;
 }
+
 #noticeRenderHtml li.ql-indent-5.ql-direction-rtl.ql-align-right {
   padding-right: 16.5em;
 }
+
 #noticeRenderHtml .ql-indent-6:not(.ql-direction-rtl) {
   padding-left: 18em;
 }
+
 #noticeRenderHtml li.ql-indent-6:not(.ql-direction-rtl) {
   padding-left: 19.5em;
 }
+
 #noticeRenderHtml .ql-indent-6.ql-direction-rtl.ql-align-right {
   padding-right: 18em;
 }
+
 #noticeRenderHtml li.ql-indent-6.ql-direction-rtl.ql-align-right {
   padding-right: 19.5em;
 }
+
 #noticeRenderHtml .ql-indent-7:not(.ql-direction-rtl) {
   padding-left: 21em;
 }
+
 #noticeRenderHtml li.ql-indent-7:not(.ql-direction-rtl) {
   padding-left: 22.5em;
 }
+
 #noticeRenderHtml .ql-indent-7.ql-direction-rtl.ql-align-right {
   padding-right: 21em;
 }
+
 #noticeRenderHtml li.ql-indent-7.ql-direction-rtl.ql-align-right {
-  padding-right: 22.5em; 
+  padding-right: 22.5em;
 }
+
 #noticeRenderHtml .ql-indent-8:not(.ql-direction-rtl) {
   padding-left: 24em;
 }
+
 #noticeRenderHtml li.ql-indent-8:not(.ql-direction-rtl) {
   padding-left: 25.5em;
 }
+
 #noticeRenderHtml .ql-indent-8.ql-direction-rtl.ql-align-right {
   padding-right: 24em;
 }
+
 #noticeRenderHtml li.ql-indent-8.ql-direction-rtl.ql-align-right {
   padding-right: 25.5em;
 }
+
 #noticeRenderHtml .ql-indent-9:not(.ql-direction-rtl) {
   padding-left: 27em;
 }
+
 #noticeRenderHtml li.ql-indent-9:not(.ql-direction-rtl) {
   padding-left: 28.5em;
 }
+
 #noticeRenderHtml .ql-indent-9.ql-direction-rtl.ql-align-right {
   padding-right: 27em;
 }
+
 #noticeRenderHtml li.ql-indent-9.ql-direction-rtl.ql-align-right {
   padding-right: 28.5em;
 }
