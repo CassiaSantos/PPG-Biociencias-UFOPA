@@ -48,7 +48,7 @@ function loginAdmin() {
                     timer: 3000,
                     timerProgressBar: true,
                 }).then(() => {
-                    window.location.href = 'http://127.0.0.1:5500/form-cadastros.html';
+                    window.location.href = 'https://cassiasantos.github.io/PPG-Biociencias-UFOPA/form-cadastros.html';
                 });
 
 
