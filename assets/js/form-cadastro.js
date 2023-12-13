@@ -600,6 +600,7 @@ function previewNotice() {
     }else{
         let data = new Date();
     dataNoticia = new Date().toLocaleDateString;
+    console.log(dataNoticia);
     dataFormatada = formatarData(dataNoticia);
     var horas = dataNoticia.getHours();
     var minutos = dataNoticia.getMinutes();
