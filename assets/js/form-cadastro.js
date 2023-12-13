@@ -21,12 +21,8 @@ function formatarData(dataString) {
         "Julho", "Agosto", "Setembro",
         "Outubro", "Novembro", "Dezembro"
     ];
-    console.log(dataString);
     const data = new Date(`${dataString}T00:00:00-03:00`);
-
-    console.log(data);
     const dia = data.getDate();
-    console.log(dia);
     const mes = meses[data.getMonth()];
     const ano = data.getFullYear();
 
@@ -414,7 +410,7 @@ async function searchNoticeByTitle2(event) {
 function showNewNotice(data) {
 
     function renderSelectedCategories() {
-        categoriesList.innerHTML = selectedCategories.map(category => `<li>${category}</li><button style="margin: 2px; width: 50%; color: white; background-color: var(--color-primary); border-radius:0.25rem; border: none" onmouseover="this.style.backgroundColor='var(--color-tertiary)'"
+        categoriesList.innerHTML = selectedCategories.map(category => `<li>${category}</li><button type="button" style="margin: 2px; width: 50%; color: white; background-color: var(--color-primary); border-radius:0.25rem; border: none" onmouseover="this.style.backgroundColor='var(--color-tertiary)'"
         onmouseout="this.style.backgroundColor= 'var(--color-primary)'"  class="delete-btn" data-category="${category}">Excluir</button>`).join('');
 
         // Adicione um ouvinte de evento para os botões de exclusão
