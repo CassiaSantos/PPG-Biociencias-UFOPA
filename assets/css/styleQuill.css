@@ -41,8 +41,9 @@
   max-width: 75%;
 }
 
-#noticeRenderHtml img {
-align-self: center;
+#noticeRenderHtml p img {
+  align-self: center;
+  vertical-align: middle;
   max-width: 50%;
 }
 
