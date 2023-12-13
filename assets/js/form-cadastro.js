@@ -83,7 +83,7 @@ function newImgCarousel() {
                 } else {
                     Swal.fire({
                         titleText: "Ocorreu um erro ao salvar a imagem!",
-                        text:"Tente novamente.",
+                        text: "Tente novamente.",
                         icon: "error"
                     })
                     throw new Error('Erro na requisição');
@@ -96,12 +96,12 @@ function newImgCarousel() {
                 titleText: "Imagem enviada!",
                 icon: "success"
             }).then((result) => {
-                    window.location.reload();
+                window.location.reload();
             }
             )
         })
         .catch(error => {
-            
+
             console.error('Erro na solicitação fetch:', error);
         });
 
@@ -207,7 +207,7 @@ async function showEditAlert(id) {
                     } else {
                         Swal.fire({
                             titleText: "Ocorreu um erro ao atualizar a imagem!",
-                            text:"Tente novamente.",
+                            text: "Tente novamente.",
                             icon: "error"
                         })
                         throw new Error('Erro na requisição');
@@ -269,7 +269,7 @@ function showDelAlert(id) {
                         } else {
                             Swal.fire({
                                 titleText: "Ocorreu um erro ao excluir a imagem!",
-                                text:"Tente novamente.",
+                                text: "Tente novamente.",
                                 icon: "error"
                             })
                             throw new Error('Erro na requisição');
@@ -290,7 +290,7 @@ function showDelAlert(id) {
                     })
                 })
                 .catch(error => {
-                    
+
                     console.error('Erro na solicitação fetch:', error);
                 });
         }
@@ -341,7 +341,7 @@ function showAllNoticesEdit() {
 function renderNoticesSearchEdit(data) {
     const divAllNotices = document.getElementById("showAllNotices");
     divAllNotices.style.display = "none";
-    
+
 
     const divRender = document.getElementById("showSearchEditNotices");
 
@@ -595,21 +595,26 @@ function previewNotice() {
     inputImagemCapa = document.getElementById("imagem-noticia");
     categoriasList = (selectedCategories.length > 0 ? selectedCategories : ["Categoria não definida"]);
 
-    if(idNoticeUpdate != ''){
+    if (idNoticeUpdate != '') {
         var horaAtual = hora;
-    }else{
+    } else {
         let data = new Date();
-    dataNoticia = new Date().toLocaleDateString;
-    console.log(dataNoticia);
-    dataFormatada = formatarData(dataNoticia);
-    var horas = dataNoticia.getHours();
-    var minutos = dataNoticia.getMinutes();
-    horas = (horas < 10) ? "0" + horas : horas;
-    minutos = (minutos < 10) ? "0" + minutos : minutos;
+        var ano = data.getFullYear();
+        var mes = (data.getMonth() + 1).toString().padStart(2, '0');
+        var dia = data.getDate().toString().padStart(2, '0');
 
-    var horaAtual = horas + ":" + minutos + "h";
+        let dataFormatada2 = ano + '-' + mes + '-' + dia;
+
+        dataNoticia = dataFormatada2;
+        dataFormatada = formatarData(dataNoticia);
+        var horas = data.getHours();
+        var minutos = data.getMinutes();
+        horas = (horas < 10) ? "0" + horas : horas;
+        minutos = (minutos < 10) ? "0" + minutos : minutos;
+
+        var horaAtual = horas + ":" + minutos + "h";
     }
-    
+
 
 
     let divRender = document.getElementById("previewNotice");
@@ -656,8 +661,8 @@ function salvarNoticia() {
     inputTitulo = document.getElementById("titulo-noticia");
     inputImagemCapa = document.getElementById("imagem-noticia");
 
-    if(idNoticeUpdate != ''){
-        
+    if (idNoticeUpdate != '') {
+
     }
     var hora2 = new Date();
     var horaH = hora2.getHours();
@@ -669,7 +674,7 @@ function salvarNoticia() {
     var dataP = new Date();
     var ano = dataP.getFullYear();
     var mes = (dataP.getMonth() + 1).toString().padStart(2, '0');
-    var dia = dataP.getDate().toString().padStart(2, '0'); 
+    var dia = dataP.getDate().toString().padStart(2, '0');
 
     let dataFormatada2 = ano + '-' + mes + '-' + dia;
 
@@ -683,7 +688,7 @@ function salvarNoticia() {
         autor: autorNome,
     }
 
-    if(idNoticeUpdate != ''){
+    if (idNoticeUpdate != '') {
         data.data = dataNoticia;
         data.hora = hora;
     }
@@ -722,7 +727,7 @@ function salvarNoticia() {
                     } else {
                         Swal.fire({
                             titleText: "Ocorreu um erro ao atualizar a notícia!",
-                            text:"Tente novamente.",
+                            text: "Tente novamente.",
                             icon: "error"
                         })
                         throw new Error('Erro na requisição');
@@ -737,13 +742,13 @@ function salvarNoticia() {
                     titleText: "A notícia foi atualizada!",
                     icon: "success"
                 }).then((result) => {
-                    
-                        window.location.reload();
+
+                    window.location.reload();
                 })
             })
             .catch(error => {
                 console.error('Erro durante a solicitação de salvamento da notícia:', error);
-                
+
             });
     } else {
         fetch(urlNew, requestOptionsNew)
@@ -759,7 +764,7 @@ function salvarNoticia() {
                     } else {
                         Swal.fire({
                             titleText: "Ocorreu um erro ao salvar a notícia!",
-                            text:"Tente novamente.",
+                            text: "Tente novamente.",
                             icon: "error"
                         })
                         throw new Error('Erro na requisição');
@@ -774,15 +779,15 @@ function salvarNoticia() {
                     titleText: "A notícia foi salva!",
                     icon: "success"
                 }).then((result) => {
-                    
-                        window.location.reload();
+
+                    window.location.reload();
                 })
-                
+
             })
             .catch(error => {
                 console.error('Erro durante a solicitação de salvamento da notícia:', error);
-                
-                
+
+
             });
     }
 
@@ -888,7 +893,7 @@ function showDelNoticeAlert(id) {
 function renderNoticesSearchDel(data) {
     const divAllNotices = document.getElementById("showAllNotices2");
     divAllNotices.style.display = "none";
-    
+
 
     const divRender = document.getElementById("showSearchDelNotices");
 
@@ -949,7 +954,7 @@ async function searchNoticeByTitle3(event) {
 }
 
 
-function showDelNotice(){
+function showDelNotice() {
     const sectionNemNotice = document.getElementById('section-new-notice');
     const divEditNotice = document.getElementById("sectionEditNotice");
     sectionNemNotice.style.display = 'none';
