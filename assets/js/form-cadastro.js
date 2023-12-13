@@ -598,7 +598,8 @@ function previewNotice() {
     if(idNoticeUpdate != ''){
         var horaAtual = hora;
     }else{
-    dataNoticia = new Date();
+        let data = new Date();
+    dataNoticia = new Date().toLocaleDateString;
     dataFormatada = formatarData(dataNoticia);
     var horas = dataNoticia.getHours();
     var minutos = dataNoticia.getMinutes();
