@@ -682,7 +682,7 @@ function salvarNoticia() {
     }
 
     if(idNoticeUpdate != ''){
-        data.data = dataFormatada;
+        data.data = dataNoticia;
         data.hora = hora;
     }
 
