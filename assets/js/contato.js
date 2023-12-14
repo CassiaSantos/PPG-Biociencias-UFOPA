@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- ======= Contact Section ======= -->
     <div class="container" data-aos="fade-up">
-        <div class="row gx-lg-0 gy-4">
+        <div class="contact row gx-lg-0 gy-4">
       
             <div class="col-lg-4">
       
