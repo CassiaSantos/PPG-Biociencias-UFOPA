@@ -9,7 +9,7 @@ function searchNoticeByTitle() {
   
 
 
-    fetch(`https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/titulo/${searchInput}`)
+    fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInput}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
@@ -47,8 +47,8 @@ function createLastNoticias() {
         renderNoticias2(noticiasData, lastNoticiasContainer, pagNoticias);
         renderCategorias(categoriasData);
     } else {
-        const jsonURL1 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias-recentes";
-        const jsonURL2 = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categorias";
+        const jsonURL1 = "https://apippgbio-or3c.vercel.app/noticias-recentes";
+        const jsonURL2 = "https://apippgbio-or3c.vercel.app/noticias/categorias";
 
         fetch(jsonURL1)
             .then((response) => response.json())
@@ -82,7 +82,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
             "Outubro", "Novembro", "Dezembro"
         ];
 
-        const data = new Date(dataString);
+        const data = new Date(`${dataString}T00:00:00-03:00`);
         const dia = data.getDate();
         const mes = meses[data.getMonth()];
         const ano = data.getFullYear();
@@ -98,8 +98,8 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
         const dataFormatada = formatarData(item.data);
         lastNoticiasHTML += `
 
-            <div class="post-item mt-3" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/${item.imagem} alt="">
+            <div class="post-item mt-3">
+                <img src="${item.imagem} alt="">
                 <div>
                     <h4><a href="${pagNoticias}?id=${item._id}">${item.titulo}</a></h4>
                     <time>${dataFormatada} às ${item.hora}</time>
@@ -121,7 +121,7 @@ function renderCategorias(data) {
         if (data.hasOwnProperty(item)){
             let valor = data[item];
             categoriasHTML += `
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li>
                     <a href="${allNoticias}?categoria=${item}">${item}<span>(${valor})</span>
                     </a>
                 </li>

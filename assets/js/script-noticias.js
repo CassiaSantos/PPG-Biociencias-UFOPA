@@ -6,7 +6,7 @@ function formatarData(dataString) {
     "Outubro", "Novembro", "Dezembro"
   ];
 
-  const data = new Date(dataString);
+  const data = new Date(`${dataString}T00:00:00-03:00`);
   const dia = data.getDate();
   const mes = meses[data.getMonth()];
   const ano = data.getFullYear();
@@ -26,7 +26,7 @@ function createNoticias() {
   if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
     renderNoticias(noticiasData, noticiasContainer, pagNoticias);
   } else {
-    const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias-recentes";
+    const jsonURL = "https://apippgbio-or3c.vercel.app/noticias-recentes";
 
     
 
@@ -54,7 +54,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
         <div class="col-xl-4 col-md-6" data-aos="fade-up">
           <article>
             <div class="post-img">
-              <img src="assets/img/${item.imagem}" class="img-fluid">
+              <img src="${item.imagem}" class="img-fluid">
             </div>
             <p class="post-category">${item.categorias[0]}</p>
             <h2 class="title">
@@ -76,7 +76,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
         <div class="col-xl-4 col-md-6">
           <article>
             <div class="post-img">
-              <img src="assets/img/${item.imagem}" class="img-fluid">
+              <img src="${item.imagem}" class="img-fluid">
             </div>
             <p class="post-category">${item.categorias[0]}</p>
             <h2 class="title">

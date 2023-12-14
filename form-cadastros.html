@@ -32,7 +32,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <!-- Editor QuilJS -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
+    <link href="assets/css/styleQuill.css" rel="stylesheet">
     <!-- CSS Botstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -199,7 +199,7 @@
                                 notícia</button>
                             <button class="btn button-green" id="btnEditNotice" onclick="btnEditNotice()">Editar
                                 noticias</button>
-                            <button class="btn button-green" data-toggle="modal" data-target=".modal-del-notice">Excluir
+                            <button class="btn button-green" onclick="showDelNotice()">Excluir
                                 noticias</button>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                             </div>
                             <div class="justify-content-center d-flex" id="create-notice">
                                 <div class="col-10 justify-self-center">
-                                    <form action="" method="POST" class="contact-form">
+                                    <form  class="contact-form">
                                         <div class="column">
                                             <div class="form-group mt-3">
                                                 <h4>Título da Notícia</h4>
@@ -257,10 +257,10 @@
                                             </div>
                                         </div>
                                         <div class="text-center ">
-                                            <button class="btn button-green" onclick="dataQuill()" type="submit">Gravar
+                                            <button class="btn button-green mr-2" onclick="salvarNoticia()" type="button">Gravar
                                                 Notícia</button>
-                                            <button class="btn button-green" data-toggle="modal"
-                                                data-target="#modalPreview"> Preview</button>
+                                            <button class="btn button-green ml-2" data-toggle="modal"
+                                                data-target="#modalPreview" type="button" onclick="previewNotice()"> Preview</button>
                                         </div>
                                     </form>
 
@@ -269,8 +269,8 @@
                         </div>
                         <div class="modal fade" id="modalPreview" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content modal-xl">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
                                     <div class="modal-header">
                                         <h4 class="modal-title" id="exampleModalLabel">Pré-visualização</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -294,8 +294,8 @@
                         <div class="d-flex col-10 align-self-center"
                             style="flex-direction: column; border: 1px solid var(--color-primary); border-radius: 10px;">
                             <div class=" d-flex flex-column "
-                                style="width: 60vw; align-items: center; align-self: center; justify-self: center; ">
-                                <h3 class="pt-4 mb-5">Pesquise pela notícia</h3>
+                                style="width: 60%; align-items: center; align-self: center; justify-self: center; ">
+                                <h5 class="pt-4 mb-5">Pesquise pela notícia que você quer editar!</h5>
                                 <form class="contact-form col-10">
                                     <div class="row">
                                         <div class="form-group text-center">
@@ -328,11 +328,52 @@
                         </div>
 
                     </section>
+                        <!-- Exlcuir noticias -->
+                        <section id="sectionDelNotice" class="container"
+                        style="display: none; width: 80vw; flex-direction: column;">
+                        <div class="d-flex col-10 align-self-center"
+                            style="flex-direction: column; border: 1px solid var(--color-primary); border-radius: 10px;">
+                            <div class=" d-flex flex-column "
+                                style="width: 60%; align-items: center; align-self: center; justify-self: center; ">
+                                <h5 class="pt-4 mb-5">Pesquise pela notícia que você quer excluir!</h5>
+                                <form class="contact-form col-10">
+                                    <div class="row">
+                                        <div class="form-group text-center">
+                                            <input type="text" name="titulo-noticia" id="search-notice-del"
+                                                class="form-control" placeholder="Titulo da noticia" required>
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn button-green" onclick="searchNoticeByTitle3(event)"
+                                                type="submit" style="padding: 6px 12px;">Buscar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="mt-4" id="showSearchDelNotices">
+                                <br>
+                                <!-- Resultado da Pesquisa -->
+                            </div>
+                            <div class="d-flex justify-content-center flex-column">
+                                <br>
+                                <button class="btn button-green" onclick="showAllNoticesDel()">Exibir todas as
+                                    noticias</button>
+                                <br>
+                                <div id="showAllNotices2" style="display: none;">
+                                    <br>
+
+                                </div>
+                                <!-- Todas as noticias -->
+                            </div>
+                        </div>
+
+                    </section>
+
 
                 </section>
 
 
-                <!-- Editar e exlcuir noticias -->
+               
 
 
         </section>
@@ -441,7 +482,7 @@
     <script src="assets/js/footer.js"></script>
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    <!-- <script src="/assets/js/script-login.js"></script> -->
+
     <script src="/assets/js/script-carrosel.js"></script>
 
     <!-- Script para tradução do site -->
@@ -472,81 +513,12 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <script src="assets/js/form-cadastro.js"></script>
-
     <!-- Editor QuilJS -->
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script>
-        var toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike',],
-            [{ 'script': 'super' }, { 'script': 'sub' }, 'blockquote', 'link'],
-            [{ 'align': '' }, { 'align': 'center' }, { 'align': 'right' }, { 'align': 'justify' }],
-            [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '+1' }, { 'indent': '-1' }],
-            ['image']
-        ]
-        var quill = new Quill('#editorQuil', {
-            theme: 'snow',
-            placeholder: 'Escreva a notícia aqui...',
-            modules: {
-                toolbar: {
-                    container: toolbarOptions,
-                    handlers: {
-                        image: urlImage
-                    }
-                }
-            }
-        });
-
-        async function urlImage() {
-            let mousePosition = this.quill.getSelection();
-            const { value: url } = await Swal.fire({
-                input: "text",
-                inputLabel: "URL da Imagem",
-                inputPlaceholder: "Digite a URL"
-            });
-            if (url === null) { return };
-            this.quill.insertEmbed(mousePosition.index, 'image', url);
-
-        }
-
-        function dataQuill() {
-            let data = quill.root.innerHTML;
-            console.log(data);
-            return data;
-        }
-
-        function previewNotice() {
-            let inputTitulo = document.getElementById("titulo-noticia");
-            let inputImagemCapa = document.getElementById("imagem-noticia");
-
-
-            let divRender = document.getElementById("previewNotice");
-
-            let htmlRender = `
-            <article class="blog-details">
-              <div class="post-img">
-                <img src="assets/img/${data.imagem}" alt="" class="img-fluid">
-              </div>
-              <h2 class="title">${data.titulo}</h2>
-              <div class="meta-top">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="blog.html?categoria=${data.categorias[0]}">${data.categorias[0]}</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a><time datetime="${data.data}">${dataFormatada} às ${data.hora}</time></a></li>
-                </ul>
-              </div>
-              <div class="content" id="noticeRenderHtml">
-              </div>
-            </article>
-            `;
-
-            divRender.innerHTML = htmlRender;
-
-            let conteudoNotice = document.getElementById("noticeRenderHtml");
-            conteudoNotice.innerHTML = dataQuill();
-
-        }
-
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js">    
     </script>
+
+    <script src="assets/js/form-cadastro.js"></script>
+   
 
 
 

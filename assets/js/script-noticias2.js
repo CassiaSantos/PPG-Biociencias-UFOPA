@@ -24,7 +24,7 @@ function formatarData(dataString) {
     "Outubro", "Novembro", "Dezembro"
   ];
 
-  const data = new Date(dataString);
+  const data = new Date(`${dataString}T00:00:00-03:00`);
   const dia = data.getDate();
   const mes = meses[data.getMonth()];
   const ano = data.getFullYear();
@@ -45,7 +45,7 @@ function renderNews(data, currentSize, noticiasContainer, pagNoticias) {
       <div class="col-xl-4 col-md-6" data-aos="fade-up">
         <article>
           <div class="post-img">
-            <img src="assets/img/${item.imagem}" class="img-fluid">
+            <img src="${item.imagem}" class="img-fluid">
           </div>
           <p class="post-category">${item.categorias[0]}</p>
           <h2 class="title">
@@ -71,13 +71,13 @@ function loadNews(currentSize) {
   if (categoria != null) {
     const cat = `<li>${categoria}</li>`;
     mapBar.innerHTML += cat;
-    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/categoria/" + categoria;
+    jsonURL = "https://apippgbio-or3c.vercel.app/noticias/categoria/" + categoria;
   } else if (titulo != null) {
     const title = `<li>Busca por "<i>${titulo}</i>".</li>`;
     mapBar.innerHTML += title;
-    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias/titulo/" + titulo;
+    jsonURL = "https://apippgbio-or3c.vercel.app/noticias/titulo/" + titulo;
   } else {
-    jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticias";
+    jsonURL = "https://apippgbio-or3c.vercel.app/noticias";
     if (noticiasData.length > 0 && Date.now() - lastFetchTime < 60 * 1000) {
       renderNews(noticiasData, currentSize, noticiasContainer, pagNoticias);
       return;

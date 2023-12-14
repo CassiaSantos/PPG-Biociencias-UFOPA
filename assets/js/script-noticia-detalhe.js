@@ -6,7 +6,7 @@ function renderNotice() {
     const id = urlParams.get("id");
 
     // Alterar posteriormente a URL para a API
-    const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/noticia/id/" + id;
+    const jsonURL = "https://apippgbio-or3c.vercel.app/noticia/id/" + id;
 
     function formatarData(dataString) {
       const meses = [
@@ -16,7 +16,7 @@ function renderNotice() {
         "Outubro", "Novembro", "Dezembro"
       ];
     
-      const data = new Date(dataString);
+      const data = new Date(`${dataString}T00:00:00-03:00`);
       const dia = data.getDate();
       const mes = meses[data.getMonth()];
       const ano = data.getFullYear();
@@ -36,7 +36,7 @@ function renderNotice() {
           noticiasHTML += `
             <article class="blog-details">
               <div class="post-img">
-                <img src="assets/img/${data.imagem}" alt="" class="img-fluid">
+                <img src="${data.imagem}" alt="" class="img-fluid">
               </div>
               <h2 class="title">${data.titulo}</h2>
               <div class="meta-top">

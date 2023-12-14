@@ -2,7 +2,7 @@ function createCarousel() {
   const carouselContainer = document.getElementById("carousel");
   const indicatorsContainer = document.getElementById("carousel-indicators");
   // Alterar posteriormente a URL para a API
-  const jsonURL = "https://apippgbio-or3c-86czpr403-fer96carvalho.vercel.app/carrousel-img"; 
+  const jsonURL = "https://apippgbio-or3c.vercel.app/carrousel-img"; 
 
   fetch(jsonURL)
     .then((response) => response.json())
