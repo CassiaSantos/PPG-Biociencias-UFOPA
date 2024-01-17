@@ -52,6 +52,10 @@ h6 {
   font-weight: bold;
 }
 
+.justify-content{
+  text-align: justify;
+}
+
 .access-button {
   border-radius: 50px !important;
 }
@@ -361,16 +365,8 @@ section {
 .gt_container-unisv1 a.glink span:active{
   display: block !important;
 }
-/* 
-.gtranslate_wrapper.gt_container--9uakgu{
-  display: block !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-self: center !important;
-} */
 
 .traducao-top:hover {
-  /* background: rgba(248, 90, 64, 0.8); */
   cursor: pointer;
 }
 
@@ -835,7 +831,11 @@ section .container .section-header {
   }
 }
 
-
+.container-back{
+  padding: 50px57;
+  text-align: none;
+  color: #000;
+}
 
 /*--------------------------------------------------------------
 # About Us Section
@@ -1833,6 +1833,7 @@ section .container .section-header {
 /*--------------------------------------------------------------
 # Frequently Asked Questions Section
 --------------------------------------------------------------*/
+
 .faq .content h3 {
   font-weight: 400;
   font-size: 34px;
