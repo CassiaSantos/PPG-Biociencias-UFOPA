@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const footerContainer = document.getElementById("footer-container");
 
   const footerHTML = `
@@ -22,28 +22,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         <div class="col-lg-2 col-6 footer-links">
-        <h4>Quero ir para:</h4>
-        <ul>
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#about">Disciplinas</a></li>
-          <li><a href="#services">Laboratórios</a></li>
-          <li><a href="#team">Corpo Acadêmico</a></li>
-          <li><a href="#">Teses</a></li>
-          <li><a href="#">Documentos</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4> </h4>
+          <h4>Quero ir para:</h4>
           <ul>
-            <li><a href="#hero">Início2</a></li>
-            <li><a href="#about">Disciplinas2</a></li>
-            <li><a href="#services">Laboratórios2</a></li>
-            <li><a href="#team">Corpo Acadêmico2</a></li>
-            <li><a href="#">Teses2</a></li>
-            <li><a href="#">Documentos2</a></li>
-            <li><a href="#contact">Contato2</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
+            <li><a href="corpoAcademico.html">Corpo Acadêmico</a></li>
+            <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
+            <li><a href="projetosPPGBIO.html">Projetos</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="PS-PPGBIO.html">Processos seletivos</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-6 footer-links">
+          <br><br>
+          <ul>
+            <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
+            <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
+            <li><a href="regimentosPPGBIO.html">Regimento do curso</a></li>
+            <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
+            <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
+            <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
+            <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
 
@@ -71,8 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
   </footer>
   <!-- End Footer -->
   `;
-  
+
   //Inserir o conteúdo do footer no elemento do container:
   footerContainer.innerHTML = footerHTML;
-  
 });
