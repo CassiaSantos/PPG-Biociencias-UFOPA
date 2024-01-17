@@ -552,7 +552,7 @@ section .container .section-header {
   max-height: 30px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .navbar {
     padding: 0;
   }
@@ -681,7 +681,7 @@ section .container .section-header {
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
   }
@@ -691,7 +691,7 @@ section .container .section-header {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
 
   .mobile-nav-show,
   .mobile-nav-hide {
@@ -710,7 +710,7 @@ section .container .section-header {
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
-@media (max-width: 1279px) {
+@media (max-width: 1024px) {
   .navbar {
     /* position: fixed; */
     top: 250px;
