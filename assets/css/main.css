@@ -56,6 +56,10 @@ h6 {
   text-align: justify;
 }
 
+.nome-prof{
+  color: var(--color-default) !important;
+}
+
 .access-button {
   border-radius: 50px !important;
 }
@@ -418,6 +422,7 @@ section {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  
 }
 
 /*--------------------------------------------------------------
@@ -1826,7 +1831,14 @@ section .container .section-header {
 
 @media (min-width: 992px) {
   .pricing .featured {
-    transform: scale(1.15);
+    transform: scale(1.10);
+  };
+  .carousel-inner{
+    width: 90vw;
+  }
+
+  .carousel-inner-lab{
+    width: 90vw;
   }
 }
 
@@ -3001,4 +3013,9 @@ section .container .section-header {
 
 .footer .credits a {
   color: var(--color-white);
+}
+
+.carousel-inner-lab{
+  max-height: 300px; 
+  width: 40vw;
 }
