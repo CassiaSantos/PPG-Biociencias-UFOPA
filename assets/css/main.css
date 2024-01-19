@@ -3026,3 +3026,13 @@ section .container .section-header {
   display: block;
   margin: 0px auto;
 }
+
+.lattes-prof{
+  display: flex;
+}
+
+.lattes-icon{
+  max-width: 38px;
+  margin-left: 10px;
+  line-height: 20px;
+}
