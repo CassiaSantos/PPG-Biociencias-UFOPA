@@ -679,6 +679,7 @@ section .container .section-header {
     left: 100%;
     visibility: visible;
   }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
@@ -3018,4 +3019,10 @@ section .container .section-header {
 .carousel-inner-lab{
   max-height: 300px; 
   width: 40vw;
+}
+
+.lab-PPG{
+  width: 35%;
+  display: block;
+  margin: 0px auto;
 }
