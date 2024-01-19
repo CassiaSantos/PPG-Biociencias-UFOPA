@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/team.css" rel="stylesheet">
+
 
   <!-- CSS Botstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -75,12 +77,22 @@
   </div><!-- End Breadcrumbs -->
     <div class="container" data-aos="fade-up"> 
       <!--Coordenação-->
-      <div>
-        <h4 class="pt-3">Coordenação</h4>
-      </div>
-
+      <br>
       <div class="row gy-4" id="div-prof">
         <!--Rendereização via JS-->   
+      </div>
+      <div class="modal" id="memberModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content modal-lg">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+            </div>
+            <div class="modal-body d-flex justify-content-center flex-column" id="modalBody"></div>
+          </div>
+        </div>
       </div>
       
     </div>
@@ -103,7 +115,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <!--JS Corpo Acadêmico-->
-  <script src="assets/js/script-corpoAcademico.js"></script>
+  <script src="assets/js/script-corpoAcademico2.js"></script>
 
   <!-- Script para tradução do site -->
   <script src="./assets/js/idiomas.js"></script>
