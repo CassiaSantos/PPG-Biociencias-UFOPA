@@ -3036,3 +3036,7 @@ section .container .section-header {
   margin-left: 10px;
   line-height: 20px;
 }
+
+.back-page{
+ color: var(--color-primary) !important;
+}
