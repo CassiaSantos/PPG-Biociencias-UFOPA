@@ -3037,6 +3037,6 @@ section .container .section-header {
   line-height: 20px;
 }
 
-.back-page{
+.back-page, .sigaa-page{
  color: var(--color-primary) !important;
 }
