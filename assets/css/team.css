@@ -1,0 +1,55 @@
+ img.img-fluid{
+border-radius: 10px;
+overflow: hidden;
+}
+
+.modal h5#modalTitle{
+font-weight: 700;
+margin-top: 16px;
+margin-bottom: 2px;
+font-size: 20px;
+}
+
+.modal span{
+font-style: italic;
+display: block;
+font-size: 16px;
+font-weight: bold;
+margin: 5px;
+}
+
+.modal .social{
+margin-top: 15px;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.modal .social a{
+    color: #a2a2a2;
+    transition: 0.3s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbbbbb;
+}
+
+.modal .social a:hover{
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.modal a{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.modal p{
+    text-align: justify;
+}
