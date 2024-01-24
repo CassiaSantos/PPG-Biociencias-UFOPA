@@ -3022,7 +3022,7 @@ section .container .section-header {
 }
 
 .lab-PPG{
-  width: 35%;
+  width: 40%;
   display: block;
   margin: 0px auto;
 }
@@ -3035,4 +3035,8 @@ section .container .section-header {
   max-width: 38px;
   margin-left: 10px;
   line-height: 20px;
+}
+
+.back-page, .sigaa-page{
+ color: var(--color-primary) !important;
 }

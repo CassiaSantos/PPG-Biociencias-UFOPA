@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="bolsasPPGBIO.html">Bolsas Institucionais</a></li>
             <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
             <li><a href="regimentosPPGBIO.html">Regimento do curso</a></li>
-            <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
+            <li><a href="planoPedagogicoPPGBIO.html">PPC do curso</a></li>
             <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
             <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
             <li><a href="contato.html">Contato</a></li>

@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li><a href="index.html">Início</a></li>
                         <li class="dropdown"><a href="#"><span>Institucional</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
-                                <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
                                 <li><a href="corpoAcademico.html">Corpo acadêmico</a></li>
                                 <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
+                                <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
                                 <li><a href="projetosPPGBIO.html">Projetos</a></li>
                             </ul>
                         </li>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li class="dropdown"><a href="#"><span>Documentos</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
                                 <li><a href="regimentosPPGBIO.html">Regimento do Curso</a></li>
-                                <li><a href="planoPoliticoDoCursoPPGBIO.html">PPC do curso</a></li>
+                                <li><a href="planoPedagogicoPPGBIO.html">PPC do curso</a></li>
                                 <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
                                 <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
                                 <li><a href="formulariosPPGBIO.html">Formulários</a><li>
