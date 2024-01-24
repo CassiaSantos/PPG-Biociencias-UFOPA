@@ -60,5 +60,9 @@ function abrirModal(index) {
   $('#memberModal').modal('show');
 }
 
+function fecharModal(){
+  $('#memberModal').modal('hide');
+}
+
 document.addEventListener("DOMContentLoaded", preencherMembros);
 
