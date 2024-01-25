@@ -2958,3 +2958,14 @@ section .container .section-header {
 .back-page, .sigaa-page{
  color: var(--color-primary) !important;
 }
+
+/* --------------------------------------------
+Grade curricular
+------------------------------------------------ */
+.linha-pesquisa-grade{
+  padding-bottom: 12px;
+}
+
+.disciplina-grade{
+  padding-bottom: 8px;
+}
