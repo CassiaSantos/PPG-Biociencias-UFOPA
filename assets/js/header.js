@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <li><a href="projetosPPGBIO.html">Projetos</a></li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Notícias</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
 
                         <li class="dropdown"><a href="#"><span>Editais</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
                             <ul>
