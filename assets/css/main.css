@@ -977,79 +977,6 @@ section .container .section-header {
 }
 
 /*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients {
-  padding: 40px 0;
-}
-
-.clients .swiper {
-  padding: 10px 0;
-}
-
-.clients .swiper-slide img {
-  transition: 0.3s;
-}
-
-.clients .swiper-slide img:hover {
-  transform: scale(1.1);
-}
-
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  background-color: #ddd;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
-}
-
-/*--------------------------------------------------------------
-# Stats Counter Section
---------------------------------------------------------------*/
-.stats-counter {
-  padding: 40px 0;
-}
-
-.stats-counter .stats-item {
-  padding: 20px 0;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.stats-counter .stats-item .purecounter {
-  min-width: 90px;
-  padding-right: 15px;
-}
-
-.stats-counter .stats-item i {
-  font-size: 44px;
-  line-height: 0;
-  margin-right: 15px;
-}
-
-.stats-counter .stats-item span {
-  font-size: 40px;
-  display: block;
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 40px;
-}
-
-.stats-counter .stats-item p {
-  margin: 0;
-  font-family: var(--font-primary);
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
@@ -1452,7 +1379,7 @@ section .container .section-header {
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1617,7 +1544,7 @@ section .container .section-header {
   margin: 0 0 15px 0 0 0;
   padding: 0;
 }
-
+*/
 /*--------------------------------------------------------------
 # Our Team Section
 --------------------------------------------------------------*/
@@ -1696,7 +1623,7 @@ section .container .section-header {
 
 /*--------------------------------------------------------------
 # Pricing Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .pricing .pricing-item {
   padding: 60px 40px;
   box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
@@ -1837,12 +1764,8 @@ section .container .section-header {
   .carousel-inner{
     width: 90vw;
   }
-
-  .carousel-inner-lab{
-    width: 90vw;
-  }
 }
-
+*/
 /*--------------------------------------------------------------
 # Frequently Asked Questions Section
 --------------------------------------------------------------*/
@@ -3014,11 +2937,6 @@ section .container .section-header {
 
 .footer .credits a {
   color: var(--color-white);
-}
-
-.carousel-inner-lab{
-  max-height: 300px; 
-  width: 40vw;
 }
 
 .lab-PPG{
