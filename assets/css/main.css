@@ -2955,6 +2955,12 @@ section .container .section-header {
   line-height: 20px;
 }
 
+.ufopa-icon{
+  max-width: 38px;
+  margin-left: 10px;
+  line-height: 20px;
+}
+
 .back-page, .sigaa-page{
  color: var(--color-primary) !important;
 }
