@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h4>Quero ir para:</h4>
           <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="disciplinasPPGBIO.html">Disciplinas</a></li>
+            <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
             <li><a href="corpoAcademico.html">Corpo Acadêmico</a></li>
             <li><a href="laboratoriosBioCiencias.html">Laboratórios</a></li>
             <li><a href="projetosPPGBIO.html">Projetos</a></li>
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="auxiliosPPGBIO.html">Auxílios Financeiros</a></li>
             <li><a href="regimentosPPGBIO.html">Regimento do curso</a></li>
             <li><a href="planoPedagogicoPPGBIO.html">PPC do curso</a></li>
-            <li><a href="dissertacoesPPGBIO.html">Dissertações</a></li>
             <li><a href="gradeCurricularPPGBIO.html">Grade Curricular</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
