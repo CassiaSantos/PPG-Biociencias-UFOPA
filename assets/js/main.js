@@ -6,32 +6,58 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    setTimeout(function() {
+      console.log("Passaram-se 5 segundos!");
       preloader.remove();
-    });
+      
+    }, 5000);
+    // window.addEventListener('load', () => {
+    //   preloader.remove();
+    // });
   }
-  /*HTML*/
-  const nav = document.getElementById('navbar');
-  function viewNavbar(){
+
+//   const nav = document.getElementById('navbar');
+//   function viewNavbar(){
     
-    console.log(nav);
-    nav.style.display = flex; 
-}
+//     console.log("TESTE");
+//     nav.style.display = flex; 
+// }
 
-  function closedNavbar(){
-    console.log(nav);
-    nav.style.display =none;
-  }
+//   function closedNavbar(){
+//     console.log(nav);
+//     nav.style.display =none;
+//   }
 
-  function checkWidth() {
-    console.log(screen.width)
-  if (screen.width > 1279) {
-    nav.style.display = flex;
-  } else {
-    nav.style.display = none;
-  }
-}
 
+//   function checkWidth() {
+//     console.log(screen.width)
+//   if (screen.width > 1279) {
+//     nav.style.display = flex;
+//   } else {
+//     nav.style.display = none;
+//   }
+// }
+// const nav = document.getElementById('navbar');
+//   function viewNavbar(){
+    
+//     console.log("TESTE");
+//     nav.style.display = flex; 
+// }
+
+//   function closedNavbar(){
+//     console.log(nav);
+//     nav.style.display =none;
+//   }
+
+
+//   function checkWidth() {
+//     console.log(screen.width)
+//   if (screen.width > 1279) {
+//     nav.style.display = flex;
+//   } else {
+//     nav.style.display = none;
+//   }
+// }
   /**
    * Sticky Header on Scroll
    */
