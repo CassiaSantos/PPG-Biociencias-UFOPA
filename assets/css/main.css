@@ -1785,11 +1785,12 @@ section .container .section-header {
   font-size: 15px;
   color: #6c757d;
 }
-/* 
-.faq .accordion{
+ 
+/* .faq .accordion{
   display: inline-block;
   width: 100%;
-} */
+  margin: auto !important;
+}  */
 
 .faq .accordion-item {
   border: 0;
