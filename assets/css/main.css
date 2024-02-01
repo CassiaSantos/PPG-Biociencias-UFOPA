@@ -389,7 +389,7 @@ section {
   z-index: 999999;
   overflow: hidden;
   background: #fff;
-  transition: all 0.6s ease-out;; font-size: 24px
+  transition: all 0.4s ease-out;; font-size: 24px
 }
 
 #preloader:before {
@@ -402,7 +402,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  animation: animate-preloader 1s linear infinite;
 }
 
 @keyframes animate-preloader {
@@ -1104,7 +1104,7 @@ section .container .section-header {
 }
 
 .services .service-item {
-  padding: 40px;
+  padding: 30px;
   background: #fff;
   height: 100%;
   border-radius: 10px;
@@ -1135,7 +1135,7 @@ section .container .section-header {
   z-index: 1;
   top: 10px;
   right: -20px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .services .service-item h3 {
@@ -1286,6 +1286,10 @@ section .container .section-header {
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
+  }
+
+  .carrosel-lab{
+    width: 100% !important;
   }
 }
 
@@ -1785,12 +1789,6 @@ section .container .section-header {
   font-size: 15px;
   color: #6c757d;
 }
- 
-/* .faq .accordion{
-  display: inline-block;
-  width: 100%;
-  margin: auto !important;
-}  */
 
 .faq .accordion-item {
   border: 0;
@@ -2976,3 +2974,8 @@ Grade curricular
 .disciplina-grade{
   padding-bottom: 8px;
 }
+
+/* .carrosel-lab{
+  width: 60vw !important;
+  margin: auto !important;
+} */

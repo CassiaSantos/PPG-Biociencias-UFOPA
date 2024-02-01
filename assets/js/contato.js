@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="bi bi-envelope flex-shrink-0"></i>
                         <div>
                             <h4>Email:</h4>
-                            <p>ppgbio@ufopa.edu.br</p>
+                            <p>ppbcufopa@gmail.com</p>
                         </div>
                     </div><!-- End Info Item -->
           
