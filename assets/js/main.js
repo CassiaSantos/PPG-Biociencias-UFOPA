@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    setTimeout(function() {
-      console.log("Passaram-se 5 segundos!");
-      preloader.remove();
-      
-    }, 5000);
-    // window.addEventListener('load', () => {
+    // setTimeout(function() {
+    //   console.log("Passaram-se 5 segundos!");
     //   preloader.remove();
-    // });
+    // }, 5000);
+    
+    window.addEventListener('load', () => {
+      preloader.remove();
+    });
   }
 
 //   const nav = document.getElementById('navbar');
