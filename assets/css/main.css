@@ -2983,3 +2983,8 @@ Grade curricular
   width: 800px;
   height: 800px;
 }
+
+.carousel-smt, .carousel-lab{
+  max-width: 85%; 
+  margin: auto;
+}
