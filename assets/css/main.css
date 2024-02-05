@@ -980,7 +980,7 @@ section .container .section-header {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/alter-do-chao.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.ufopa.edu.br/media/file/site/ufopa/imagens/2021/991e764a1155e89645f424b07302c52a.jpg") center center;
   background-size: cover;
   padding: 100px 60px;
   border-radius: 15px;
