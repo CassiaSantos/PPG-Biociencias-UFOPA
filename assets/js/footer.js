@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </a>
           <br><br>
 
-          <strong>Email:</strong> ppgbio@ufopa.edu.br<br>
+          <strong>Email: </strong>ppbcufopa@gmail.com<br>
         </div>
       </div>
     </div>
