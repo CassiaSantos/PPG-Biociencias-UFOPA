@@ -16,48 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-//   const nav = document.getElementById('navbar');
-//   function viewNavbar(){
-    
-//     console.log("TESTE");
-//     nav.style.display = flex; 
-// }
-
-//   function closedNavbar(){
-//     console.log(nav);
-//     nav.style.display =none;
-//   }
 
 
-//   function checkWidth() {
-//     console.log(screen.width)
-//   if (screen.width > 1279) {
-//     nav.style.display = flex;
-//   } else {
-//     nav.style.display = none;
-//   }
-// }
-// const nav = document.getElementById('navbar');
-//   function viewNavbar(){
-    
-//     console.log("TESTE");
-//     nav.style.display = flex; 
-// }
-
-//   function closedNavbar(){
-//     console.log(nav);
-//     nav.style.display =none;
-//   }
-
-
-//   function checkWidth() {
-//     console.log(screen.width)
-//   if (screen.width > 1279) {
-//     nav.style.display = flex;
-//   } else {
-//     nav.style.display = none;
-//   }
-// }
   /**
    * Sticky Header on Scroll
    */
