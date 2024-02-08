@@ -1135,7 +1135,7 @@ section .container .section-header {
   z-index: 1;
   top: 10px;
   right: -20px;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .services .service-item h3 {
@@ -1152,7 +1152,7 @@ section .container .section-header {
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  /* font-size: 15px; */
   margin-bottom: 0;
 }
 
