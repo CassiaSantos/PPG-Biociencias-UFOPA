@@ -30,12 +30,10 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!--Cabeçalho da página-->
-  <script src="assets/js/header.js"></script>
+  <!-- script menu do bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-  <!-- CSS Botstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -78,7 +76,7 @@
 
           <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" data-pause="false">
             <ol class="carousel-indicators" id="carousel-indicators"></ol>
-            <div class="carousel-inner" id="carousel" style="max-height: 80vh; object-fit:scale-down; margin: auto"></div>
+            <div class="carousel-inner carousel-fade" id="carousel" style="max-height: 80vh; object-fit:scale-down; margin: auto"></div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Anterior</span>
@@ -207,56 +205,46 @@
           instituições de ensino superior e pesquisa no módulo Coleta da Plataforma Sucupira.</p>
       
       <div  class="d-flex">
-        <div id="carouselExampleIndicators2" class="carousel slide carousel-smt" data-ride="carousel" data-pause="false">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
-            <li data-target="#carouselExampleIndicators2" data-slide-to="6"></li>      
-          </ol>
-          <div class="carousel-inner" style="max-height: 75vh; border-radius: 15px;">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            
+          </div>
+          <div class="carousel-inner" style="width: 90%; margin: auto; max-height: 75vh; border-radius: 15px;">
             <div class="carousel-item active">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_1.png"
-                alt="Primeira foto do Seminário de Meio Termo CAPES" style="width: 100%"> 
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_1.png" class="d-block w-100" alt="Primeira foto do Seminário de Meio Termo CAPES">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_2.png"
-                alt="Segunda foto do Seminário de Meio Termo CAPES" style="width: 100%">
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_2.png" class="d-block w-100" alt="Segunda foto do Seminário de Meio Termo CAPES">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_3.png"
-                alt="Terceira foto do Seminário de Meio Termo CAPES" style="width: 100%">
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_3.png" class="d-block w-100" alt="Terceira foto do Seminário de Meio Termo CAPES">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_4.png"
-                alt="Quarta foto do Seminário de Meio Termo CAPES" style="width: 100%">
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_4.png" class="d-block w-100" alt="Qaurta foto do Seminário de Meio Termo CAPES">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_5.png"
-                alt="Quinta Primeira foto do Seminário de Meio Termo CAPES" style="width: 100%">
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_5.png" class="d-block w-100" alt="Quinta foto do Seminário de Meio Termo CAPES">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-70"
-                src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_6.png"
-                alt="Sexta Primeira foto do Seminário de Meio Termo CAPES" style="width: 100%">
+              <img src="assets/img/SeminarioDeMeioTermoCAPES2023/smt2023_6.png" class="d-block w-100" alt="Sexta foto do Seminário de Meio Termo CAPES">
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-          </a>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
       </div>
     </section>
 
@@ -568,23 +556,7 @@
 
   <div id="preloader"></div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <!-- Footer da página-->
-  <script src="assets/js/footer.js"></script>
-  <!--JS Corpo Acadêmico-->
-  <script src="assets/js/script-corpoAcademico.js"></script>
-  <!-- JS Carousel -->
-  <script src="assets/js/script-carrosel.js"></script>
-  <!-- JS Noticias -->
-  <script src="assets/js/script-noticias.js"></script>
-  <!-- JS Contato -->
-  <script src="./assets/js/contato.js"></script>
-
-  <!-- Script para tradução do site -->
-  <script src="./assets/js/idiomas.js"></script>
-  <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
-
+ 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -594,15 +566,28 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- JS bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+
+  
+
+      <!--Cabeçalho da página-->
+   <script src="assets/js/header.js"></script>
+   <!-- Main JS File -->
+   <script src="assets/js/main.js"></script>
+   <!-- Footer da página-->
+   <script src="assets/js/footer.js"></script>
+   <!--JS Corpo Acadêmico-->
+   <script src="assets/js/script-corpoAcademico.js"></script>
+   <!-- JS Carousel -->
+   <script src="assets/js/script-carrosel.js"></script>
+   <!-- JS Noticias -->
+   <script src="assets/js/script-noticias.js"></script>
+   <!-- JS Contato -->
+   <script src="./assets/js/contato.js"></script>
+ 
+   <!-- Script para tradução do site -->
+   <script src="./assets/js/idiomas.js"></script>
+   <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+ 
 
 </body>
 
