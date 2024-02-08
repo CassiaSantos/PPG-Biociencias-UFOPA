@@ -5,7 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // Conteúdo do cabeçalho
     const headerHTML = `
     
+        <div id="topo-ufopa" class="d-flex flex-column ">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <a href="http://www.ufopa.edu.br">
+                        <img id="logomarca" src=" assets/img/logoUFOPA.png " class="img-responsive" title="Universidade Federal do Oeste do Pará" alt="Brasão da Universidade Federal do Oeste do Pará"/>
+                        </a>
+                    </div>
+                    <div class="col-sm-8 col-xs-4 d-flex align-items-center">
+                        <h1 class="titulo-ufopa hidden-xs">Universidade Federal do Oeste do Pará</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header id="header" class="header d-flex align-items-center">
+
+            
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- <img src="assets/img/logoBio.png" alt="logo do site do mestrado"> -->
