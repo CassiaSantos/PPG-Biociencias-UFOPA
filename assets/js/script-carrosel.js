@@ -19,9 +19,11 @@ function createCarousel() {
         }
         carouselItem.appendChild(image);
 
-        const indicator = document.createElement("li");
-        indicator.setAttribute("data-target", "#carouselExampleIndicators");
-        indicator.setAttribute("data-slide-to", index);
+        const indicator = document.createElement("button");
+        indicator.setAttribute("data-bs-target", "#carouselExampleIndicators");
+        indicator.setAttribute("type", "button");
+        indicator.setAttribute("aria-label", `Slide${index + 1}`);
+        indicator.setAttribute("data-bs-slide-to", index);
         if (index === 0) {
           indicator.classList.add("active");
         }
