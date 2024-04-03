@@ -20,10 +20,10 @@ function preencherMembros() {
             <h4>${membro.nomeCompleto}</h4>
             <span>${membro.cargo}</span>
             <div class="social">
-              <a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>
-              <a href="${membro.redesSociais.facebook}" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="${membro.redesSociais.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="${membro.redesSociais.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>
+              ${membro.redesSociais.twitter ? `<a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>` : ''}
+              ${membro.redesSociais.facebook ? `<a href="${membro.redesSociais.facebook}" target="_blank"><i class="bi bi-facebook"></i></a>` : ''}
+              ${membro.redesSociais.instagram ? `<a href="${membro.redesSociais.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>` : ''}
+              ${membro.redesSociais.linkedin ? `<a href="${membro.redesSociais.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
             </div>
             <a href="${membro.curriculoLattes}" target="_blank" class="readmore">Currículo Lattes <i class="bi bi-arrow-right"></i></a>
           </div>
@@ -45,10 +45,10 @@ function abrirModal(index) {
     <span>Resumo profissional</span>
     <p>${membro.resumoPessoal}</p>
     <div class="social">
-      <a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>
-      <a href="${membro.redesSociais.facebook}" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="${membro.redesSociais.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="${membro.redesSociais.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>
+      ${membro.redesSociais.twitter ? `<a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>` : ''}
+      ${membro.redesSociais.facebook ? `<a href="${membro.redesSociais.facebook}" target="_blank"><i class="bi bi-facebook"></i></a>` : ''}
+      ${membro.redesSociais.instagram ? `<a href="${membro.redesSociais.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>` : ''}
+      ${membro.redesSociais.linkedin ? `<a href="${membro.redesSociais.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
     </div>
     <div class="d-flex justify-content-center">
       <a href="${membro.curriculoLattes}" target="_blank" class="readmore">Currículo Lattes <i class="bi bi-arrow-right"></i></a>
