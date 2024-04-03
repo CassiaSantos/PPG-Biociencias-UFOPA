@@ -17,10 +17,10 @@ function preencherMembros() {
               <h4>${membro.nomeCompleto}</h4>
               <span>${membro.cargo}</span>
               <div class="social">
-                <a href="${membro.redesSociais.twitter}"><i class="bi bi-twitter"></i></a>
-                <a href="${membro.redesSociais.facebook}"><i class="bi bi-facebook"></i></a>
-                <a href="${membro.redesSociais.instagram}"><i class="bi bi-instagram"></i></a>
-                <a href="${membro.redesSociais.linkedin}"><i class="bi bi-linkedin"></i></a>
+                ${membro.redesSociais.twitter ? `<a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>` : ''}
+                ${membro.redesSociais.facebook ? `<a href="${membro.redesSociais.facebook}" target="_blank"><i class="bi bi-facebook"></i></a>` : ''}
+                ${membro.redesSociais.instagram ? `<a href="${membro.redesSociais.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>` : ''}
+                ${membro.redesSociais.linkedin ? `<a href="${membro.redesSociais.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
               </div>
               <a href="${membro.curriculoLattes}" class="readmore">Currículo Lattes <i class="bi bi-arrow-right"></i></a>
             </div>
