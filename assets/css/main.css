@@ -552,7 +552,7 @@ section .container .section-header {
   max-height: 30px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .navbar {
     padding: 0;
   }
@@ -819,7 +819,7 @@ section .container .section-header {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
   .mobile-nav-show,
   .mobile-nav-hide {
