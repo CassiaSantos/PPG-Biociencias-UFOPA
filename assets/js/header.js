@@ -1,24 +1,104 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Seletor do elemento onde o cabeçalho será inserido
-    const headerContainer = document.getElementById("header-container");
+  // Seletor do elemento onde o cabeçalho será inserido
+  const headerContainer = document.getElementById("header-container");
 
-    // Conteúdo do cabeçalho
-    const headerHTML = `
-    
-        <div id="topo-ufopa" class="d-flex flex-column ">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-2 col-sm-2 col-xs-4">
-                        <a href="http://www.ufopa.edu.br">
-                        <img id="logomarca" src=" assets/img/logoUFOPA.png " class="img-responsive" title="Universidade Federal do Oeste do Pará" alt="Brasão da Universidade Federal do Oeste do Pará"/>
-                        </a>
+  // Conteúdo do cabeçalho
+  const headerHTML = `
+<div>
+<div id="acessibilidade" class="hidden-xs">
+<div class="containe">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-pills">
+                <li>
+                    <a accesskey="1" href="#irconteudo" id="link-informe">Ir para o conteúdo <span>[1]</span></a>
+                </li>
+                <li>
+                    <a accesskey="2" href="#menu" id="link-nav">Ir para o menu <span>[2]</span></a>
+                </li>
+                <li>
+                    <a accesskey="3" href="#busca" id="link-busca">Ir para a busca <span>[3]</span></a>
+                </li>
+                <li>
+                    <a accesskey="4" href="#rodape" id="link-rodape">Ir para o rodapé <span>[4]</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div id="barra-brasil" class="hidden-xs">
+<div id="wrapper-barra-brasil">
+    <div class="brasil-flag">
+        <a href="https://gov.br" class="link-barra">Brasil</a>
+    </div>
+    <nav>
+        <ul id="lista-barra-brasil" class="list">
+            <li>
+                <a href="#" id="menu-icon"></a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.gov.br/economia/pt-br/canais_atendimento/ouvidoria/simplifique"
+                    class="link-barra">Simplifique!</a>
+            </li>
+            <li class="list-item">
+                <a href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr/"
+                    class="link-barra">Comunica BR</a>
+            </li>
+            <li class="list-item"><a href="https://www.gov.br/pt-br/participacao-social/"
+                    class="link-barra">Participe</a></li>
+            <li class="list-item"><a href="http://www.gov.br/acessoainformacao/" class="link-barra">Acesso à
+                    informação</a></li>
+            <li class="list-item"><a href="http://www.planalto.gov.br/legislacao"
+                    class="link-barra">Legislação</a></li>
+            <li class="list-item last last-item"><a href="https://gov.br/pt-br/canais-do-executivo-federal"
+                    class="link-barra">Canais</a></li>
+        </ul>
+    </nav>
+    <span id="brasil-vlibras">
+        <a class="logo-vlibras" id="logovlibras" href="#"></a>
+        <span class="link-vlibras">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" class="barralazy"
+                data-src="//barra.brasil.gov.br/imagens/vlibras.gif" width="132" height="116">
+            &nbsp;
+            <br>
+            O conteúdo desse portal pode ser acessível em Libras usando o
+            <a href="http://www.vlibras.gov.br">VLibras</a>
+        </span>
+    </span>
+</div>
+</div>
+
+</div>
+
+<header id="topo-ufopa">
+    <div class="container-xl">
+        <div class="banner">
+            <div class="col-md-2 col-sm-2 col-xs-4 minwdth-logo">
+                <a href="http://www.ufopa.edu.br">
+                    <img id="logomarca" src="assets/img/logoUFOPA.png" class="img-fluid"
+                        title="Universidade Federal do Oeste do Pará"
+                        alt="Brasão da Universidade Federal do Oeste do Pará">
+                </a>
+            </div>
+            <div class="col-sm-8 col-xs-4 d-flex minwdth">
+                <h1 class="titulo-ufopa hidden-xs">Universidade Federal do Oeste do Pará</h1>
+                <h1 class="titulo-ufopa visibile-xs">Ufopa</h1>                   
+            </div>
+            <div class="col-sm-2 busca col-xs-4 minwdth">
+                <form action="https://www.ufopa.edu.br/ufopa/@@search/" method="GET">
+                    <div class="form-group">
+                        <label title="Buscar por" for="tx-search"></label>
+                        <input title="Buscar por" type="text" autofocus="true" autocomplete="off"
+                            class="thim-s form-control courses-search-input" placeholder="Buscar por" name="search"
+                            value="" id="tx-search">
+                        <button type="submit" value="Subscribe"><i class="bi bi-search"></i></button>
                     </div>
-                    <div class="col-sm-8 col-xs-4 d-flex align-items-center">
-                        <h1 class="titulo-ufopa hidden-xs">Universidade Federal do Oeste do Pará</h1>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
+</header>
 
         <header id="header" class="header d-flex align-items-center">
 
@@ -68,6 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </header>
     `;
 
-    // Inserir o conteúdo do cabeçalho no elemento de container
-    headerContainer.innerHTML = headerHTML;
+  // Inserir o conteúdo do cabeçalho no elemento de container
+  headerContainer.innerHTML = headerHTML;
 });
