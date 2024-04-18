@@ -2745,8 +2745,8 @@ background: linear-gradient(180deg, rgba(25,65,58,1) 90%, rgb(0, 105, 93) 100%);
 }
 
 #acessibilidade {
-  font-family: 'Roboto';
-  font-size: 14px;
+/*   font-family: 'Roboto'; */
+  font-size: 12px;
 }
 #acessibilidade .container, #acessibilidade .col-sm-12{
 padding: 0;
