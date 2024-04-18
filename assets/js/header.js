@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div>
 <div id="acessibilidade" class="hidden-xs">
 <div class="containe">
-    <div class="row">
+    <div class="row p-2">
         <div class="col-sm-12">
             <ul class="nav nav-pills">
                 <li>
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <span id="brasil-vlibras">
         <a class="logo-vlibras" id="logovlibras" href="#"></a>
         <span class="link-vlibras">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" class="barralazy"
+            <img src="//barra.brasil.gov.br/imagens/vlibras.gif" class="barralazy"
                 data-src="//barra.brasil.gov.br/imagens/vlibras.gif" width="132" height="116">
             &nbsp;
             <br>
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="http://www.vlibras.gov.br">VLibras</a>
         </span>
     </span>
+    <script defer="defer" src="//barra.brasil.gov.br/barra.js"></script>
 </div>
 </div>
 
