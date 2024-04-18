@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div>
 <div id="acessibilidade" class="hidden-xs">
 <div class="containe">
-    <div class="row p-2">
+    <div class="row p-2" style="width:100%">
         <div class="col-sm-12">
             <ul class="nav nav-pills">
                 <li>
