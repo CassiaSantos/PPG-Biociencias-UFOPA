@@ -298,7 +298,7 @@ section {
 # Search top button
 --------------------------------------------------------------*/
 .search-top {
-  position: fixed;
+/*   position: fixed; */
   visibility: visible;
 /*   right: 15px;
   top: 90px; */
