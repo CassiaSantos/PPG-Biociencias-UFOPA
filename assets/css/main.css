@@ -318,13 +318,22 @@ section {
   margin: 0 !important;
 }
 
-.search-top:hover {
-  background: rgba(248, 90, 64, 0.8);
-  cursor: pointer;
+.divpesquisar{
+  border-radius: 25px;
+  border: var(--color-primary) 1px solid;
+
 }
 
-.search-top:hover i {
-  color: var(--color-primary);
+.divpesquisar:hover{
+  cursor: pointer;
+  border: var(--color-secondary) 1px solid;
+  .search-top i {
+    color: var(--color-primary);
+  }
+  .search-top{
+    background: rgba(248, 90, 64, 0.8);
+
+  }
 }
 
 /*--------------------------------------------------------------
