@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectHeader = document.querySelector('#header');
   if (selectHeader) {
     let headerOffset = selectHeader.offsetTop;
-    let nextElement = selectHeader.nextElementSibling;
+    let nextElement = document.querySelector('#hero');
 
     const headerFixed = () => {
       if ((headerOffset - window.scrollY) <= 0) {
