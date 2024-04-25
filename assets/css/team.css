@@ -53,3 +53,8 @@ justify-content: space-around;
 .modal p{
     text-align: justify;
 }
+
+.member>h4:hover, .member>.img-fluid{
+    cursor: pointer;
+    color: var(--color-primary);
+}
