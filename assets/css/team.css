@@ -62,7 +62,8 @@ justify-content: space-around;
  
 .member>.img-fluid:hover{
     .member>h4{
+        cursor: pointer;
+        color: var(--color-primary);
+    };
     cursor: pointer;
-    color: var(--color-primary);
-    }
 }
