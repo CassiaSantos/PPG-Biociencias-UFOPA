@@ -54,7 +54,15 @@ justify-content: space-around;
     text-align: justify;
 }
 
-.member>h4:hover, .member>.img-fluid{
+
+.member>h4:hover{
+ cursor: pointer;
+ color: var(--color-primary);
+}
+ 
+.member>.img-fluid:hover{
+    .member>h4{
     cursor: pointer;
     color: var(--color-primary);
+    }
 }
