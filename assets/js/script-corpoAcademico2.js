@@ -17,7 +17,7 @@ function preencherMembros() {
         memberDiv.innerHTML = `
           <div class="member" data-target="#memberModal">
             <img src="${membro.foto}" class="img-fluid" data-toggle="modal" data-index="${index}" onclick="abrirModal(this.getAttribute('data-index'))" alt=""/>          
-            <h4>${membro.nomeCompleto}</h4>
+            <h4 data-toggle="modal" data-index="${index}" onclick="abrirModal(this.getAttribute('data-index'))">${membro.nomeCompleto}</h4>
             <span>${membro.cargo}</span>
             <div class="social">
               ${membro.redesSociais.twitter ? `<a href="${membro.redesSociais.twitter}" target="_blank"><i class="bi bi-twitter"></i></a>` : ''}
