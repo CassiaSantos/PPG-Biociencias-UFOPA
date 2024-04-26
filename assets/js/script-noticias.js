@@ -16,7 +16,7 @@ function formatarData(dataString) {
 
 function createNoticias() {
   const noticiasContainer = document.getElementById("noticiasContainer");
-  const pagNoticias = "blog-details.html";
+  const pagNoticias = "noticia.html";
 
   let noticiasData = JSON.parse(sessionStorage.getItem("noticiasRecData")) || [];
   let lastFetchTime = sessionStorage.getItem("lastFetchTimeNR")
