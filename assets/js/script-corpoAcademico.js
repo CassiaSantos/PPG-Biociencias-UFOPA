@@ -5,6 +5,7 @@ function preencherMembros() {
   fetch(corpoAcademico)
     .then((response) => response.json())
     .then((data) => {
+      data.sort(() => Math.random() - 0.5);
       data.slice(0, 4).forEach((membro, index) => {
         const memberDiv = document.createElement("div");
         memberDiv.className = "col-xl-3 col-md-6 d-flex justify-content-center ";
