@@ -6,7 +6,7 @@ let lastFetchTime = sessionStorage.getItem("lastFetchTime")
   ? parseInt(sessionStorage.getItem("lastFetchTime"))
   : 0;
 
-const pagNoticias = "blog-details.html";
+const pagNoticias = "noticia.html";
 
 const noticiasBtn = document.getElementById("btn-more-notice");
 const mapBar = document.getElementById("mapBar");
