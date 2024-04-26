@@ -34,7 +34,7 @@ function searchNoticeByTitle() {
 
 function createLastNoticias() {
     const lastNoticiasContainer = document.getElementById("last-notices");
-    const pagNoticias = "blog-details.html";
+    const pagNoticias = "noticia.html";
     
 
     let noticiasData = JSON.parse(sessionStorage.getItem("noticiasRecData")) || [];
