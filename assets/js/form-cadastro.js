@@ -62,6 +62,7 @@ function newImgCarousel() {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
+        credentials: 'include',
         body: JSON.stringify(data),
     };
 
@@ -187,6 +188,7 @@ async function showEditAlert(id) {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
             },
+            credentials: 'include',
             body: JSON.stringify(data),
         };
 
@@ -249,7 +251,9 @@ function showDelAlert(id) {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token
-                }
+                },
+                credentials: 'include',
+
             };
 
             fetch(delAPI, options)
@@ -696,6 +700,7 @@ function salvarNoticia() {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
+        credentials: 'include',
         body: JSON.stringify(data),
     };
 
@@ -706,6 +711,7 @@ function salvarNoticia() {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
         },
+        credentials: 'include',
         body: JSON.stringify(data),
     }
 
@@ -851,7 +857,8 @@ function showDelNoticeAlert(id) {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + token
-                }
+                },
+                credentials: 'include',
             };
 
             fetch(delAPI, options)
