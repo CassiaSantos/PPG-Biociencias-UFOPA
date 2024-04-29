@@ -14,6 +14,7 @@ function loginAdmin() {
             headers: {
                 'Content-Type': 'application/json',
             },
+            // credentials: 'include',  Certificar de alterar nas outras requisições
             body: JSON.stringify(data),
         })
             .then(response => {
@@ -48,7 +49,7 @@ function loginAdmin() {
                     timer: 3000,
                     timerProgressBar: true,
                 }).then(() => {
-                    // window.location.href = 'https://cassiasantos.github.io/PPG-Biociencias-UFOPA/form-cadastros.html';
+                    window.location.href = 'https://cassiasantos.github.io/PPG-Biociencias-UFOPA/form-cadastros.html';
                 });
 
 
