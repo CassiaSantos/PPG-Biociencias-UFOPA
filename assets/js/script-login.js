@@ -49,13 +49,13 @@ function loginAdmin() {
                     timer: 3000,
                     timerProgressBar: true,
                 }).then(() => {
-                   window.location.href = 'https://cassiasantos.github.io/PPG-Biociencias-UFOPA/form-cadastros.html';
+                window.location.href = 'https://cassiasantos.github.io/PPG-Biociencias-UFOPA/form-cadastros.html';
+
                 });
 
 
             })
             .catch(err => {
-                // Lógica a ser executada em caso de erro
                 console.error('Erro na requisição:', err.message);
             });
     }

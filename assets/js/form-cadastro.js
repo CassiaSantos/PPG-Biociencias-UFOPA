@@ -1,4 +1,5 @@
 const urlAPI = 'https://apippgbio-or3c.vercel.app/carrousel-img';
+
 const token = sessionStorage.getItem('token');
 
 let autorNome = sessionStorage.getItem('autor');
@@ -584,7 +585,6 @@ async function urlImage() {
 
 function dataQuill() {
     let data = quill.root.innerHTML;
-    console.log(data);
     return data;
 }
 
