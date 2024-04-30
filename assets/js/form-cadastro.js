@@ -69,6 +69,7 @@ function newImgCarousel() {
 
     fetch(urlAPI, options)
         .then(response => {
+            console.log(response)
             if (!response.ok) {
                 if (response.status === 401) {
                     Swal.fire({
