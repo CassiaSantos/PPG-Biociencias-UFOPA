@@ -38,7 +38,7 @@ function loginAdmin() {
                 return response.json();
             })
             .then(data => {
-                sessionStorage.setItem('token', data.Token);
+                sessionStorage.setItem('token', data.token);
                 sessionStorage.setItem('autor', data.autor);
                 console.log('Sucesso:', data);
 
