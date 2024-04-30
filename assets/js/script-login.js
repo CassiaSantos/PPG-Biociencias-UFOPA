@@ -40,7 +40,7 @@ function loginAdmin() {
             .then(data => {
                 sessionStorage.setItem('token', data.token);
                 sessionStorage.setItem('autor', data.autor);
-                console.log('Sucesso:', data);
+                //console.log('Sucesso:', data);
 
                 Swal.fire({
                     titleText: "Login bem-sucedido!",

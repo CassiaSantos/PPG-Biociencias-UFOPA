@@ -70,7 +70,6 @@ function newImgCarousel() {
 
     fetch(urlAPI, options)
         .then(response => {
-            console.log(response)
             if (!response.ok) {
                 if (response.status === 401) {
                     Swal.fire({
@@ -280,7 +279,7 @@ function showDelAlert(id) {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Resposta:', data);
+                    //console.log('Resposta:', data);
                     Swal.fire({
                         title: "Excluido!",
                         text: "A imagem foi excluida.",
@@ -458,7 +457,7 @@ function showNewNotice(data) {
         selectedCategories = data.categorias;
         renderSelectedCategories();
         idNoticeUpdate = data._id;
-        console.log(idNoticeUpdate);
+        //console.log(idNoticeUpdate);
     }
 
 
@@ -524,7 +523,6 @@ function renderCategorias() {
         const newCategory = (selectedCategory === 'new' && newCategoryValue) ? newCategoryValue : null;
 
         // Limitando a quantidade de categorias
-        console.log(selectedCategories.length)
         if (selectedCategories.length == 3) { return }
 
         // Adicione a categoria selecionada ou nova ao array
@@ -652,7 +650,7 @@ function editQuillNotice(id) {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            console.log("Dados específicos para o ID:", data);
+            //console.log("Dados específicos para o ID:", data);
             showNewNotice(data);
         })
         .catch((error) => console.error("Erro ao carregar dados específicos: ", error));
@@ -740,7 +738,7 @@ function salvarNoticia() {
                 return response.json();
             })
             .then(data => {
-                console.log('Notícia Atualizada com sucesso:', data);
+               // console.log('Notícia Atualizada com sucesso:', data);
                 Swal.fire({
                     titleText: "A notícia foi atualizada!",
                     icon: "success"
@@ -776,7 +774,7 @@ function salvarNoticia() {
                 return response.json();
             })
             .then(data => {
-                console.log('Notícia salva com sucesso:', data);
+               // console.log('Notícia salva com sucesso:', data);
 
                 Swal.fire({
                     titleText: "A notícia foi salva!",
@@ -871,7 +869,7 @@ function showDelNoticeAlert(id) {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Resposta:', data);
+                   // console.log('Resposta:', data);
                     Swal.fire({
                         title: "Excluido!",
                         text: "A notícia foi excluida!",
@@ -965,7 +963,7 @@ function showDelNotice() {
     divEditNotice.style.display = "none";
     const divDelNotice = document.getElementById("sectionDelNotice");
     divDelNotice.style.display = 'flex';
-    console.log("Botão funcionando");
+    //console.log("Botão funcionando");
 
 }
 
