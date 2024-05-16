@@ -1784,9 +1784,6 @@ section .container .section-header {
   align-items: center;
 }
 
-#pwd input{
-width: 100%;
-}
 
 .contact .contact-form input[type=email]:focus,
 .contact .contact-form input[type=password]:focus {
