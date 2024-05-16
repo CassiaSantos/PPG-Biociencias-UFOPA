@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h1 class="titulo-ufopa hidden-xs">Universidade Federal do Oeste do Pará</h1>
                 <h1 class="titulo-ufopa visibile-xs">Ufopa</h1>                   
             </div>
-            <div class="col-sm-2 busca col-xs-4 minwdth">
+            <div id="busca" class="col-sm-2 busca col-xs-4 minwdth">
                 <form action="https://www.ufopa.edu.br/ufopa/@@search/" method="GET">
                     <div class="form-group">
                         <label title="Buscar por" for="tx-search"></label>
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <header id="header" class="header d-flex align-items-center">
 
             
-            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <div  id="menu" class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- <img src="assets/img/logoBio.png" alt="logo do site do mestrado"> -->
                     <h1>PPG <span>Biociências</span></h1>
