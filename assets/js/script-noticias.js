@@ -95,7 +95,7 @@ function renderNoticias(data, noticiasContainer, pagNoticias) {
 
   btnMais = `
     <div class="text-center pt-4">
-      <a class="button-green" href="blog.html">Todas as notícias</a>
+      <a class="button-green" href="noticias.html">Todas as notícias</a>
     </div>
   `;
 
