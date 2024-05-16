@@ -1,4 +1,6 @@
-const urlAPI = 'https://apippgbio-or3c.vercel.app/carrousel-img';
+const apippgbio = "'https://apippgbio-or3c.vercel.app";
+
+const urlAPI = `${apippgbio}/carrousel-img`;
 
 const token = sessionStorage.getItem('token');
 
@@ -107,7 +109,7 @@ function newImgCarousel() {
 
 async function fetchThumbnails() {
     try {
-        const response = await fetch('https://apippgbio-or3c.vercel.app/carrousel-img');
+        const response = await fetch(`${apippgbio}/carrousel-img`);
         const data = await response.json();
 
         // Chamada a função para exibir as miniaturas na página
@@ -305,7 +307,7 @@ function showAllNoticesEdit() {
     noticiasSearch.style.display = "none";
 
     let noticiasHTML = "";
-    jsonURL = "https://apippgbio-or3c.vercel.app/noticias";
+    jsonURL = `${apippgbio}/noticias`;
 
     fetch(jsonURL)
         .then((response) => response.json())
@@ -390,7 +392,7 @@ async function searchNoticeByTitle2(event) {
 
 
 
-    await fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInputValue}`)
+    await fetch(`${apippgbio}/noticias/titulo/${searchInputValue}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
@@ -495,7 +497,7 @@ function renderCategorias() {
     }
 
     // Adicione as opções ao menu suspenso
-    fetch('https://apippgbio-or3c.vercel.app/noticias/categorias')
+    fetch(`${apippgbio}/noticias/categorias`)
         .then(response => response.json())
         .then(data => {
             for (const category in data) {
@@ -644,7 +646,7 @@ function previewNotice() {
 
 function editQuillNotice(id) {
     // URL específica para buscar os dados pelo id
-    const url = `https://apippgbio-or3c.vercel.app/noticia/id/${id}`;
+    const url = `${apippgbio}/noticia/id/${id}`;
 
 
     fetch(url)
@@ -692,7 +694,7 @@ function salvarNoticia() {
         data.hora = hora;
     }
 
-    const urlNew = 'https://apippgbio-or3c.vercel.app/noticia/new';
+    const urlNew = `${apippgbio}/noticia/new`;
     const requestOptionsNew = {
         method: 'POST',
         headers: {
@@ -703,7 +705,7 @@ function salvarNoticia() {
         body: JSON.stringify(data),
     };
 
-    const urlUp = `https://apippgbio-or3c.vercel.app/noticia/id/${idNoticeUpdate}`;
+    const urlUp = `${apippgbio}/noticia/id/${idNoticeUpdate}`;
     const requestOptionsUp = {
         method: 'PUT',
         headers: {
@@ -800,7 +802,7 @@ function showAllNoticesDel() {
     noticiasSearch.style.display = "none";
 
     let noticiasHTML = "";
-    jsonURL = "https://apippgbio-or3c.vercel.app/noticias";
+    jsonURL = `${apippgbio}/noticias`;
 
     fetch(jsonURL)
         .then((response) => response.json())
@@ -835,8 +837,7 @@ function showAllNoticesDel() {
 }
 
 function showDelNoticeAlert(id) {
-    const delAPI = `https://apippgbio-or3c.vercel.app/noticia/${id}`;
-    const delAPIL = `http://localhost:3000/noticia/${id}`;
+    const delAPI = `${apippgbio}/noticia/${id}`;
 
     Swal.fire({
         title: "Atenção",
@@ -933,7 +934,7 @@ async function searchNoticeByTitle3(event) {
 
 
 
-    await fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInputValue}`)
+    await fetch(`${apippgbio}/noticias/titulo/${searchInputValue}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
