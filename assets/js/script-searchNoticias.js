@@ -113,7 +113,7 @@ function renderNoticias2(data, lastNoticiasContainer, pagNoticias) {
 }
 
 function renderCategorias(data) {
-    const allNoticias = "blog.html";
+    const allNoticias = "noticias.html";
     const listcat = document.getElementById("listcat");
     let categoriasHTML = "";
     
