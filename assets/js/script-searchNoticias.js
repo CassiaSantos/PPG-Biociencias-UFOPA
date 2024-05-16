@@ -2,6 +2,7 @@ const formSearch = document.getElementById("form-search").addEventListener("subm
     event.preventDefault();
     searchNoticeByTitle;
 })
+const url = "https://apippgbio-or3c.vercel.app/noticias/titulo";
 
 function searchNoticeByTitle() {
     
@@ -9,7 +10,7 @@ function searchNoticeByTitle() {
   
 
 
-    fetch(`https://apippgbio-or3c.vercel.app/noticias/titulo/${searchInput}`)
+    fetch(`${url}/${searchInput}`)
         .then(response => {
             if (!response.ok) {
                 Swal.fire({
