@@ -23,7 +23,7 @@ function searchNoticeByTitle() {
             return response.json(); 
         })
         .then(data => {
-            const redirectURL = `blog.html?titulo=${searchInput}`;
+            const redirectURL = `noticias.html?titulo=${searchInput}`;
             window.location.href = redirectURL;
         })
         .catch(error => {
