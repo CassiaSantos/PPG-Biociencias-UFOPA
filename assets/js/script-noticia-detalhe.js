@@ -41,7 +41,7 @@ function renderNotice() {
               <h2 class="title">${data.titulo}</h2>
               <div class="meta-top">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="blog.html?categoria=${data.categorias[0]}">${data.categorias[0]}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks-fill"></i> <a href="noticias.html?categoria=${data.categorias[0]}">${data.categorias[0]}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a><time datetime="${data.data}">${dataFormatada} às ${data.hora}</time></a></li>
                 </ul>
               </div>
