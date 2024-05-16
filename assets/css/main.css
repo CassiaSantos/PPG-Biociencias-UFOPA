@@ -1785,7 +1785,7 @@ section .container .section-header {
 }
 
 #pwd input{
-widht: 100%;
+width: 100%;
 }
 
 .contact .contact-form input[type=email]:focus,
