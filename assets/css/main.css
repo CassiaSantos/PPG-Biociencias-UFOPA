@@ -174,7 +174,9 @@ section {
   color: var(--color-secondary);
   content: "/";
 }
-
+.pbt-4 {
+  padding-bottom: 4rem;
+}
 /*--------------------------------------------------------------
 # Modal gallery Carrosel
 --------------------------------------------------------------*/
